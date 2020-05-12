@@ -1,0 +1,1390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		181980EE243E507000150AE6 /* EAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181980E5243E507000150AE6 /* EAKit.framework */; };
+		181980F3243E507000150AE6 /* EAKit_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181980F2243E507000150AE6 /* EAKit_macOSTests.swift */; };
+		181980F5243E507000150AE6 /* EAKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 181980E7243E507000150AE6 /* EAKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1819810A243E50B300150AE6 /* EAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18198101243E50B300150AE6 /* EAKit.framework */; };
+		1819810F243E50B400150AE6 /* EAKit_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819810E243E50B400150AE6 /* EAKit_iOSTests.swift */; };
+		18198111243E50B400150AE6 /* EAKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 18198103243E50B300150AE6 /* EAKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1819811D243E527300150AE6 /* EAHillClimbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819811C243E527300150AE6 /* EAHillClimbing.swift */; };
+		1819811E243E527300150AE6 /* EAHillClimbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819811C243E527300150AE6 /* EAHillClimbing.swift */; };
+		1819811F243E527300150AE6 /* EAHillClimbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819811C243E527300150AE6 /* EAHillClimbing.swift */; };
+		18198120243E527300150AE6 /* EAHillClimbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819811C243E527300150AE6 /* EAHillClimbing.swift */; };
+		1832D6AC243F78F400FE1B26 /* EAIndividualProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */; };
+		1832D6AE243F796C00FE1B26 /* EAPopulationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */; };
+		1832D6B0243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */; };
+		1832D6B4243F7A8D00FE1B26 /* EAFitnessFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B3243F7A8D00FE1B26 /* EAFitnessFunction.swift */; };
+		1832D6B6243F7BDA00FE1B26 /* EAIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B5243F7BDA00FE1B26 /* EAIndividual.swift */; };
+		1832D6B8243F7C6700FE1B26 /* EAPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B7243F7C6700FE1B26 /* EAPopulation.swift */; };
+		1832D6BB243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6BA243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift */; };
+		1832D6BC243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6BA243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift */; };
+		1832D6BD243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6BA243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift */; };
+		1832D6BE243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6BA243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift */; };
+		1832D6BF243F80B600FE1B26 /* EAFitnessFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B3243F7A8D00FE1B26 /* EAFitnessFunction.swift */; };
+		1832D6C0243F80B600FE1B26 /* EAFitnessFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B3243F7A8D00FE1B26 /* EAFitnessFunction.swift */; };
+		1832D6C1243F80B700FE1B26 /* EAFitnessFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B3243F7A8D00FE1B26 /* EAFitnessFunction.swift */; };
+		1832D6C2243F80B900FE1B26 /* EAPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B7243F7C6700FE1B26 /* EAPopulation.swift */; };
+		1832D6C3243F80B900FE1B26 /* EAPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B7243F7C6700FE1B26 /* EAPopulation.swift */; };
+		1832D6C4243F80BA00FE1B26 /* EAPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B7243F7C6700FE1B26 /* EAPopulation.swift */; };
+		1832D6C5243F80BC00FE1B26 /* EAIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B5243F7BDA00FE1B26 /* EAIndividual.swift */; };
+		1832D6C6243F80BD00FE1B26 /* EAIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B5243F7BDA00FE1B26 /* EAIndividual.swift */; };
+		1832D6C7243F80BD00FE1B26 /* EAIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6B5243F7BDA00FE1B26 /* EAIndividual.swift */; };
+		1832D6C8243F80C000FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */; };
+		1832D6C9243F80C000FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */; };
+		1832D6CA243F80C100FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */; };
+		1832D6CB243F80C400FE1B26 /* EAPopulationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */; };
+		1832D6CC243F80C500FE1B26 /* EAPopulationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */; };
+		1832D6CD243F80C500FE1B26 /* EAPopulationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */; };
+		1832D6CF243F80C800FE1B26 /* EAIndividualProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */; };
+		1832D6D0243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */; };
+		1832D6D1243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */; };
+		1832D6D3243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D2243F8C9400FE1B26 /* EADoubleIndividual.swift */; };
+		1832D6D4243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D2243F8C9400FE1B26 /* EADoubleIndividual.swift */; };
+		1832D6D5243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D2243F8C9400FE1B26 /* EADoubleIndividual.swift */; };
+		1832D6D6243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D2243F8C9400FE1B26 /* EADoubleIndividual.swift */; };
+		1832D6D8243F8EC400FE1B26 /* EASphereFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D7243F8EC400FE1B26 /* EASphereFunction.swift */; };
+		1832D6D9243F8EC400FE1B26 /* EASphereFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D7243F8EC400FE1B26 /* EASphereFunction.swift */; };
+		1832D6DA243F8EC400FE1B26 /* EASphereFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D7243F8EC400FE1B26 /* EASphereFunction.swift */; };
+		1832D6DB243F8EC400FE1B26 /* EASphereFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6D7243F8EC400FE1B26 /* EASphereFunction.swift */; };
+		1832D6E3243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E2243FA0DD00FE1B26 /* EADistributionProtocol.swift */; };
+		1832D6E4243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E2243FA0DD00FE1B26 /* EADistributionProtocol.swift */; };
+		1832D6E5243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E2243FA0DD00FE1B26 /* EADistributionProtocol.swift */; };
+		1832D6E6243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E2243FA0DD00FE1B26 /* EADistributionProtocol.swift */; };
+		1832D6E8243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */; };
+		1832D6E9243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */; };
+		1832D6EA243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */; };
+		1832D6EB243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */; };
+		187A58DC244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
+		187A58DD244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
+		187A58DE244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
+		187A58DF244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
+		187A58E1244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
+		187A58E2244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
+		187A58E3244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
+		187A58E4244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
+		187A58E6244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
+		187A58E7244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
+		187A58E8244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
+		187A58E9244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
+		187A58EB244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
+		187A58EC244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
+		187A58ED244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
+		187A58EE244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
+		187A58F0244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
+		187A58F1244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
+		187A58F2244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
+		187A58F3244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
+		187A58FA244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
+		187A58FB244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
+		187A58FC244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
+		187A58FD244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
+		187A58FF244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
+		187A5900244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
+		187A5901244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
+		187A5902244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
+		1887B7BE246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
+		1887B7BF246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
+		1887B7C0246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
+		1887B7C1246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
+		1887B7C324608D5F00AAC050 /* EATextFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C224608D5F00AAC050 /* EATextFunction.swift */; };
+		1887B7C424608D5F00AAC050 /* EATextFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C224608D5F00AAC050 /* EATextFunction.swift */; };
+		1887B7C524608D5F00AAC050 /* EATextFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C224608D5F00AAC050 /* EATextFunction.swift */; };
+		1887B7C624608D5F00AAC050 /* EATextFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C224608D5F00AAC050 /* EATextFunction.swift */; };
+		1887B7C824608E8700AAC050 /* EACharacterIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C724608E8700AAC050 /* EACharacterIndividual.swift */; };
+		1887B7C924608E8700AAC050 /* EACharacterIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C724608E8700AAC050 /* EACharacterIndividual.swift */; };
+		1887B7CA24608E8700AAC050 /* EACharacterIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C724608E8700AAC050 /* EACharacterIndividual.swift */; };
+		1887B7CB24608E8700AAC050 /* EACharacterIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C724608E8700AAC050 /* EACharacterIndividual.swift */; };
+		1887B7D6246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */; };
+		1887B7D7246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */; };
+		1887B7D8246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */; };
+		1887B7D9246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */; };
+		1898175624534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
+		1898175724534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
+		1898175824534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
+		1898175924534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
+		189FF34D244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
+		189FF34E244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
+		189FF34F244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
+		189FF350244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
+		18A1B8CB2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */; };
+		18A1B8CC2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */; };
+		18A1B8CD2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */; };
+		18A1B8CE2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */; };
+		18A1B8D02469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */; };
+		18A1B8D12469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */; };
+		18A1B8D22469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */; };
+		18A1B8D32469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */; };
+		18B1449024477B09007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
+		18B144922447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
+		18B14493244787A3007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
+		18B14494244787A4007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
+		18B14495244787A4007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
+		18B14496244787A7007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
+		18B14497244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
+		18B14498244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
+		18B1449A244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
+		18B1449B244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
+		18B1449C244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
+		18B1449D244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
+		18B1449F24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
+		18B144A024478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
+		18B144A124478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
+		18B144A224478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
+		18B144A42447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
+		18B144A52447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
+		18B144A62447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
+		18B144A72447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
+		18DBD6D4244E094E00488C14 /* EATSPFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D3244E094E00488C14 /* EATSPFunction.swift */; };
+		18DBD6D5244E094E00488C14 /* EATSPFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D3244E094E00488C14 /* EATSPFunction.swift */; };
+		18DBD6D6244E094E00488C14 /* EATSPFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D3244E094E00488C14 /* EATSPFunction.swift */; };
+		18DBD6D7244E094E00488C14 /* EATSPFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D3244E094E00488C14 /* EATSPFunction.swift */; };
+		18DBD6D9244E0DB400488C14 /* EATSPCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D8244E0DB400488C14 /* EATSPCity.swift */; };
+		18DBD6DA244E0DB400488C14 /* EATSPCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D8244E0DB400488C14 /* EATSPCity.swift */; };
+		18DBD6DB244E0DB400488C14 /* EATSPCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D8244E0DB400488C14 /* EATSPCity.swift */; };
+		18DBD6DC244E0DB400488C14 /* EATSPCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D8244E0DB400488C14 /* EATSPCity.swift */; };
+		18DBD6DE244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6DD244E0F2B00488C14 /* EAIntegerIndividual.swift */; };
+		18DBD6DF244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6DD244E0F2B00488C14 /* EAIntegerIndividual.swift */; };
+		18DBD6E0244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6DD244E0F2B00488C14 /* EAIntegerIndividual.swift */; };
+		18DBD6E1244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6DD244E0F2B00488C14 /* EAIntegerIndividual.swift */; };
+		18DBD6E8244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6E7244E291000488C14 /* EAGATSPTwoPointCrossover.swift */; };
+		18DBD6E9244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6E7244E291000488C14 /* EAGATSPTwoPointCrossover.swift */; };
+		18DBD6EA244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6E7244E291000488C14 /* EAGATSPTwoPointCrossover.swift */; };
+		18DBD6EB244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6E7244E291000488C14 /* EAGATSPTwoPointCrossover.swift */; };
+		18DE235B245A00A800C5A927 /* EAParentsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE235A245A00A800C5A927 /* EAParentsGroup.swift */; };
+		18DE235C245A00A800C5A927 /* EAParentsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE235A245A00A800C5A927 /* EAParentsGroup.swift */; };
+		18DE235D245A00A800C5A927 /* EAParentsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE235A245A00A800C5A927 /* EAParentsGroup.swift */; };
+		18DE235E245A00A800C5A927 /* EAParentsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE235A245A00A800C5A927 /* EAParentsGroup.swift */; };
+		18DE239B245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
+		18DE239C245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
+		18DE239D245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
+		18DE239E245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
+		18DE23A0245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
+		18DE23A1245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
+		18DE23A2245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
+		18DE23A3245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
+		18EFBCEC244102DB00C5BD5F /* EADistributionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */; };
+		18EFBCED244102DB00C5BD5F /* EADistributionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */; };
+		18EFBCEE244102DB00C5BD5F /* EADistributionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */; };
+		18EFBCEF244102DB00C5BD5F /* EADistributionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */; };
+		18EFBD1224419BDF00C5BD5F /* EAAlgorithmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */; };
+		18EFBD1324419CE700C5BD5F /* EAAlgorithmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */; };
+		18EFBD1424419CE700C5BD5F /* EAAlgorithmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */; };
+		18EFBD1524419CE800C5BD5F /* EAAlgorithmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */; };
+		18EFBD172441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */; };
+		18EFBD192441D40E00C5BD5F /* EAAlgorithmResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD182441D40E00C5BD5F /* EAAlgorithmResult.swift */; };
+		18EFBD1A2441D49500C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */; };
+		18EFBD1B2441D49600C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */; };
+		18EFBD1C2441D49600C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */; };
+		18EFBD1D2441D49A00C5BD5F /* EAAlgorithmResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD182441D40E00C5BD5F /* EAAlgorithmResult.swift */; };
+		18EFBD1E2441D49A00C5BD5F /* EAAlgorithmResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD182441D40E00C5BD5F /* EAAlgorithmResult.swift */; };
+		18EFBD1F2441D49B00C5BD5F /* EAAlgorithmResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD182441D40E00C5BD5F /* EAAlgorithmResult.swift */; };
+		18EFBD212441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD202441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift */; };
+		18EFBD222441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD202441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift */; };
+		18EFBD232441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD202441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift */; };
+		18EFBD242441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD202441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift */; };
+		18EFBD262441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */; };
+		18EFBD272441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */; };
+		18EFBD282441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */; };
+		18EFBD292441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */; };
+		18EFBD2C2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD2B2441DE3600C5BD5F /* EAHillClimbingParameters.swift */; };
+		18EFBD2D2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD2B2441DE3600C5BD5F /* EAHillClimbingParameters.swift */; };
+		18EFBD2E2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD2B2441DE3600C5BD5F /* EAHillClimbingParameters.swift */; };
+		18EFBD2F2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD2B2441DE3600C5BD5F /* EAHillClimbingParameters.swift */; };
+		18EFBD312441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */; };
+		18EFBD322441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */; };
+		18EFBD332441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */; };
+		18EFBD342441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */; };
+		18EFBD3B2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD3A2441F5C700C5BD5F /* EAAlgorithmParameters.swift */; };
+		18EFBD3C2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD3A2441F5C700C5BD5F /* EAAlgorithmParameters.swift */; };
+		18EFBD3D2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD3A2441F5C700C5BD5F /* EAAlgorithmParameters.swift */; };
+		18EFBD3E2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD3A2441F5C700C5BD5F /* EAAlgorithmParameters.swift */; };
+		18EFBD452442264B00C5BD5F /* EAAlgorithmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD442442264B00C5BD5F /* EAAlgorithmDelegate.swift */; };
+		18EFBD462442277600C5BD5F /* EAAlgorithmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD442442264B00C5BD5F /* EAAlgorithmDelegate.swift */; };
+		18EFBD472442277600C5BD5F /* EAAlgorithmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD442442264B00C5BD5F /* EAAlgorithmDelegate.swift */; };
+		18EFBD482442277700C5BD5F /* EAAlgorithmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD442442264B00C5BD5F /* EAAlgorithmDelegate.swift */; };
+		18EFBD4A2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD492442433700C5BD5F /* EARosenbrockFunction.swift */; };
+		18EFBD4B2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD492442433700C5BD5F /* EARosenbrockFunction.swift */; };
+		18EFBD4C2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD492442433700C5BD5F /* EARosenbrockFunction.swift */; };
+		18EFBD4D2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD492442433700C5BD5F /* EARosenbrockFunction.swift */; };
+		18EFBD4F2442437100C5BD5F /* EANormalDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD4E2442437100C5BD5F /* EANormalDistribution.swift */; };
+		18EFBD502442437100C5BD5F /* EANormalDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD4E2442437100C5BD5F /* EANormalDistribution.swift */; };
+		18EFBD512442437100C5BD5F /* EANormalDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD4E2442437100C5BD5F /* EANormalDistribution.swift */; };
+		18EFBD522442437100C5BD5F /* EANormalDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD4E2442437100C5BD5F /* EANormalDistribution.swift */; };
+		18EFBD56244247C200C5BD5F /* MathGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD55244247C200C5BD5F /* MathGlobal.swift */; };
+		18EFBD57244247C200C5BD5F /* MathGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD55244247C200C5BD5F /* MathGlobal.swift */; };
+		18EFBD58244247C200C5BD5F /* MathGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD55244247C200C5BD5F /* MathGlobal.swift */; };
+		18EFBD59244247C200C5BD5F /* MathGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD55244247C200C5BD5F /* MathGlobal.swift */; };
+		18EFBD5B244249D200C5BD5F /* EARastriginFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5A244249D200C5BD5F /* EARastriginFunction.swift */; };
+		18EFBD5C244249D200C5BD5F /* EARastriginFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5A244249D200C5BD5F /* EARastriginFunction.swift */; };
+		18EFBD5D244249D200C5BD5F /* EARastriginFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5A244249D200C5BD5F /* EARastriginFunction.swift */; };
+		18EFBD5E244249D200C5BD5F /* EARastriginFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5A244249D200C5BD5F /* EARastriginFunction.swift */; };
+		18EFBD6024424C1100C5BD5F /* EAAckleyFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5F24424C1100C5BD5F /* EAAckleyFunction.swift */; };
+		18EFBD6124424C1100C5BD5F /* EAAckleyFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5F24424C1100C5BD5F /* EAAckleyFunction.swift */; };
+		18EFBD6224424C1100C5BD5F /* EAAckleyFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5F24424C1100C5BD5F /* EAAckleyFunction.swift */; };
+		18EFBD6324424C1100C5BD5F /* EAAckleyFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD5F24424C1100C5BD5F /* EAAckleyFunction.swift */; };
+		18EFBD65244250F500C5BD5F /* EASchwefelFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD64244250F500C5BD5F /* EASchwefelFunction.swift */; };
+		18EFBD66244250F500C5BD5F /* EASchwefelFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD64244250F500C5BD5F /* EASchwefelFunction.swift */; };
+		18EFBD67244250F500C5BD5F /* EASchwefelFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD64244250F500C5BD5F /* EASchwefelFunction.swift */; };
+		18EFBD68244250F500C5BD5F /* EASchwefelFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD64244250F500C5BD5F /* EASchwefelFunction.swift */; };
+		18EFBD6A2442550200C5BD5F /* EAEasomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD692442550200C5BD5F /* EAEasomFunction.swift */; };
+		18EFBD6B2442550200C5BD5F /* EAEasomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD692442550200C5BD5F /* EAEasomFunction.swift */; };
+		18EFBD6C2442550200C5BD5F /* EAEasomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD692442550200C5BD5F /* EAEasomFunction.swift */; };
+		18EFBD6D2442550200C5BD5F /* EAEasomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBD692442550200C5BD5F /* EAEasomFunction.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		181980EF243E507000150AE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181980BA243CF5FF00150AE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181980E4243E507000150AE6;
+			remoteInfo = "EAKit-macOS";
+		};
+		1819810B243E50B300150AE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181980BA243CF5FF00150AE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18198100243E50B300150AE6;
+			remoteInfo = "EAKit-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		181980E5243E507000150AE6 /* EAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		181980E7243E507000150AE6 /* EAKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAKit_macOS.h; sourceTree = "<group>"; };
+		181980E8243E507000150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181980ED243E507000150AE6 /* EAKit-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EAKit-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181980F2243E507000150AE6 /* EAKit_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAKit_macOSTests.swift; sourceTree = "<group>"; };
+		181980F4243E507000150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18198101243E50B300150AE6 /* EAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18198103243E50B300150AE6 /* EAKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAKit_iOS.h; sourceTree = "<group>"; };
+		18198104243E50B300150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18198109243E50B300150AE6 /* EAKit-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EAKit-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1819810E243E50B400150AE6 /* EAKit_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAKit_iOSTests.swift; sourceTree = "<group>"; };
+		18198110243E50B400150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1819811C243E527300150AE6 /* EAHillClimbing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAHillClimbing.swift; sourceTree = "<group>"; };
+		1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAIndividualProtocol.swift; sourceTree = "<group>"; };
+		1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAPopulationProtocol.swift; sourceTree = "<group>"; };
+		1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFitnessFunctionProtocol.swift; sourceTree = "<group>"; };
+		1832D6B3243F7A8D00FE1B26 /* EAFitnessFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFitnessFunction.swift; sourceTree = "<group>"; };
+		1832D6B5243F7BDA00FE1B26 /* EAIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAIndividual.swift; sourceTree = "<group>"; };
+		1832D6B7243F7C6700FE1B26 /* EAPopulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAPopulation.swift; sourceTree = "<group>"; };
+		1832D6BA243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAArtificialLandscapeFunction.swift; sourceTree = "<group>"; };
+		1832D6D2243F8C9400FE1B26 /* EADoubleIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADoubleIndividual.swift; sourceTree = "<group>"; };
+		1832D6D7243F8EC400FE1B26 /* EASphereFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASphereFunction.swift; sourceTree = "<group>"; };
+		1832D6E2243FA0DD00FE1B26 /* EADistributionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADistributionProtocol.swift; sourceTree = "<group>"; };
+		1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAUniformDistribution.swift; sourceTree = "<group>"; };
+		187A58DB244A2DFD0034258D /* EARandomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARandomProtocol.swift; sourceTree = "<group>"; };
+		187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGASinglePointCrossover.swift; sourceTree = "<group>"; };
+		187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAKPointCrossover.swift; sourceTree = "<group>"; };
+		187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGATwoPointCrossover.swift; sourceTree = "<group>"; };
+		187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAUniformCrossover.swift; sourceTree = "<group>"; };
+		187A58F9244CB2490034258D /* EAGASwapMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGASwapMutation.swift; sourceTree = "<group>"; };
+		187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAFloatingNumericMutation.swift; sourceTree = "<group>"; };
+		1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAReplacementMutation.swift; sourceTree = "<group>"; };
+		1887B7C224608D5F00AAC050 /* EATextFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATextFunction.swift; sourceTree = "<group>"; };
+		1887B7C724608E8700AAC050 /* EACharacterIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EACharacterIndividual.swift; sourceTree = "<group>"; };
+		1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategy.swift; sourceTree = "<group>"; };
+		1898175524534BB700803ED5 /* EAGARouletteSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGARouletteSelection.swift; sourceTree = "<group>"; };
+		189FF34C244A244D007700D1 /* EAGARandomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGARandomSelection.swift; sourceTree = "<group>"; };
+		18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategyConfiguration.swift; sourceTree = "<group>"; };
+		18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategySelectionStrategyType.swift; sourceTree = "<group>"; };
+		18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithm.swift; sourceTree = "<group>"; };
+		18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmParameters.swift; sourceTree = "<group>"; };
+		18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmSelectionProtocol.swift; sourceTree = "<group>"; };
+		18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmCrossoverProtocol.swift; sourceTree = "<group>"; };
+		18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmMutationProtocol.swift; sourceTree = "<group>"; };
+		18DBD6D3244E094E00488C14 /* EATSPFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATSPFunction.swift; sourceTree = "<group>"; };
+		18DBD6D8244E0DB400488C14 /* EATSPCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATSPCity.swift; sourceTree = "<group>"; };
+		18DBD6DD244E0F2B00488C14 /* EAIntegerIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAIntegerIndividual.swift; sourceTree = "<group>"; };
+		18DBD6E7244E291000488C14 /* EAGATSPTwoPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGATSPTwoPointCrossover.swift; sourceTree = "<group>"; };
+		18DE235A245A00A800C5A927 /* EAParentsGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAParentsGroup.swift; sourceTree = "<group>"; };
+		18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGATournamentSelection.swift; sourceTree = "<group>"; };
+		18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAGATSPSinglePointCrossover.swift; sourceTree = "<group>"; };
+		18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EADistributionType.swift; sourceTree = "<group>"; };
+		18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmProtocol.swift; sourceTree = "<group>"; };
+		18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmResultProtocol.swift; sourceTree = "<group>"; };
+		18EFBD182441D40E00C5BD5F /* EAAlgorithmResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmResult.swift; sourceTree = "<group>"; };
+		18EFBD202441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmParametersProtocol.swift; sourceTree = "<group>"; };
+		18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmParametersOutput.swift; sourceTree = "<group>"; };
+		18EFBD2B2441DE3600C5BD5F /* EAHillClimbingParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAHillClimbingParameters.swift; sourceTree = "<group>"; };
+		18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmDelegateProtocol.swift; sourceTree = "<group>"; };
+		18EFBD3A2441F5C700C5BD5F /* EAAlgorithmParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmParameters.swift; sourceTree = "<group>"; };
+		18EFBD442442264B00C5BD5F /* EAAlgorithmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmDelegate.swift; sourceTree = "<group>"; };
+		18EFBD492442433700C5BD5F /* EARosenbrockFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARosenbrockFunction.swift; sourceTree = "<group>"; };
+		18EFBD4E2442437100C5BD5F /* EANormalDistribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EANormalDistribution.swift; sourceTree = "<group>"; };
+		18EFBD55244247C200C5BD5F /* MathGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGlobal.swift; sourceTree = "<group>"; };
+		18EFBD5A244249D200C5BD5F /* EARastriginFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARastriginFunction.swift; sourceTree = "<group>"; };
+		18EFBD5F24424C1100C5BD5F /* EAAckleyFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAckleyFunction.swift; sourceTree = "<group>"; };
+		18EFBD64244250F500C5BD5F /* EASchwefelFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASchwefelFunction.swift; sourceTree = "<group>"; };
+		18EFBD692442550200C5BD5F /* EAEasomFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEasomFunction.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		181980E2243E507000150AE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181980EA243E507000150AE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181980EE243E507000150AE6 /* EAKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181980FE243E50B300150AE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18198106243E50B300150AE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1819810A243E50B300150AE6 /* EAKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		181980B9243CF5FF00150AE6 = {
+			isa = PBXGroup;
+			children = (
+				18198118243E50C300150AE6 /* EAKit */,
+				18198102243E50B300150AE6 /* EAKit-iOS */,
+				1819810D243E50B400150AE6 /* EAKit-iOSTests */,
+				181980E6243E507000150AE6 /* EAKit-macOS */,
+				181980F1243E507000150AE6 /* EAKit-macOSTests */,
+				181980C4243CF5FF00150AE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		181980C4243CF5FF00150AE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				181980E5243E507000150AE6 /* EAKit.framework */,
+				181980ED243E507000150AE6 /* EAKit-macOSTests.xctest */,
+				18198101243E50B300150AE6 /* EAKit.framework */,
+				18198109243E50B300150AE6 /* EAKit-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		181980E6243E507000150AE6 /* EAKit-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				181980E7243E507000150AE6 /* EAKit_macOS.h */,
+				181980E8243E507000150AE6 /* Info.plist */,
+			);
+			path = "EAKit-macOS";
+			sourceTree = "<group>";
+		};
+		181980F1243E507000150AE6 /* EAKit-macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				181980F2243E507000150AE6 /* EAKit_macOSTests.swift */,
+				181980F4243E507000150AE6 /* Info.plist */,
+			);
+			path = "EAKit-macOSTests";
+			sourceTree = "<group>";
+		};
+		18198102243E50B300150AE6 /* EAKit-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				18198103243E50B300150AE6 /* EAKit_iOS.h */,
+				18198104243E50B300150AE6 /* Info.plist */,
+			);
+			path = "EAKit-iOS";
+			sourceTree = "<group>";
+		};
+		1819810D243E50B400150AE6 /* EAKit-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				1819810E243E50B400150AE6 /* EAKit_iOSTests.swift */,
+				18198110243E50B400150AE6 /* Info.plist */,
+			);
+			path = "EAKit-iOSTests";
+			sourceTree = "<group>";
+		};
+		18198118243E50C300150AE6 /* EAKit */ = {
+			isa = PBXGroup;
+			children = (
+				18EFBD542442479500C5BD5F /* Math */,
+				1819811B243E50EA00150AE6 /* Models */,
+				1819811A243E50E500150AE6 /* Algorithms */,
+			);
+			path = EAKit;
+			sourceTree = "<group>";
+		};
+		1819811A243E50E500150AE6 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				18EFBD2A2441DE1900C5BD5F /* Hill Climbing */,
+				18B1448E24477AF1007CE7E6 /* Genetic Algorithm */,
+				1887B7D42464787000AAC050 /* Evolutionary Strategy */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
+		1819811B243E50EA00150AE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				187A58D5244A2C4D0034258D /* Randoms */,
+				1832D6DC243F934000FE1B26 /* Distributions */,
+				1832D6B1243F7A3000FE1B26 /* Protocols */,
+				1832D6B2243F7A3C00FE1B26 /* General */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1832D6B1243F7A3000FE1B26 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */,
+				1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */,
+				1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */,
+				18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */,
+				18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */,
+				18EFBD202441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift */,
+				18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1832D6B2243F7A3C00FE1B26 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				1832D6B5243F7BDA00FE1B26 /* EAIndividual.swift */,
+				1832D6B7243F7C6700FE1B26 /* EAPopulation.swift */,
+				1832D6B3243F7A8D00FE1B26 /* EAFitnessFunction.swift */,
+				18EFBD182441D40E00C5BD5F /* EAAlgorithmResult.swift */,
+				1832D6D2243F8C9400FE1B26 /* EADoubleIndividual.swift */,
+				1887B7C724608E8700AAC050 /* EACharacterIndividual.swift */,
+				18DBD6DD244E0F2B00488C14 /* EAIntegerIndividual.swift */,
+				18EFBD442442264B00C5BD5F /* EAAlgorithmDelegate.swift */,
+				18EFBD3A2441F5C700C5BD5F /* EAAlgorithmParameters.swift */,
+				18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */,
+				18DE235A245A00A800C5A927 /* EAParentsGroup.swift */,
+				1832D6B9243F806D00FE1B26 /* Test Functions */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		1832D6B9243F806D00FE1B26 /* Test Functions */ = {
+			isa = PBXGroup;
+			children = (
+				1832D6BA243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift */,
+				1832D6D7243F8EC400FE1B26 /* EASphereFunction.swift */,
+				18EFBD492442433700C5BD5F /* EARosenbrockFunction.swift */,
+				18EFBD5A244249D200C5BD5F /* EARastriginFunction.swift */,
+				18EFBD5F24424C1100C5BD5F /* EAAckleyFunction.swift */,
+				18EFBD64244250F500C5BD5F /* EASchwefelFunction.swift */,
+				18EFBD692442550200C5BD5F /* EAEasomFunction.swift */,
+				18DBD6D3244E094E00488C14 /* EATSPFunction.swift */,
+				18DBD6D8244E0DB400488C14 /* EATSPCity.swift */,
+				18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */,
+				18DBD6E7244E291000488C14 /* EAGATSPTwoPointCrossover.swift */,
+				1887B7C224608D5F00AAC050 /* EATextFunction.swift */,
+			);
+			path = "Test Functions";
+			sourceTree = "<group>";
+		};
+		1832D6DC243F934000FE1B26 /* Distributions */ = {
+			isa = PBXGroup;
+			children = (
+				18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */,
+				1832D6E2243FA0DD00FE1B26 /* EADistributionProtocol.swift */,
+				18EFBD4E2442437100C5BD5F /* EANormalDistribution.swift */,
+				1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */,
+			);
+			path = Distributions;
+			sourceTree = "<group>";
+		};
+		187A58D5244A2C4D0034258D /* Randoms */ = {
+			isa = PBXGroup;
+			children = (
+				187A58DB244A2DFD0034258D /* EARandomProtocol.swift */,
+			);
+			path = Randoms;
+			sourceTree = "<group>";
+		};
+		1887B7D42464787000AAC050 /* Evolutionary Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */,
+				18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */,
+				1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */,
+			);
+			path = "Evolutionary Strategy";
+			sourceTree = "<group>";
+		};
+		189FF349244A22F0007700D1 /* Selections */ = {
+			isa = PBXGroup;
+			children = (
+				189FF34C244A244D007700D1 /* EAGARandomSelection.swift */,
+				1898175524534BB700803ED5 /* EAGARouletteSelection.swift */,
+				18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */,
+			);
+			path = Selections;
+			sourceTree = "<group>";
+		};
+		189FF34A244A2302007700D1 /* Crossovers */ = {
+			isa = PBXGroup;
+			children = (
+				187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */,
+				187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */,
+				187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */,
+				187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */,
+			);
+			path = Crossovers;
+			sourceTree = "<group>";
+		};
+		189FF34B244A239A007700D1 /* Mutations */ = {
+			isa = PBXGroup;
+			children = (
+				187A58F9244CB2490034258D /* EAGASwapMutation.swift */,
+				187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */,
+				1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */,
+			);
+			path = Mutations;
+			sourceTree = "<group>";
+		};
+		18B1448E24477AF1007CE7E6 /* Genetic Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */,
+				18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */,
+				18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */,
+				18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */,
+				18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */,
+				189FF349244A22F0007700D1 /* Selections */,
+				189FF34A244A2302007700D1 /* Crossovers */,
+				189FF34B244A239A007700D1 /* Mutations */,
+			);
+			path = "Genetic Algorithm";
+			sourceTree = "<group>";
+		};
+		18EFBD2A2441DE1900C5BD5F /* Hill Climbing */ = {
+			isa = PBXGroup;
+			children = (
+				18EFBD2B2441DE3600C5BD5F /* EAHillClimbingParameters.swift */,
+				1819811C243E527300150AE6 /* EAHillClimbing.swift */,
+			);
+			path = "Hill Climbing";
+			sourceTree = "<group>";
+		};
+		18EFBD542442479500C5BD5F /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				18EFBD55244247C200C5BD5F /* MathGlobal.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		181980E0243E507000150AE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181980F5243E507000150AE6 /* EAKit_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181980FC243E50B300150AE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18198111243E50B400150AE6 /* EAKit_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		181980E4243E507000150AE6 /* EAKit-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181980FA243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOS" */;
+			buildPhases = (
+				181980E0243E507000150AE6 /* Headers */,
+				181980E1243E507000150AE6 /* Sources */,
+				181980E2243E507000150AE6 /* Frameworks */,
+				181980E3243E507000150AE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EAKit-macOS";
+			productName = "EAKit-macOS";
+			productReference = 181980E5243E507000150AE6 /* EAKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		181980EC243E507000150AE6 /* EAKit-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181980FB243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOSTests" */;
+			buildPhases = (
+				181980E9243E507000150AE6 /* Sources */,
+				181980EA243E507000150AE6 /* Frameworks */,
+				181980EB243E507000150AE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181980F0243E507000150AE6 /* PBXTargetDependency */,
+			);
+			name = "EAKit-macOSTests";
+			productName = "EAKit-macOSTests";
+			productReference = 181980ED243E507000150AE6 /* EAKit-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18198100243E50B300150AE6 /* EAKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18198112243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOS" */;
+			buildPhases = (
+				181980FC243E50B300150AE6 /* Headers */,
+				181980FD243E50B300150AE6 /* Sources */,
+				181980FE243E50B300150AE6 /* Frameworks */,
+				181980FF243E50B300150AE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EAKit-iOS";
+			productName = "EAKit-iOS";
+			productReference = 18198101243E50B300150AE6 /* EAKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		18198108243E50B300150AE6 /* EAKit-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18198115243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOSTests" */;
+			buildPhases = (
+				18198105243E50B300150AE6 /* Sources */,
+				18198106243E50B300150AE6 /* Frameworks */,
+				18198107243E50B300150AE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1819810C243E50B300150AE6 /* PBXTargetDependency */,
+			);
+			name = "EAKit-iOSTests";
+			productName = "EAKit-iOSTests";
+			productReference = 18198109243E50B300150AE6 /* EAKit-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		181980BA243CF5FF00150AE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Libor Polehna";
+				TargetAttributes = {
+					181980E4243E507000150AE6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					181980EC243E507000150AE6 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					18198100243E50B300150AE6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					18198108243E50B300150AE6 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 181980BD243CF5FF00150AE6 /* Build configuration list for PBXProject "EAKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 181980B9243CF5FF00150AE6;
+			productRefGroup = 181980C4243CF5FF00150AE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18198100243E50B300150AE6 /* EAKit-iOS */,
+				18198108243E50B300150AE6 /* EAKit-iOSTests */,
+				181980E4243E507000150AE6 /* EAKit-macOS */,
+				181980EC243E507000150AE6 /* EAKit-macOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		181980E3243E507000150AE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181980EB243E507000150AE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181980FF243E50B300150AE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18198107243E50B300150AE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		181980E1243E507000150AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887B7C524608D5F00AAC050 /* EATextFunction.swift in Sources */,
+				18EFBD332441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
+				18EFBD4C2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
+				18A1B8CD2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
+				187A58F2244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				187A5901244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				1832D6DA243F8EC400FE1B26 /* EASphereFunction.swift in Sources */,
+				18EFBD1E2441D49A00C5BD5F /* EAAlgorithmResult.swift in Sources */,
+				1819811F243E527300150AE6 /* EAHillClimbing.swift in Sources */,
+				18A1B8D22469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				18EFBCEE244102DB00C5BD5F /* EADistributionType.swift in Sources */,
+				1832D6C6243F80BD00FE1B26 /* EAIndividual.swift in Sources */,
+				18EFBD2E2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
+				18B1449C244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				18EFBD6224424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
+				1832D6C0243F80B600FE1B26 /* EAFitnessFunction.swift in Sources */,
+				18DE239D245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				1832D6C3243F80B900FE1B26 /* EAPopulation.swift in Sources */,
+				18EFBD58244247C200C5BD5F /* MathGlobal.swift in Sources */,
+				189FF34F244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				1832D6D5243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
+				18B144A62447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				1832D6EA243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
+				18EFBD512442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				18EFBD472442277600C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				18EFBD1B2441D49600C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
+				18B14494244787A4007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
+				18EFBD1424419CE700C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
+				18EFBD5D244249D200C5BD5F /* EARastriginFunction.swift in Sources */,
+				1832D6C9243F80C000FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
+				18B14497244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
+				187A58E3244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				18EFBD67244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
+				187A58E8244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				18DE23A2245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
+				1887B7C0246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				1832D6BD243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
+				187A58ED244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				18EFBD282441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
+				1887B7CA24608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
+				1832D6CF243F80C800FE1B26 /* EAIndividualProtocol.swift in Sources */,
+				18EFBD3D2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
+				18EFBD232441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
+				18EFBD6C2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
+				187A58DE244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
+				18DBD6EA244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
+				18DBD6DB244E0DB400488C14 /* EATSPCity.swift in Sources */,
+				18B144A124478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
+				1832D6CD243F80C500FE1B26 /* EAPopulationProtocol.swift in Sources */,
+				18DBD6D6244E094E00488C14 /* EATSPFunction.swift in Sources */,
+				1898175824534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				1832D6E5243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
+				187A58FC244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				1887B7D8246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
+				18DBD6E0244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
+				18DE235D245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181980E9243E507000150AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EFBD1F2441D49B00C5BD5F /* EAAlgorithmResult.swift in Sources */,
+				1832D6DB243F8EC400FE1B26 /* EASphereFunction.swift in Sources */,
+				18EFBD5E244249D200C5BD5F /* EARastriginFunction.swift in Sources */,
+				1832D6CC243F80C500FE1B26 /* EAPopulationProtocol.swift in Sources */,
+				1832D6EB243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
+				18EFBD342441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
+				18A1B8CE2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
+				18B144A224478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
+				18DE239E245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				18EFBD6324424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
+				18A1B8D32469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				181980F3243E507000150AE6 /* EAKit_macOSTests.swift in Sources */,
+				18EFBD4D2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
+				1832D6C4243F80BA00FE1B26 /* EAPopulation.swift in Sources */,
+				18198120243E527300150AE6 /* EAHillClimbing.swift in Sources */,
+				18EFBD2F2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
+				1832D6C1243F80B700FE1B26 /* EAFitnessFunction.swift in Sources */,
+				1832D6E6243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
+				1887B7CB24608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
+				18EFBD522442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				1887B7D9246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
+				18EFBD1C2441D49600C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
+				18B1449D244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				187A58DF244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
+				1832D6CA243F80C100FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
+				18EFBD1524419CE800C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
+				18EFBD3E2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
+				1887B7C624608D5F00AAC050 /* EATextFunction.swift in Sources */,
+				1832D6D1243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */,
+				18B144A72447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				187A58E4244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				18EFBD59244247C200C5BD5F /* MathGlobal.swift in Sources */,
+				18EFBD6D2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
+				1832D6C7243F80BD00FE1B26 /* EAIndividual.swift in Sources */,
+				18EFBD292441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
+				18DBD6EB244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
+				18DBD6D7244E094E00488C14 /* EATSPFunction.swift in Sources */,
+				187A58E9244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				1832D6BE243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
+				1832D6D6243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
+				187A58FD244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				18DBD6E1244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
+				187A5902244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				18EFBCEF244102DB00C5BD5F /* EADistributionType.swift in Sources */,
+				18EFBD462442277600C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				187A58F3244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				18EFBD68244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
+				18EFBD242441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
+				1887B7C1246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				18B14495244787A4007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
+				18DE23A3245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
+				189FF350244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				187A58EE244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				18DBD6DC244E0DB400488C14 /* EATSPCity.swift in Sources */,
+				1898175924534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				18B14498244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
+				18DE235E245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181980FD243E50B300150AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887B7C324608D5F00AAC050 /* EATextFunction.swift in Sources */,
+				18EFBD312441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
+				18B1449024477B09007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
+				18A1B8CB2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
+				187A58F0244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				187A58FF244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				18EFBD4A2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
+				1832D6D8243F8EC400FE1B26 /* EASphereFunction.swift in Sources */,
+				18EFBD192441D40E00C5BD5F /* EAAlgorithmResult.swift in Sources */,
+				18A1B8D02469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				1832D6B0243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
+				18EFBCEC244102DB00C5BD5F /* EADistributionType.swift in Sources */,
+				1832D6B4243F7A8D00FE1B26 /* EAFitnessFunction.swift in Sources */,
+				18B1449A244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				18EFBD2C2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
+				18EFBD6024424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
+				18DE239B245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				1832D6AC243F78F400FE1B26 /* EAIndividualProtocol.swift in Sources */,
+				1832D6AE243F796C00FE1B26 /* EAPopulationProtocol.swift in Sources */,
+				189FF34D244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				18EFBD56244247C200C5BD5F /* MathGlobal.swift in Sources */,
+				18B144A42447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				1832D6D3243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
+				1832D6E8243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
+				18EFBD4F2442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				18EFBD452442264B00C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				18EFBD172441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
+				18EFBD1224419BDF00C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
+				18EFBD5B244249D200C5BD5F /* EARastriginFunction.swift in Sources */,
+				1832D6B6243F7BDA00FE1B26 /* EAIndividual.swift in Sources */,
+				18EFBD65244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
+				187A58E1244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				1832D6BB243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
+				187A58E6244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				18DE23A0245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
+				1887B7BE246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				18EFBD262441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
+				187A58EB244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				1819811D243E527300150AE6 /* EAHillClimbing.swift in Sources */,
+				1887B7C824608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
+				18EFBD3B2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
+				18EFBD212441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
+				18EFBD6A2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
+				1832D6B8243F7C6700FE1B26 /* EAPopulation.swift in Sources */,
+				187A58DC244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
+				18DBD6E8244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
+				18DBD6D9244E0DB400488C14 /* EATSPCity.swift in Sources */,
+				18B1449F24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
+				1832D6E3243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
+				18DBD6D4244E094E00488C14 /* EATSPFunction.swift in Sources */,
+				1898175624534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				18B144922447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
+				187A58FA244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				1887B7D6246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
+				18DBD6DE244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
+				18DE235B245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18198105243E50B300150AE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EFBD1D2441D49A00C5BD5F /* EAAlgorithmResult.swift in Sources */,
+				1832D6D9243F8EC400FE1B26 /* EASphereFunction.swift in Sources */,
+				18EFBD5C244249D200C5BD5F /* EARastriginFunction.swift in Sources */,
+				1832D6CB243F80C400FE1B26 /* EAPopulationProtocol.swift in Sources */,
+				1832D6E9243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
+				18EFBD322441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
+				18A1B8CC2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
+				18B144A024478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
+				18DE239C245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				18EFBD6124424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
+				18A1B8D12469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				1819810F243E50B400150AE6 /* EAKit_iOSTests.swift in Sources */,
+				18EFBD4B2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
+				1832D6C2243F80B900FE1B26 /* EAPopulation.swift in Sources */,
+				1819811E243E527300150AE6 /* EAHillClimbing.swift in Sources */,
+				18EFBD2D2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
+				1832D6BF243F80B600FE1B26 /* EAFitnessFunction.swift in Sources */,
+				1832D6E4243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
+				1887B7C924608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
+				18EFBD502442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				1887B7D7246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
+				18EFBD1A2441D49500C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
+				18B1449B244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				187A58DD244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
+				1832D6C8243F80C000FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
+				18EFBD1324419CE700C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
+				18EFBD3C2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
+				1887B7C424608D5F00AAC050 /* EATextFunction.swift in Sources */,
+				1832D6D0243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */,
+				18B144A52447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				187A58E2244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				18EFBD57244247C200C5BD5F /* MathGlobal.swift in Sources */,
+				18EFBD6B2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
+				1832D6C5243F80BC00FE1B26 /* EAIndividual.swift in Sources */,
+				18EFBD272441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
+				18DBD6E9244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
+				18DBD6D5244E094E00488C14 /* EATSPFunction.swift in Sources */,
+				187A58E7244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				1832D6BC243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
+				1832D6D4243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
+				187A58FB244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				18DBD6DF244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
+				187A5900244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				18EFBCED244102DB00C5BD5F /* EADistributionType.swift in Sources */,
+				18EFBD482442277700C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				187A58F1244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				18EFBD66244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
+				18EFBD222441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
+				1887B7BF246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				18B14493244787A3007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
+				18DE23A1245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
+				189FF34E244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				187A58EC244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				18DBD6DA244E0DB400488C14 /* EATSPCity.swift in Sources */,
+				1898175724534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				18B14496244787A7007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
+				18DE235C245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		181980F0243E507000150AE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181980E4243E507000150AE6 /* EAKit-macOS */;
+			targetProxy = 181980EF243E507000150AE6 /* PBXContainerItemProxy */;
+		};
+		1819810C243E50B300150AE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18198100243E50B300150AE6 /* EAKit-iOS */;
+			targetProxy = 1819810B243E50B300150AE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		181980D5243CF60000150AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		181980D6243CF60000150AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		181980F6243E507000150AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EAKit-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-macOS";
+				PRODUCT_NAME = EAKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		181980F7243E507000150AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EAKit-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-macOS";
+				PRODUCT_NAME = EAKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		181980F8243E507000150AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "EAKit-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		181980F9243E507000150AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "EAKit-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		18198113243E50B400150AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EAKit-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-iOS";
+				PRODUCT_NAME = EAKit;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18198114243E50B400150AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "EAKit-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-iOS";
+				PRODUCT_NAME = EAKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18198116243E50B400150AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "EAKit-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18198117243E50B400150AE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "EAKit-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		181980BD243CF5FF00150AE6 /* Build configuration list for PBXProject "EAKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181980D5243CF60000150AE6 /* Debug */,
+				181980D6243CF60000150AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181980FA243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181980F6243E507000150AE6 /* Debug */,
+				181980F7243E507000150AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181980FB243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181980F8243E507000150AE6 /* Debug */,
+				181980F9243E507000150AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18198112243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18198113243E50B400150AE6 /* Debug */,
+				18198114243E50B400150AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18198115243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18198116243E50B400150AE6 /* Debug */,
+				18198117243E50B400150AE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 181980BA243CF5FF00150AE6 /* Project object */;
+}
