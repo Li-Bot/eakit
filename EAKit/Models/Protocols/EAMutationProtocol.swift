@@ -9,12 +9,13 @@
 import Foundation
 
 
-public protocol EAGeneticAlgorithmMutationProtocol {
+public protocol EAMutationProtocol {
     
     associatedtype IndividualType: EAIndividualProtocol
     
     var threshold: Double { get }
     
-    func mutate(individual: IndividualType) -> IndividualType
+    mutating func prepare(context: EAContextProtocol?)
+    func mutate(individual: IndividualType, context: EAContextProtocol?) -> IndividualType
     
 }

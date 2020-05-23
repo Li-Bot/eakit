@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum EAEvolutionaryStrategySelectionStrategyType {
+public enum EAEvolutionaryStrategySelectionStrategyType {
     
     case plus
     case comma

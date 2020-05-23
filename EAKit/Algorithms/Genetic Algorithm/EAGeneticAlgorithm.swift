@@ -9,7 +9,7 @@
 import Foundation
 
 
-public final class EAGeneticAlgorithm<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EAGeneticAlgorithmSelectionProtocol, CrossoverType: EAGeneticAlgorithmCrossoverProtocol, MutationType: EAGeneticAlgorithmMutationProtocol>: EAAlgorithmProtocol where FitnessFunctionType.PopulationType == SelectionType.PopulationType, FitnessFunctionType.PopulationType.IndividualType == CrossoverType.IndividualType, FitnessFunctionType.PopulationType.IndividualType == MutationType.IndividualType {
+public final class EAGeneticAlgorithm<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, CrossoverType: EAGeneticAlgorithmCrossoverProtocol, MutationType: EAMutationProtocol>: EAAlgorithmProtocol where FitnessFunctionType.IndividualType == CrossoverType.IndividualType, FitnessFunctionType.IndividualType == MutationType.IndividualType, SelectionType.PopulationType == EAPopulation<FitnessFunctionType.IndividualType> {
     
     public let parameters: EAGeneticAlgorithmParameters<FitnessFunctionType, SelectionType, CrossoverType, MutationType>
     
@@ -17,29 +17,31 @@ public final class EAGeneticAlgorithm<FitnessFunctionType: EAFitnessFunctionProt
         self.parameters = parameters
     }
     
-    public func run() -> EAAlgorithmResult<FitnessFunctionType.PopulationType> {
-        var currentPopulation = parameters.fitnessFunction.getRandomPopulation(type: .uniform, size: parameters.populationCount)
+    public func run() -> EAAlgorithmResult<SelectionType.PopulationType> {
+        var currentPopulation = PopulationType.getRandomPopulation(type: .uniform, fitnessFunction: parameters.fitnessFunction, size: parameters.populationCount, context: nil)
         let result = EAAlgorithmResult(population: currentPopulation)
         let uniformUnifiedDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
         
-        for generationIndex in 0 ..< parameters.generationsCount {
-            let population = parameters.selection.createNewPopulation(population: currentPopulation) ?? FitnessFunctionType.PopulationType(individuals: [])
+        for generationIndex in 0 ..< parameters.generationsCount - 1 {
+            let population = parameters.selection.createNewPopulation(population: currentPopulation) ?? PopulationType(individuals: [])
             
+            parameters.selection.prepare(population: currentPopulation, context: nil)
+            parameters.mutation.prepare(context: nil)
             while population.size < currentPopulation.size {
-                let parents = parameters.selection.selectParents(population: currentPopulation)
-                var offsprings: [FitnessFunctionType.PopulationType.IndividualType]
+                let parents = parameters.selection.selectParents(population: currentPopulation, count: 2, context: nil)
+                var offsprings: [PopulationType.IndividualType]
                 let sizeDiff = Int(currentPopulation.size) - Int(population.size)
                 
                 if uniformUnifiedDistribution.random() <= parameters.crossover.threshold {
-                    offsprings = parameters.crossover.cross(first: parents.first, second: parents.second)
+                    offsprings = parameters.crossover.cross(first: parents[0], second: parents[1])
                 } else {
-                    offsprings = [parents.first, parents.second]
+                    offsprings = parents
                 }
                 
                 offsprings = Array(offsprings.prefix(upTo: min(max(sizeDiff, 0), offsprings.count)))
                 for index in 0 ..< offsprings.count {
                     if uniformUnifiedDistribution.random() <= parameters.mutation.threshold {
-                        offsprings[index] = parameters.mutation.mutate(individual: offsprings[index])
+                        offsprings[index] = parameters.mutation.mutate(individual: offsprings[index], context: nil)
                     }
                     offsprings[index].fitness = parameters.fitnessFunction.evaluate(individual: offsprings[index])
                     

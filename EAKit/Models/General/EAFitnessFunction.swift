@@ -9,24 +9,26 @@
 import Foundation
 
 
-public class EAFitnessFunction<PopulationType: EAPopulationProtocol>: EAFitnessFunctionProtocol {
+public class EAFitnessFunction<IndividualType: EAIndividualProtocol>: EAFitnessFunctionProtocol {
     
     public let dimension: Int
+    public var domainValidation: EAFitnessFunctionDomainValidationProtocol?
     
-    public init(dimension: Int) {
+    public init(dimension: Int, domainValidation: EAFitnessFunctionDomainValidationProtocol?) {
         self.dimension = dimension
+        self.domainValidation = domainValidation
     }
     
-    public func evaluate(individual: PopulationType.IndividualType) -> Double {
+    public func evaluate(individual: IndividualType) -> Double {
         fatalError("evaluation has not been implemented yet")
     }
     
-    public func getRandomIndividual(type: EADistributionType<PopulationType.IndividualType.DataType>) -> PopulationType.IndividualType {
+    public func getRandomIndividual(type: EADistributionType<IndividualType.DataType>) -> IndividualType {
         fatalError("getRandomIndividual has not been implemented yet")
     }
     
-    public func getRandomPopulation(type: EADistributionType<PopulationType.IndividualType.DataType>, size: UInt) -> PopulationType {
-        fatalError("getRandomPopulation has not been implemented yet")
+    public func validateDomains(individual: IndividualType) -> IndividualType {
+        fatalError("validateDomains has not been implemented yet")
     }
     
 }

@@ -9,22 +9,28 @@
 import Foundation
 
 
-public class EAArtificialLandscapeFunction: EAFitnessFunctionProtocol {
+public class EAArtificialLandscapeFunction<IndividualType: EADoubleIndividual>: EAFitnessFunctionProtocol {
     
     public let dimension: Int
+    public let domainValidation: EAFitnessFunctionDomainValidationProtocol?
     public let range: ClosedRange<Double>
     
-    public init(dimension: Int, range: ClosedRange<Double>) {
+    public var distance: Double {
+        range.upperBound - range.lowerBound
+    }
+    
+    public init(dimension: Int, domainValidation: EAFitnessFunctionDomainValidationProtocol?, range: ClosedRange<Double>) {
         self.dimension = dimension
+        self.domainValidation = domainValidation
         self.range = range
     }
     
-    public func evaluate(individual: EADoubleIndividual) -> Double {
+    public func evaluate(individual: IndividualType) -> Double {
         fatalError("evaluation has not been implemented yet")
     }
     
-    public func getRandomIndividual(type: EADistributionType<EADoubleIndividual.DataType>) -> EADoubleIndividual {
-        let individual = EADoubleIndividual()
+    public func getRandomIndividual(type: EADistributionType<IndividualType.DataType>) -> IndividualType {
+        let individual = IndividualType()
         
         var distribution: EAUniformDistribution<Double>!
         for dimension in 0 ..< dimension {
@@ -44,15 +50,8 @@ public class EAArtificialLandscapeFunction: EAFitnessFunctionProtocol {
         return individual
     }
     
-    public func getRandomPopulation(type: EADistributionType<EADoubleIndividual.DataType>, size: UInt) -> EAPopulation<EADoubleIndividual> {
-        let population = PopulationType(individuals: [getRandomIndividual(type: type)])
-        
-        for _ in 0 ..< (size - 1) {
-            let individual = getRandomIndividual(type: type)
-            population.append(individual: individual)
-        }
-        
-        return population
+    public func validateDomains(individual: IndividualType) -> IndividualType {
+        return domainValidation?.validate(individual: individual, fitnessFunction: self) ?? individual
     }
     
 }

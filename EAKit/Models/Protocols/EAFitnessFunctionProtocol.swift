@@ -11,12 +11,13 @@ import Foundation
 
 public protocol EAFitnessFunctionProtocol {
     
-    associatedtype PopulationType: EAPopulationProtocol
+    associatedtype IndividualType: EAIndividualProtocol
     
     var dimension: Int { get }
+    var domainValidation: EAFitnessFunctionDomainValidationProtocol? { get }
     
-    func evaluate(individual: PopulationType.IndividualType) -> Double
-    func getRandomIndividual(type: EADistributionType<PopulationType.IndividualType.DataType>) -> PopulationType.IndividualType
-    func getRandomPopulation(type: EADistributionType<PopulationType.IndividualType.DataType>, size: UInt) -> PopulationType
+    func evaluate(individual: IndividualType) -> Double
+    func getRandomIndividual(type: EADistributionType<IndividualType.DataType>) -> IndividualType
+    func validateDomains(individual: IndividualType) -> IndividualType
     
 }

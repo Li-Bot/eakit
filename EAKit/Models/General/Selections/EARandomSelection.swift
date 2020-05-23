@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct EAGARandomSelection<PopulationType: EAPopulationProtocol>: EAGeneticAlgorithmSelectionProtocol {
+public struct EARandomSelection<PopulationType: EAPopulationProtocol>: EASelectionProtocol {
     
     public let isElitism: Bool
     
@@ -24,13 +24,17 @@ public struct EAGARandomSelection<PopulationType: EAPopulationProtocol>: EAGenet
         return nil
     }
     
-    public func selectParents(population: PopulationType) -> EAParentsGroup<PopulationType.IndividualType> {
+    public mutating func prepare(population: PopulationType, context: EAContextProtocol?) {
+        
+    }
+    
+    public func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType] {
         let distribution = EAUniformDistribution(range: 0 ... population.individuals.count - 1)
         
-        let indexes = distribution.random(count: 2)
-        return EAParentsGroup(first: population.individuals[indexes[0]],
-                              second: population.individuals[indexes[1]]
-        )
+        let indexes = distribution.random(count: UInt(count))
+        return indexes.map { index -> PopulationType.IndividualType in
+            return population.individuals[index]
+        }
     }
     
 }

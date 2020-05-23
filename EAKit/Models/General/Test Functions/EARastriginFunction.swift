@@ -9,16 +9,16 @@
 import Foundation
 
 
-public final class EARastriginFunction: EAArtificialLandscapeFunction {
+public final class EARastriginFunction<IndividualType: EADoubleIndividual>: EAArtificialLandscapeFunction<IndividualType> {
     
     public let a: Double
     
     public init(dimension: Int = 2, a: Double = 10.0) {
         self.a = a
-        super.init(dimension: dimension, range: -5.12 ... 5.12)
+        super.init(dimension: dimension, domainValidation: nil, range: -5.12 ... 5.12)
     }
     
-    public override func evaluate(individual: EADoubleIndividual) -> Double {
+    public override func evaluate(individual: IndividualType) -> Double {
         let count = Double(individual.data.count)
         var fitness = a * count
         for x in individual.data {

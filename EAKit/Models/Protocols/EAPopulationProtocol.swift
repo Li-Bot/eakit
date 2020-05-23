@@ -13,6 +13,9 @@ public protocol EAPopulationProtocol {
     
     associatedtype IndividualType: EAIndividualProtocol
     
+    static func getRandomIndividual<FitnessFunction: EAFitnessFunctionProtocol>(type: EADistributionType<IndividualType.DataType>, fitnessFunction: FitnessFunction, context: EAContextProtocol?) -> IndividualType where FitnessFunction.IndividualType == IndividualType
+    static func getRandomPopulation<FitnessFunction: EAFitnessFunctionProtocol>(type: EADistributionType<IndividualType.DataType>, fitnessFunction: FitnessFunction, size: UInt, context: EAContextProtocol?) -> Self where FitnessFunction.IndividualType == IndividualType
+    
     init(individuals: [IndividualType])
     
     var bestIndividual: IndividualType? { get }

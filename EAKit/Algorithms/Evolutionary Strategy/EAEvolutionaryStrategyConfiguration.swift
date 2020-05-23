@@ -9,14 +9,14 @@
 import Foundation
 
 
-struct EAEvolutionaryStrategyConfiguration {
+public struct EAEvolutionaryStrategyConfiguration {
     
-    let µ: UInt
-    let ρ: UInt
-    let selectionStrategy: EAEvolutionaryStrategySelectionStrategyType
-    let λ: UInt
+    public let µ: UInt
+    public let ρ: UInt
+    public let selectionStrategy: EAEvolutionaryStrategySelectionStrategyType
+    public let λ: UInt
     
-    init(µ: UInt, ρ: UInt, selectionStrategy: EAEvolutionaryStrategySelectionStrategyType, λ: UInt) throws {
+    public init(µ: UInt, ρ: UInt, selectionStrategy: EAEvolutionaryStrategySelectionStrategyType, λ: UInt) throws {
         self.µ = µ
         self.ρ = ρ
         self.selectionStrategy = selectionStrategy

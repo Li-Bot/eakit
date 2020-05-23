@@ -9,7 +9,22 @@
 import Foundation
 
 
-public final class EAPopulation<IndividualType: EAIndividualProtocol>: EAPopulationProtocol {
+public class EAPopulation<IndividualType: EAIndividualProtocol>: EAPopulationProtocol {
+    
+    public class func getRandomIndividual<FitnessFunction>(type: EADistributionType<IndividualType.DataType>, fitnessFunction: FitnessFunction, context: EAContextProtocol?) -> IndividualType where FitnessFunction : EAFitnessFunctionProtocol, IndividualType == FitnessFunction.IndividualType {
+        return fitnessFunction.getRandomIndividual(type: type)
+    }
+    
+    public class func getRandomPopulation<FitnessFunction>(type: EADistributionType<IndividualType.DataType>, fitnessFunction: FitnessFunction, size: UInt, context: EAContextProtocol?) -> Self<IndividualType> where FitnessFunction : EAFitnessFunctionProtocol, IndividualType == FitnessFunction.IndividualType {
+        let population = Self(individuals: [getRandomIndividual(type: type, fitnessFunction: fitnessFunction, context: context)])
+        
+        for _ in 0 ..< (size - 1) {
+            let individual = getRandomIndividual(type: type, fitnessFunction: fitnessFunction, context: context)
+            population.append(individual: individual)
+        }
+        
+        return population
+    }
     
     public var bestIndividual: IndividualType? {
         if let index = bestIndividualIndex {

@@ -15,4 +15,8 @@ public struct EAAlgorithmParametersOutput {
     
     public let saveProgress: Bool
     
+    public init(saveProgress: Bool) {
+        self.saveProgress = saveProgress
+    }
+    
 }

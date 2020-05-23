@@ -9,55 +9,79 @@
 import Foundation
 
 
-public final class EAEvolutionaryStrategy<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EAGeneticAlgorithmSelectionProtocol, CrossoverType: EAGeneticAlgorithmCrossoverProtocol, MutationType: EAGeneticAlgorithmMutationProtocol>: EAAlgorithmProtocol where FitnessFunctionType.PopulationType == SelectionType.PopulationType, FitnessFunctionType.PopulationType.IndividualType == CrossoverType.IndividualType, FitnessFunctionType.PopulationType.IndividualType == MutationType.IndividualType {
+public final class EAEvolutionaryStrategy<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, RecombinationType: EAEvolutionaryStrategyRecombinationProtocol, MutationType: EAMutationProtocol>: EAAlgorithmProtocol where SelectionType.PopulationType == EAPopulation<FitnessFunctionType.IndividualType>, FitnessFunctionType.IndividualType == RecombinationType.IndividualType, FitnessFunctionType.IndividualType == MutationType.IndividualType {
     
-    public let parameters: EAGeneticAlgorithmParameters<FitnessFunctionType, SelectionType, CrossoverType, MutationType>
+    private typealias OffspringsTuple = (offsprings: [FitnessFunctionType.IndividualType], offspringsPointersHashes: Set<Int>)
     
-    public init(parameters: EAGeneticAlgorithmParameters<FitnessFunctionType, SelectionType, CrossoverType, MutationType>) {
+    public let parameters: EAEvolutionaryStrategyParameters<FitnessFunctionType, SelectionType, RecombinationType, MutationType>
+    
+    private let uniformUnifiedDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
+    
+    private var context: EAEvolutionaryStrategyContext?
+    
+    public init(parameters: EAEvolutionaryStrategyParameters<FitnessFunctionType, SelectionType, RecombinationType, MutationType>) {
         self.parameters = parameters
     }
     
-    public func run() -> EAAlgorithmResult<FitnessFunctionType.PopulationType> {
-        var currentPopulation = parameters.fitnessFunction.getRandomPopulation(type: .uniform, size: parameters.populationCount)
+    public func run() -> EAAlgorithmResult<SelectionType.PopulationType> {
+        var currentPopulation = PopulationType.getRandomPopulation(type: .uniform, fitnessFunction: parameters.fitnessFunction, size: parameters.populationCount, context: nil)
         let result = EAAlgorithmResult(population: currentPopulation)
-        let uniformUnifiedDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
         
-        for generationIndex in 0 ..< parameters.generationsCount {
-            let population = parameters.selection.createNewPopulation(population: currentPopulation) ?? FitnessFunctionType.PopulationType(individuals: [])
+        for generationIndex in 0 ..< parameters.generationsCount - 1 {
+            parameters.selection.prepare(population: currentPopulation, context: context)
+            parameters.mutation.prepare(context: context)
             
-            while population.size < currentPopulation.size {
-                let parents = parameters.selection.selectParents(population: currentPopulation)
-                var offsprings: [FitnessFunctionType.PopulationType.IndividualType]
-                let sizeDiff = Int(currentPopulation.size) - Int(population.size)
-                
-                if uniformUnifiedDistribution.random() <= parameters.crossover.threshold {
-                    offsprings = parameters.crossover.cross(first: parents.first, second: parents.second)
-                } else {
-                    offsprings = [parents.first, parents.second]
-                }
-                
-                offsprings = Array(offsprings.prefix(upTo: min(max(sizeDiff, 0), offsprings.count)))
-                for index in 0 ..< offsprings.count {
-                    if uniformUnifiedDistribution.random() <= parameters.mutation.threshold {
-                        offsprings[index] = parameters.mutation.mutate(individual: offsprings[index])
-                    }
-                    offsprings[index].fitness = parameters.fitnessFunction.evaluate(individual: offsprings[index])
-                    
-                    if parameters.isElitism && parents[index].fitness < offsprings[index].fitness {
-                        offsprings[index] = parents[index]
-                    }
-                }
-                
-                population.append(individuals: offsprings)
+            var offspringsTuple = getOffsprings(population: &currentPopulation)
+            
+            if parameters.configuration.selectionStrategy == .plus {
+                offspringsTuple.offsprings.append(contentsOf: currentPopulation.individuals)
             }
             
-            result.append(population: population, keepBestOnly: !parameters.output.saveProgress)
-            currentPopulation = population
+            offspringsTuple.offsprings = Array(offspringsTuple.offsprings.sorted(by: { firstIndividual, secondIndividual in
+                return firstIndividual.fitness < secondIndividual.fitness
+            }).prefix(upTo: Int(currentPopulation.size)))
             
-            parameters.delegate?.didFinishGeneration?(self, generationIndex, population)
+            context = getContext(offspringsTuple: &offspringsTuple)
+            currentPopulation = PopulationType(individuals: offspringsTuple.offsprings)
+            
+            result.append(population: currentPopulation, keepBestOnly: parameters.output.saveProgress)
+            parameters.delegate?.didFinishGeneration?(self, generationIndex, currentPopulation)
         }
         
         return result
+    }
+    
+    private func getOffsprings(population: inout PopulationType) -> OffspringsTuple {
+        var offsprings = [PopulationType.IndividualType]()
+        var offspringsPointersHashes = Set<Int>()
+        
+        for _ in 0 ..< parameters.configuration.λ {
+            let parents = parameters.selection.selectParents(population: population, count: Int(parameters.configuration.ρ), context: context)
+            var offspring = parameters.recombination.recombine(individuals: parents)
+            
+            if uniformUnifiedDistribution.random() <= parameters.mutation.threshold {
+                offspring = parameters.mutation.mutate(individual: offspring, context: context)
+            }
+            offspring.fitness = parameters.fitnessFunction.evaluate(individual: offspring)
+            
+            offsprings.append(offspring)
+            let id = Unmanaged.passUnretained(offspring as AnyObject).toOpaque()
+            offspringsPointersHashes.insert(id.hashValue)
+        }
+        
+        return (offsprings, offspringsPointersHashes)
+    }
+    
+    private func getContext(offspringsTuple: inout OffspringsTuple) -> EAEvolutionaryStrategyContext {
+        var betterCount = 0
+        for offspring in offspringsTuple.offsprings {
+            let id = Unmanaged.passUnretained(offspring as AnyObject).toOpaque()
+            if offspringsTuple.offspringsPointersHashes.contains(id.hashValue) {
+                betterCount += 1
+            }
+        }
+        let betterRatio = Double(betterCount) / Double(offspringsTuple.offsprings.count)
+        return EAEvolutionaryStrategyContext(betterRatio: betterRatio)
     }
     
 }

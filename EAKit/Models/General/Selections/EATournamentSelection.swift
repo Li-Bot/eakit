@@ -9,16 +9,14 @@
 import Foundation
 
 
-public struct EAGATournamentSelection<PopulationType: EAPopulationProtocol>: EAGeneticAlgorithmSelectionProtocol {
+public struct EATournamentSelection<PopulationType: EAPopulationProtocol>: EASelectionProtocol {
     
     public let isElitism: Bool
     public let size: UInt
-    public let k: Int
     
     public init(isElitism: Bool = false, tournamentSize: UInt) {
         self.isElitism = isElitism
         self.size = tournamentSize
-        self.k = 2
     }
     
     public func createNewPopulation(population: PopulationType) -> PopulationType? {
@@ -28,10 +26,14 @@ public struct EAGATournamentSelection<PopulationType: EAPopulationProtocol>: EAG
         return nil
     }
     
-    public func selectParents(population: PopulationType) -> EAParentsGroup<PopulationType.IndividualType> {
+    public func prepare(population: PopulationType, context: EAContextProtocol?) {
+        
+    }
+    
+    public func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType] {
         var parents = [PopulationType.IndividualType]()
         let uniformDistribution = EAUniformDistribution(range: 0 ... Int(population.size) - 1)
-        for _ in 0 ..< k {
+        for _ in 0 ..< count {
             var bestIndividual: PopulationType.IndividualType?
             for _ in 0 ..< size {
                 let randomIndividual = population.individuals[uniformDistribution.random()]
@@ -42,7 +44,7 @@ public struct EAGATournamentSelection<PopulationType: EAPopulationProtocol>: EAG
             parents.append(bestIndividual!)
         }
         
-        return EAParentsGroup(first: parents[0], second: parents[1])
+        return parents
     }
     
 }

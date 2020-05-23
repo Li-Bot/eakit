@@ -15,7 +15,7 @@ public class EAIndividual<DataType>: EAIndividualProtocol {
     public var data: [DataType]
     
     public required init() {
-        fitness = 0.0
+        fitness = Double.greatestFiniteMagnitude
         data = []
     }
     

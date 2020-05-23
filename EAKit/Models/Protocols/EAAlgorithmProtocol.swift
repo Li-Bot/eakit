@@ -12,7 +12,8 @@ import Foundation
 public protocol EAAlgorithmProtocol {
     
     associatedtype FitnessFunctionType: EAFitnessFunctionProtocol
+    associatedtype PopulationType: EAPopulationProtocol 
     
-    func run() -> EAAlgorithmResult<FitnessFunctionType.PopulationType>
+    func run() -> EAAlgorithmResult<PopulationType>
     
 }

@@ -17,12 +17,12 @@ public final class EAHillClimbing<FitnessFunctionType: EAFitnessFunctionProtocol
         self.parameters = parameters
     }
     
-    public func run() -> EAAlgorithmResult<FitnessFunctionType.PopulationType> {
-        var currentIndividual = parameters.fitnessFunction.getRandomIndividual(type: .uniform)
-        let result = EAAlgorithmResult(population: FitnessFunctionType.PopulationType(individuals: [currentIndividual]))
+    public func run() -> EAAlgorithmResult<EAPopulation<FitnessFunctionType.IndividualType>> {
+        var currentIndividual = PopulationType.getRandomIndividual(type: .uniform, fitnessFunction: parameters.fitnessFunction, context: nil)
+        let result = EAAlgorithmResult(population: PopulationType(individuals: [currentIndividual]))
         
-        for iterationIndex in 0 ..< parameters.generationsCount {
-            let population = parameters.fitnessFunction.getRandomPopulation(type: .normal(μ: currentIndividual.data, σ: parameters.deviation), size: parameters.populationCount)
+        for iterationIndex in 0 ..< parameters.generationsCount - 1 {
+            let population = PopulationType.getRandomPopulation(type: .normal(μ: currentIndividual.data, σ: parameters.deviation), fitnessFunction: parameters.fitnessFunction, size: parameters.populationCount, context: nil)
             
             result.append(population: population, keepBestOnly: !parameters.output.saveProgress)
             currentIndividual = population.bestIndividual!

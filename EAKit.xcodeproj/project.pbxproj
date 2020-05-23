@@ -61,6 +61,58 @@
 		1832D6E9243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */; };
 		1832D6EA243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */; };
 		1832D6EB243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */; };
+		1846781A246D8BED00ADF814 /* EAContextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467819246D8BED00ADF814 /* EAContextProtocol.swift */; };
+		1846781B246D8BED00ADF814 /* EAContextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467819246D8BED00ADF814 /* EAContextProtocol.swift */; };
+		1846781C246D8BED00ADF814 /* EAContextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467819246D8BED00ADF814 /* EAContextProtocol.swift */; };
+		1846781D246D8BED00ADF814 /* EAContextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467819246D8BED00ADF814 /* EAContextProtocol.swift */; };
+		18467824246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467823246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift */; };
+		18467825246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467823246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift */; };
+		18467826246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467823246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift */; };
+		18467827246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467823246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift */; };
+		18467829246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467828246D954D00ADF814 /* EAESIntermadiateRecombination.swift */; };
+		1846782A246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467828246D954D00ADF814 /* EAESIntermadiateRecombination.swift */; };
+		1846782B246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467828246D954D00ADF814 /* EAESIntermadiateRecombination.swift */; };
+		1846782C246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467828246D954D00ADF814 /* EAESIntermadiateRecombination.swift */; };
+		1846782E246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846782D246D974700ADF814 /* EAESDiscreteRecombination.swift */; };
+		1846782F246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846782D246D974700ADF814 /* EAESDiscreteRecombination.swift */; };
+		18467830246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846782D246D974700ADF814 /* EAESDiscreteRecombination.swift */; };
+		18467831246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846782D246D974700ADF814 /* EAESDiscreteRecombination.swift */; };
+		18467833246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467832246D9EA100ADF814 /* EANormalDistributionMutation.swift */; };
+		18467834246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467832246D9EA100ADF814 /* EANormalDistributionMutation.swift */; };
+		18467835246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467832246D9EA100ADF814 /* EANormalDistributionMutation.swift */; };
+		18467836246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467832246D9EA100ADF814 /* EANormalDistributionMutation.swift */; };
+		18467838246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467837246DB7B400ADF814 /* EAESNormalMutation.swift */; };
+		18467839246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467837246DB7B400ADF814 /* EAESNormalMutation.swift */; };
+		1846783A246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467837246DB7B400ADF814 /* EAESNormalMutation.swift */; };
+		1846783B246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467837246DB7B400ADF814 /* EAESNormalMutation.swift */; };
+		1876F3F0247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */; };
+		1876F3F1247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */; };
+		1876F3F2247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */; };
+		1876F3F3247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */; };
+		1876F3F524718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F424718DD9003A7B41 /* EAParticleSwarmLearning.swift */; };
+		1876F3F624718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F424718DD9003A7B41 /* EAParticleSwarmLearning.swift */; };
+		1876F3F724718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F424718DD9003A7B41 /* EAParticleSwarmLearning.swift */; };
+		1876F3F824718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F424718DD9003A7B41 /* EAParticleSwarmLearning.swift */; };
+		1876F3FA24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F924718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift */; };
+		1876F3FB24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F924718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift */; };
+		1876F3FC24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F924718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift */; };
+		1876F3FD24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3F924718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift */; };
+		1876F3FF24719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3FE24719031003A7B41 /* EAParticleSwarmVelocity.swift */; };
+		1876F40024719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3FE24719031003A7B41 /* EAParticleSwarmVelocity.swift */; };
+		1876F40124719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3FE24719031003A7B41 /* EAParticleSwarmVelocity.swift */; };
+		1876F40224719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F3FE24719031003A7B41 /* EAParticleSwarmVelocity.swift */; };
+		1876F40424719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */; };
+		1876F40524719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */; };
+		1876F40624719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */; };
+		1876F40724719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */; };
+		187A2F542472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */; };
+		187A2F5A2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */; };
+		187A2F5B2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */; };
+		187A2F5C2472DD2A00AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */; };
+		187A2F5F2472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
+		187A2F602472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
+		187A2F612472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
+		187A2F622472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
 		187A58DC244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
 		187A58DD244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
 		187A58DE244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
@@ -81,18 +133,18 @@
 		187A58F1244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
 		187A58F2244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
 		187A58F3244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
-		187A58FA244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
-		187A58FB244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
-		187A58FC244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
-		187A58FD244CB2490034258D /* EAGASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EAGASwapMutation.swift */; };
-		187A58FF244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
-		187A5900244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
-		187A5901244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
-		187A5902244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */; };
-		1887B7BE246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
-		1887B7BF246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
-		1887B7C0246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
-		1887B7C1246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */; };
+		187A58FA244CB2490034258D /* EASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EASwapMutation.swift */; };
+		187A58FB244CB2490034258D /* EASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EASwapMutation.swift */; };
+		187A58FC244CB2490034258D /* EASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EASwapMutation.swift */; };
+		187A58FD244CB2490034258D /* EASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EASwapMutation.swift */; };
+		187A58FF244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAFloatingNumericMutation.swift */; };
+		187A5900244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAFloatingNumericMutation.swift */; };
+		187A5901244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAFloatingNumericMutation.swift */; };
+		187A5902244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58FE244CB97A0034258D /* EAFloatingNumericMutation.swift */; };
+		1887B7BE246089F200AAC050 /* EAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAReplacementMutation.swift */; };
+		1887B7BF246089F200AAC050 /* EAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAReplacementMutation.swift */; };
+		1887B7C0246089F200AAC050 /* EAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAReplacementMutation.swift */; };
+		1887B7C1246089F200AAC050 /* EAReplacementMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7BD246089F200AAC050 /* EAReplacementMutation.swift */; };
 		1887B7C324608D5F00AAC050 /* EATextFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C224608D5F00AAC050 /* EATextFunction.swift */; };
 		1887B7C424608D5F00AAC050 /* EATextFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C224608D5F00AAC050 /* EATextFunction.swift */; };
 		1887B7C524608D5F00AAC050 /* EATextFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7C224608D5F00AAC050 /* EATextFunction.swift */; };
@@ -105,14 +157,18 @@
 		1887B7D7246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */; };
 		1887B7D8246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */; };
 		1887B7D9246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */; };
-		1898175624534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
-		1898175724534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
-		1898175824534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
-		1898175924534BB700803ED5 /* EAGARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EAGARouletteSelection.swift */; };
-		189FF34D244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
-		189FF34E244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
-		189FF34F244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
-		189FF350244A244D007700D1 /* EAGARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EAGARandomSelection.swift */; };
+		1898175624534BB700803ED5 /* EARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EARouletteSelection.swift */; };
+		1898175724534BB700803ED5 /* EARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EARouletteSelection.swift */; };
+		1898175824534BB700803ED5 /* EARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EARouletteSelection.swift */; };
+		1898175924534BB700803ED5 /* EARouletteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898175524534BB700803ED5 /* EARouletteSelection.swift */; };
+		189FF34D244A244D007700D1 /* EARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EARandomSelection.swift */; };
+		189FF34E244A244D007700D1 /* EARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EARandomSelection.swift */; };
+		189FF34F244A244D007700D1 /* EARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EARandomSelection.swift */; };
+		189FF350244A244D007700D1 /* EARandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189FF34C244A244D007700D1 /* EARandomSelection.swift */; };
+		18A06F1D24759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06F1C24759C4E00B02AA7 /* EAParticleSwarmContext.swift */; };
+		18A06F1E24759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06F1C24759C4E00B02AA7 /* EAParticleSwarmContext.swift */; };
+		18A06F1F24759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06F1C24759C4E00B02AA7 /* EAParticleSwarmContext.swift */; };
+		18A06F2024759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06F1C24759C4E00B02AA7 /* EAParticleSwarmContext.swift */; };
 		18A1B8CB2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */; };
 		18A1B8CC2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */; };
 		18A1B8CD2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */; };
@@ -121,6 +177,10 @@
 		18A1B8D12469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */; };
 		18A1B8D22469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */; };
 		18A1B8D32469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */; };
+		18A4577A2478424B00EB666E /* EAPythonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A457792478424B00EB666E /* EAPythonResult.swift */; };
+		18A4577B2478424B00EB666E /* EAPythonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A457792478424B00EB666E /* EAPythonResult.swift */; };
+		18A4577C2478424B00EB666E /* EAPythonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A457792478424B00EB666E /* EAPythonResult.swift */; };
+		18A4577D2478424B00EB666E /* EAPythonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A457792478424B00EB666E /* EAPythonResult.swift */; };
 		18B1449024477B09007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
 		18B144922447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
 		18B14493244787A3007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
@@ -129,18 +189,26 @@
 		18B14496244787A7007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
 		18B14497244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
 		18B14498244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
-		18B1449A244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
-		18B1449B244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
-		18B1449C244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
-		18B1449D244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */; };
+		18B1449A244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EASelectionProtocol.swift */; };
+		18B1449B244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EASelectionProtocol.swift */; };
+		18B1449C244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EASelectionProtocol.swift */; };
+		18B1449D244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B14499244787FB007CE7E6 /* EASelectionProtocol.swift */; };
 		18B1449F24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
 		18B144A024478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
 		18B144A124478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
 		18B144A224478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */; };
-		18B144A42447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
-		18B144A52447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
-		18B144A62447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
-		18B144A72447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */; };
+		18B144A42447888F007CE7E6 /* EAMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */; };
+		18B144A52447888F007CE7E6 /* EAMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */; };
+		18B144A62447888F007CE7E6 /* EAMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */; };
+		18B144A72447888F007CE7E6 /* EAMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */; };
+		18D76829247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */; };
+		18D7682A247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */; };
+		18D7682B247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */; };
+		18D7682C247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */; };
+		18D7682E2471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */; };
+		18D7682F2471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */; };
+		18D768302471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */; };
+		18D768312471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */; };
 		18DBD6D4244E094E00488C14 /* EATSPFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D3244E094E00488C14 /* EATSPFunction.swift */; };
 		18DBD6D5244E094E00488C14 /* EATSPFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D3244E094E00488C14 /* EATSPFunction.swift */; };
 		18DBD6D6244E094E00488C14 /* EATSPFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD6D3244E094E00488C14 /* EATSPFunction.swift */; };
@@ -161,14 +229,22 @@
 		18DE235C245A00A800C5A927 /* EAParentsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE235A245A00A800C5A927 /* EAParentsGroup.swift */; };
 		18DE235D245A00A800C5A927 /* EAParentsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE235A245A00A800C5A927 /* EAParentsGroup.swift */; };
 		18DE235E245A00A800C5A927 /* EAParentsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE235A245A00A800C5A927 /* EAParentsGroup.swift */; };
-		18DE239B245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
-		18DE239C245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
-		18DE239D245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
-		18DE239E245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */; };
+		18DE239B245DE24100C5A927 /* EATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EATournamentSelection.swift */; };
+		18DE239C245DE24100C5A927 /* EATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EATournamentSelection.swift */; };
+		18DE239D245DE24100C5A927 /* EATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EATournamentSelection.swift */; };
+		18DE239E245DE24100C5A927 /* EATournamentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239A245DE24100C5A927 /* EATournamentSelection.swift */; };
 		18DE23A0245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
 		18DE23A1245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
 		18DE23A2245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
 		18DE23A3245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */; };
+		18E90BB7246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB6246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift */; };
+		18E90BB9246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB8246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift */; };
+		18E90BBA246B01A3005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB8246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift */; };
+		18E90BBB246B01A3005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB8246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift */; };
+		18E90BBC246B01A4005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB8246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift */; };
+		18E90BBD246B0312005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB6246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift */; };
+		18E90BBE246B0312005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB6246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift */; };
+		18E90BBF246B0313005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E90BB6246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift */; };
 		18EFBCEC244102DB00C5BD5F /* EADistributionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */; };
 		18EFBCED244102DB00C5BD5F /* EADistributionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */; };
 		18EFBCEE244102DB00C5BD5F /* EADistributionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */; };
@@ -281,33 +357,52 @@
 		1832D6D7243F8EC400FE1B26 /* EASphereFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASphereFunction.swift; sourceTree = "<group>"; };
 		1832D6E2243FA0DD00FE1B26 /* EADistributionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADistributionProtocol.swift; sourceTree = "<group>"; };
 		1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAUniformDistribution.swift; sourceTree = "<group>"; };
+		18467819246D8BED00ADF814 /* EAContextProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAContextProtocol.swift; sourceTree = "<group>"; };
+		18467823246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategyContext.swift; sourceTree = "<group>"; };
+		18467828246D954D00ADF814 /* EAESIntermadiateRecombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAESIntermadiateRecombination.swift; sourceTree = "<group>"; };
+		1846782D246D974700ADF814 /* EAESDiscreteRecombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAESDiscreteRecombination.swift; sourceTree = "<group>"; };
+		18467832246D9EA100ADF814 /* EANormalDistributionMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EANormalDistributionMutation.swift; sourceTree = "<group>"; };
+		18467837246DB7B400ADF814 /* EAESNormalMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAESNormalMutation.swift; sourceTree = "<group>"; };
+		1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmIndividual.swift; sourceTree = "<group>"; };
+		1876F3F424718DD9003A7B41 /* EAParticleSwarmLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmLearning.swift; sourceTree = "<group>"; };
+		1876F3F924718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmInertiaWeight.swift; sourceTree = "<group>"; };
+		1876F3FE24719031003A7B41 /* EAParticleSwarmVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmVelocity.swift; sourceTree = "<group>"; };
+		1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmPopulation.swift; sourceTree = "<group>"; };
+		187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFitnessFunctionDomainValidationProtocol.swift; sourceTree = "<group>"; };
+		187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEmptyDomainValidation.swift; sourceTree = "<group>"; };
 		187A58DB244A2DFD0034258D /* EARandomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARandomProtocol.swift; sourceTree = "<group>"; };
 		187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGASinglePointCrossover.swift; sourceTree = "<group>"; };
 		187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAKPointCrossover.swift; sourceTree = "<group>"; };
 		187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGATwoPointCrossover.swift; sourceTree = "<group>"; };
 		187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAUniformCrossover.swift; sourceTree = "<group>"; };
-		187A58F9244CB2490034258D /* EAGASwapMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGASwapMutation.swift; sourceTree = "<group>"; };
-		187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAFloatingNumericMutation.swift; sourceTree = "<group>"; };
-		1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAReplacementMutation.swift; sourceTree = "<group>"; };
+		187A58F9244CB2490034258D /* EASwapMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASwapMutation.swift; sourceTree = "<group>"; };
+		187A58FE244CB97A0034258D /* EAFloatingNumericMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFloatingNumericMutation.swift; sourceTree = "<group>"; };
+		1887B7BD246089F200AAC050 /* EAReplacementMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAReplacementMutation.swift; sourceTree = "<group>"; };
 		1887B7C224608D5F00AAC050 /* EATextFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATextFunction.swift; sourceTree = "<group>"; };
 		1887B7C724608E8700AAC050 /* EACharacterIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EACharacterIndividual.swift; sourceTree = "<group>"; };
 		1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategy.swift; sourceTree = "<group>"; };
-		1898175524534BB700803ED5 /* EAGARouletteSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGARouletteSelection.swift; sourceTree = "<group>"; };
-		189FF34C244A244D007700D1 /* EAGARandomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGARandomSelection.swift; sourceTree = "<group>"; };
+		1898175524534BB700803ED5 /* EARouletteSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARouletteSelection.swift; sourceTree = "<group>"; };
+		189FF34C244A244D007700D1 /* EARandomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARandomSelection.swift; sourceTree = "<group>"; };
+		18A06F1C24759C4E00B02AA7 /* EAParticleSwarmContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmContext.swift; sourceTree = "<group>"; };
 		18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategyConfiguration.swift; sourceTree = "<group>"; };
 		18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategySelectionStrategyType.swift; sourceTree = "<group>"; };
+		18A457792478424B00EB666E /* EAPythonResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAPythonResult.swift; sourceTree = "<group>"; };
 		18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithm.swift; sourceTree = "<group>"; };
 		18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmParameters.swift; sourceTree = "<group>"; };
-		18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmSelectionProtocol.swift; sourceTree = "<group>"; };
+		18B14499244787FB007CE7E6 /* EASelectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASelectionProtocol.swift; sourceTree = "<group>"; };
 		18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmCrossoverProtocol.swift; sourceTree = "<group>"; };
-		18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmMutationProtocol.swift; sourceTree = "<group>"; };
+		18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAMutationProtocol.swift; sourceTree = "<group>"; };
+		18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarm.swift; sourceTree = "<group>"; };
+		18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmParameters.swift; sourceTree = "<group>"; };
 		18DBD6D3244E094E00488C14 /* EATSPFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATSPFunction.swift; sourceTree = "<group>"; };
 		18DBD6D8244E0DB400488C14 /* EATSPCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATSPCity.swift; sourceTree = "<group>"; };
 		18DBD6DD244E0F2B00488C14 /* EAIntegerIndividual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAIntegerIndividual.swift; sourceTree = "<group>"; };
 		18DBD6E7244E291000488C14 /* EAGATSPTwoPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGATSPTwoPointCrossover.swift; sourceTree = "<group>"; };
 		18DE235A245A00A800C5A927 /* EAParentsGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAParentsGroup.swift; sourceTree = "<group>"; };
-		18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGATournamentSelection.swift; sourceTree = "<group>"; };
+		18DE239A245DE24100C5A927 /* EATournamentSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATournamentSelection.swift; sourceTree = "<group>"; };
 		18DE239F245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAGATSPSinglePointCrossover.swift; sourceTree = "<group>"; };
+		18E90BB6246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategyParameters.swift; sourceTree = "<group>"; };
+		18E90BB8246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategyRecombinationProtocol.swift; sourceTree = "<group>"; };
 		18EFBCEB244102DB00C5BD5F /* EADistributionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EADistributionType.swift; sourceTree = "<group>"; };
 		18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmProtocol.swift; sourceTree = "<group>"; };
 		18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAAlgorithmResultProtocol.swift; sourceTree = "<group>"; };
@@ -436,6 +531,7 @@
 				18EFBD2A2441DE1900C5BD5F /* Hill Climbing */,
 				18B1448E24477AF1007CE7E6 /* Genetic Algorithm */,
 				1887B7D42464787000AAC050 /* Evolutionary Strategy */,
+				18D768272471579000A9CBBF /* Particle Swarn */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -457,10 +553,14 @@
 				1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */,
 				1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */,
 				1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */,
+				187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */,
 				18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */,
 				18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */,
 				18EFBD202441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift */,
 				18EFBD162441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift */,
+				18B14499244787FB007CE7E6 /* EASelectionProtocol.swift */,
+				18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */,
+				18467819246D8BED00ADF814 /* EAContextProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -479,6 +579,10 @@
 				18EFBD3A2441F5C700C5BD5F /* EAAlgorithmParameters.swift */,
 				18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */,
 				18DE235A245A00A800C5A927 /* EAParentsGroup.swift */,
+				18A457792478424B00EB666E /* EAPythonResult.swift */,
+				187A2F552472DC2800AD684C /* Fitness Function Domain Validations */,
+				18467868246F005600ADF814 /* Selections */,
+				18467869246F006F00ADF814 /* Mutations */,
 				1832D6B9243F806D00FE1B26 /* Test Functions */,
 			);
 			path = General;
@@ -514,6 +618,43 @@
 			path = Distributions;
 			sourceTree = "<group>";
 		};
+		18467868246F005600ADF814 /* Selections */ = {
+			isa = PBXGroup;
+			children = (
+				189FF34C244A244D007700D1 /* EARandomSelection.swift */,
+				1898175524534BB700803ED5 /* EARouletteSelection.swift */,
+				18DE239A245DE24100C5A927 /* EATournamentSelection.swift */,
+			);
+			path = Selections;
+			sourceTree = "<group>";
+		};
+		18467869246F006F00ADF814 /* Mutations */ = {
+			isa = PBXGroup;
+			children = (
+				187A58F9244CB2490034258D /* EASwapMutation.swift */,
+				187A58FE244CB97A0034258D /* EAFloatingNumericMutation.swift */,
+				1887B7BD246089F200AAC050 /* EAReplacementMutation.swift */,
+				18467832246D9EA100ADF814 /* EANormalDistributionMutation.swift */,
+			);
+			path = Mutations;
+			sourceTree = "<group>";
+		};
+		1846786A246F012700ADF814 /* Mutations */ = {
+			isa = PBXGroup;
+			children = (
+				18467837246DB7B400ADF814 /* EAESNormalMutation.swift */,
+			);
+			path = Mutations;
+			sourceTree = "<group>";
+		};
+		187A2F552472DC2800AD684C /* Fitness Function Domain Validations */ = {
+			isa = PBXGroup;
+			children = (
+				187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */,
+			);
+			path = "Fitness Function Domain Validations";
+			sourceTree = "<group>";
+		};
 		187A58D5244A2C4D0034258D /* Randoms */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,19 +668,14 @@
 			children = (
 				18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */,
 				18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */,
+				18E90BB6246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift */,
+				18E90BB8246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift */,
+				18467823246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift */,
 				1887B7D5246478DB00AAC050 /* EAEvolutionaryStrategy.swift */,
+				1846786A246F012700ADF814 /* Mutations */,
+				18E90BC0246B03F1005937A0 /* Recombinations */,
 			);
 			path = "Evolutionary Strategy";
-			sourceTree = "<group>";
-		};
-		189FF349244A22F0007700D1 /* Selections */ = {
-			isa = PBXGroup;
-			children = (
-				189FF34C244A244D007700D1 /* EAGARandomSelection.swift */,
-				1898175524534BB700803ED5 /* EAGARouletteSelection.swift */,
-				18DE239A245DE24100C5A927 /* EAGATournamentSelection.swift */,
-			);
-			path = Selections;
 			sourceTree = "<group>";
 		};
 		189FF34A244A2302007700D1 /* Crossovers */ = {
@@ -553,29 +689,39 @@
 			path = Crossovers;
 			sourceTree = "<group>";
 		};
-		189FF34B244A239A007700D1 /* Mutations */ = {
-			isa = PBXGroup;
-			children = (
-				187A58F9244CB2490034258D /* EAGASwapMutation.swift */,
-				187A58FE244CB97A0034258D /* EAGAFloatingNumericMutation.swift */,
-				1887B7BD246089F200AAC050 /* EAGAReplacementMutation.swift */,
-			);
-			path = Mutations;
-			sourceTree = "<group>";
-		};
 		18B1448E24477AF1007CE7E6 /* Genetic Algorithm */ = {
 			isa = PBXGroup;
 			children = (
 				18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */,
-				18B14499244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift */,
 				18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */,
-				18B144A32447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift */,
 				18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */,
-				189FF349244A22F0007700D1 /* Selections */,
 				189FF34A244A2302007700D1 /* Crossovers */,
-				189FF34B244A239A007700D1 /* Mutations */,
 			);
 			path = "Genetic Algorithm";
+			sourceTree = "<group>";
+		};
+		18D768272471579000A9CBBF /* Particle Swarn */ = {
+			isa = PBXGroup;
+			children = (
+				1876F3FE24719031003A7B41 /* EAParticleSwarmVelocity.swift */,
+				1876F3F424718DD9003A7B41 /* EAParticleSwarmLearning.swift */,
+				1876F3F924718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift */,
+				18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */,
+				1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */,
+				18A06F1C24759C4E00B02AA7 /* EAParticleSwarmContext.swift */,
+				1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */,
+				18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */,
+			);
+			path = "Particle Swarn";
+			sourceTree = "<group>";
+		};
+		18E90BC0246B03F1005937A0 /* Recombinations */ = {
+			isa = PBXGroup;
+			children = (
+				18467828246D954D00ADF814 /* EAESIntermadiateRecombination.swift */,
+				1846782D246D974700ADF814 /* EAESDiscreteRecombination.swift */,
+			);
+			path = Recombinations;
 			sourceTree = "<group>";
 		};
 		18EFBD2A2441DE1900C5BD5F /* Hill Climbing */ = {
@@ -772,29 +918,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18467826246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */,
+				1846781C246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
 				1887B7C524608D5F00AAC050 /* EATextFunction.swift in Sources */,
 				18EFBD332441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
 				18EFBD4C2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
 				18A1B8CD2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
 				187A58F2244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
-				187A5901244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				187A5901244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
 				1832D6DA243F8EC400FE1B26 /* EASphereFunction.swift in Sources */,
+				18467835246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
 				18EFBD1E2441D49A00C5BD5F /* EAAlgorithmResult.swift in Sources */,
+				1846783A246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */,
+				18467830246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */,
 				1819811F243E527300150AE6 /* EAHillClimbing.swift in Sources */,
 				18A1B8D22469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				1876F40624719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */,
+				18A4577C2478424B00EB666E /* EAPythonResult.swift in Sources */,
 				18EFBCEE244102DB00C5BD5F /* EADistributionType.swift in Sources */,
 				1832D6C6243F80BD00FE1B26 /* EAIndividual.swift in Sources */,
 				18EFBD2E2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
-				18B1449C244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				18B1449C244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */,
+				1876F3FC24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */,
 				18EFBD6224424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
 				1832D6C0243F80B600FE1B26 /* EAFitnessFunction.swift in Sources */,
-				18DE239D245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				18DE239D245DE24100C5A927 /* EATournamentSelection.swift in Sources */,
+				18A06F1F24759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */,
 				1832D6C3243F80B900FE1B26 /* EAPopulation.swift in Sources */,
 				18EFBD58244247C200C5BD5F /* MathGlobal.swift in Sources */,
-				189FF34F244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				189FF34F244A244D007700D1 /* EARandomSelection.swift in Sources */,
 				1832D6D5243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
-				18B144A62447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				18E90BBE246B0312005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */,
+				18B144A62447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
+				187A2F5B2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
+				18D768302471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
 				1832D6EA243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
+				1876F40124719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */,
 				18EFBD512442437100C5BD5F /* EANormalDistribution.swift in Sources */,
 				18EFBD472442277600C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
 				18EFBD1B2441D49600C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
@@ -807,8 +966,9 @@
 				18EFBD67244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
 				187A58E8244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
 				18DE23A2245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
-				1887B7C0246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				1887B7C0246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
 				1832D6BD243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
+				1876F3F2247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */,
 				187A58ED244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
 				18EFBD282441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
 				1887B7CA24608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
@@ -817,15 +977,20 @@
 				18EFBD232441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
 				18EFBD6C2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
 				187A58DE244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
+				187A2F612472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
+				1846782B246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
 				18DBD6EA244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
 				18DBD6DB244E0DB400488C14 /* EATSPCity.swift in Sources */,
+				1876F3F724718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
 				18B144A124478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
 				1832D6CD243F80C500FE1B26 /* EAPopulationProtocol.swift in Sources */,
 				18DBD6D6244E094E00488C14 /* EATSPFunction.swift in Sources */,
-				1898175824534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				1898175824534BB700803ED5 /* EARouletteSelection.swift in Sources */,
 				1832D6E5243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
-				187A58FC244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				187A58FC244CB2490034258D /* EASwapMutation.swift in Sources */,
 				1887B7D8246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
+				18E90BBB246B01A3005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */,
+				18D7682B247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */,
 				18DBD6E0244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
 				18DE235D245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
 			);
@@ -843,53 +1008,72 @@
 				18EFBD342441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
 				18A1B8CE2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
 				18B144A224478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
-				18DE239E245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				18DE239E245DE24100C5A927 /* EATournamentSelection.swift in Sources */,
 				18EFBD6324424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
 				18A1B8D32469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				1846781D246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
 				181980F3243E507000150AE6 /* EAKit_macOSTests.swift in Sources */,
 				18EFBD4D2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
 				1832D6C4243F80BA00FE1B26 /* EAPopulation.swift in Sources */,
 				18198120243E527300150AE6 /* EAHillClimbing.swift in Sources */,
 				18EFBD2F2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
 				1832D6C1243F80B700FE1B26 /* EAFitnessFunction.swift in Sources */,
+				18467827246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */,
+				18E90BBF246B0313005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */,
+				18467831246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */,
 				1832D6E6243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
 				1887B7CB24608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
 				18EFBD522442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				18D768312471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
 				1887B7D9246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
+				18A4577D2478424B00EB666E /* EAPythonResult.swift in Sources */,
 				18EFBD1C2441D49600C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
-				18B1449D244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				1876F3F3247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */,
+				1876F40224719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */,
+				18B1449D244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */,
+				187A2F5C2472DD2A00AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
 				187A58DF244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
 				1832D6CA243F80C100FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
 				18EFBD1524419CE800C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
 				18EFBD3E2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
 				1887B7C624608D5F00AAC050 /* EATextFunction.swift in Sources */,
+				187A2F622472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
 				1832D6D1243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */,
-				18B144A72447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				18B144A72447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
 				187A58E4244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
 				18EFBD59244247C200C5BD5F /* MathGlobal.swift in Sources */,
 				18EFBD6D2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
 				1832D6C7243F80BD00FE1B26 /* EAIndividual.swift in Sources */,
+				1876F3F824718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
+				1846783B246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */,
 				18EFBD292441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
 				18DBD6EB244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
 				18DBD6D7244E094E00488C14 /* EATSPFunction.swift in Sources */,
 				187A58E9244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
 				1832D6BE243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
 				1832D6D6243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
-				187A58FD244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				187A58FD244CB2490034258D /* EASwapMutation.swift in Sources */,
 				18DBD6E1244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
-				187A5902244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				187A5902244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
 				18EFBCEF244102DB00C5BD5F /* EADistributionType.swift in Sources */,
 				18EFBD462442277600C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				1876F3FD24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */,
+				18467836246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
+				18D7682C247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */,
+				1876F40724719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */,
 				187A58F3244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				18E90BBC246B01A4005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */,
 				18EFBD68244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
 				18EFBD242441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
-				1887B7C1246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				1887B7C1246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
 				18B14495244787A4007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
+				1846782C246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
 				18DE23A3245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
-				189FF350244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				18A06F2024759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */,
+				189FF350244A244D007700D1 /* EARandomSelection.swift in Sources */,
 				187A58EE244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
 				18DBD6DC244E0DB400488C14 /* EATSPCity.swift in Sources */,
-				1898175924534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				1898175924534BB700803ED5 /* EARouletteSelection.swift in Sources */,
 				18B14498244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
 				18DE235E245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
 			);
@@ -899,29 +1083,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18467824246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */,
+				1846781A246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
 				1887B7C324608D5F00AAC050 /* EATextFunction.swift in Sources */,
 				18EFBD312441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
 				18B1449024477B09007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
 				18A1B8CB2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
 				187A58F0244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
-				187A58FF244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				187A58FF244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
 				18EFBD4A2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
+				18467833246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
 				1832D6D8243F8EC400FE1B26 /* EASphereFunction.swift in Sources */,
+				18467838246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */,
+				1846782E246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */,
 				18EFBD192441D40E00C5BD5F /* EAAlgorithmResult.swift in Sources */,
 				18A1B8D02469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				1876F40424719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */,
+				18A4577A2478424B00EB666E /* EAPythonResult.swift in Sources */,
 				1832D6B0243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
 				18EFBCEC244102DB00C5BD5F /* EADistributionType.swift in Sources */,
 				1832D6B4243F7A8D00FE1B26 /* EAFitnessFunction.swift in Sources */,
-				18B1449A244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				18B1449A244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */,
+				1876F3FA24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */,
 				18EFBD2C2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
 				18EFBD6024424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
-				18DE239B245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				18E90BB7246B0015005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */,
+				18A06F1D24759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */,
+				18DE239B245DE24100C5A927 /* EATournamentSelection.swift in Sources */,
 				1832D6AC243F78F400FE1B26 /* EAIndividualProtocol.swift in Sources */,
 				1832D6AE243F796C00FE1B26 /* EAPopulationProtocol.swift in Sources */,
-				189FF34D244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				189FF34D244A244D007700D1 /* EARandomSelection.swift in Sources */,
 				18EFBD56244247C200C5BD5F /* MathGlobal.swift in Sources */,
-				18B144A42447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				18B144A42447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
+				18D7682E2471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
 				1832D6D3243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
+				1876F3FF24719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */,
 				1832D6E8243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
 				18EFBD4F2442437100C5BD5F /* EANormalDistribution.swift in Sources */,
 				18EFBD452442264B00C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
@@ -934,8 +1130,10 @@
 				1832D6BB243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
 				187A58E6244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
 				18DE23A0245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
-				1887B7BE246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				1887B7BE246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
 				18EFBD262441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
+				187A2F542472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
+				1876F3F0247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */,
 				187A58EB244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
 				1819811D243E527300150AE6 /* EAHillClimbing.swift in Sources */,
 				1887B7C824608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
@@ -944,15 +1142,20 @@
 				18EFBD6A2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
 				1832D6B8243F7C6700FE1B26 /* EAPopulation.swift in Sources */,
 				187A58DC244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
+				187A2F5F2472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
+				18467829246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
+				18E90BB9246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */,
 				18DBD6E8244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
+				1876F3F524718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
 				18DBD6D9244E0DB400488C14 /* EATSPCity.swift in Sources */,
 				18B1449F24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
 				1832D6E3243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
 				18DBD6D4244E094E00488C14 /* EATSPFunction.swift in Sources */,
-				1898175624534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				1898175624534BB700803ED5 /* EARouletteSelection.swift in Sources */,
 				18B144922447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
-				187A58FA244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				187A58FA244CB2490034258D /* EASwapMutation.swift in Sources */,
 				1887B7D6246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
+				18D76829247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */,
 				18DBD6DE244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
 				18DE235B245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
 			);
@@ -970,53 +1173,72 @@
 				18EFBD322441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
 				18A1B8CC2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
 				18B144A024478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
-				18DE239C245DE24100C5A927 /* EAGATournamentSelection.swift in Sources */,
+				18DE239C245DE24100C5A927 /* EATournamentSelection.swift in Sources */,
 				18EFBD6124424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
 				18A1B8D12469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
+				1846781B246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
 				1819810F243E50B400150AE6 /* EAKit_iOSTests.swift in Sources */,
 				18EFBD4B2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
 				1832D6C2243F80B900FE1B26 /* EAPopulation.swift in Sources */,
 				1819811E243E527300150AE6 /* EAHillClimbing.swift in Sources */,
 				18EFBD2D2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
 				1832D6BF243F80B600FE1B26 /* EAFitnessFunction.swift in Sources */,
+				18467825246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */,
+				18E90BBD246B0312005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */,
+				1846782F246D974700ADF814 /* EAESDiscreteRecombination.swift in Sources */,
 				1832D6E4243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
 				1887B7C924608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
+				187A2F5A2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
 				18EFBD502442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				18D7682F2471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
+				18A4577B2478424B00EB666E /* EAPythonResult.swift in Sources */,
 				1887B7D7246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
 				18EFBD1A2441D49500C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
-				18B1449B244787FB007CE7E6 /* EAGeneticAlgorithmSelectionProtocol.swift in Sources */,
+				1876F3F1247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */,
+				1876F40024719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */,
+				18B1449B244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */,
 				187A58DD244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
 				1832D6C8243F80C000FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
 				18EFBD1324419CE700C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
 				18EFBD3C2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
 				1887B7C424608D5F00AAC050 /* EATextFunction.swift in Sources */,
+				187A2F602472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
 				1832D6D0243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */,
-				18B144A52447888F007CE7E6 /* EAGeneticAlgorithmMutationProtocol.swift in Sources */,
+				18B144A52447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
 				187A58E2244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
 				18EFBD57244247C200C5BD5F /* MathGlobal.swift in Sources */,
 				18EFBD6B2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
 				1832D6C5243F80BC00FE1B26 /* EAIndividual.swift in Sources */,
+				1876F3F624718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
+				18467839246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */,
 				18EFBD272441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
 				18DBD6E9244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
 				18DBD6D5244E094E00488C14 /* EATSPFunction.swift in Sources */,
 				187A58E7244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
 				1832D6BC243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
 				1832D6D4243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
-				187A58FB244CB2490034258D /* EAGASwapMutation.swift in Sources */,
+				187A58FB244CB2490034258D /* EASwapMutation.swift in Sources */,
 				18DBD6DF244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
-				187A5900244CB97A0034258D /* EAGAFloatingNumericMutation.swift in Sources */,
+				187A5900244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
 				18EFBCED244102DB00C5BD5F /* EADistributionType.swift in Sources */,
 				18EFBD482442277700C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				1876F3FB24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */,
+				18467834246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
+				18D7682A247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */,
+				1876F40524719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */,
 				187A58F1244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				18E90BBA246B01A3005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */,
 				18EFBD66244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
 				18EFBD222441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
-				1887B7BF246089F200AAC050 /* EAGAReplacementMutation.swift in Sources */,
+				1887B7BF246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
 				18B14493244787A3007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
+				1846782A246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
 				18DE23A1245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
-				189FF34E244A244D007700D1 /* EAGARandomSelection.swift in Sources */,
+				18A06F1E24759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */,
+				189FF34E244A244D007700D1 /* EARandomSelection.swift in Sources */,
 				187A58EC244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
 				18DBD6DA244E0DB400488C14 /* EATSPCity.swift in Sources */,
-				1898175724534BB700803ED5 /* EAGARouletteSelection.swift in Sources */,
+				1898175724534BB700803ED5 /* EARouletteSelection.swift in Sources */,
 				18B14496244787A7007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
 				18DE235C245A00A800C5A927 /* EAParentsGroup.swift in Sources */,
 			);

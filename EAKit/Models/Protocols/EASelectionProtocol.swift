@@ -9,11 +9,12 @@
 import Foundation
 
 
-public protocol EAGeneticAlgorithmSelectionProtocol {
+public protocol EASelectionProtocol {
     
     associatedtype PopulationType: EAPopulationProtocol
     
     func createNewPopulation(population: PopulationType) -> PopulationType?
-    func selectParents(population: PopulationType) -> EAParentsGroup<PopulationType.IndividualType>
+    mutating func prepare(population: PopulationType, context: EAContextProtocol?)
+    func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType]
     
 }

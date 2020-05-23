@@ -9,7 +9,7 @@
 import Foundation
 
 
-public final class EAAckleyFunction: EAArtificialLandscapeFunction {
+public final class EAAckleyFunction<IndividualType: EADoubleIndividual>: EAArtificialLandscapeFunction<IndividualType> {
     
     let a: Double
     let b: Double
@@ -19,10 +19,10 @@ public final class EAAckleyFunction: EAArtificialLandscapeFunction {
         self.a = a
         self.b = b
         self.c = c
-        super.init(dimension: dimension, range: -5.0 ... 5.0)
+        super.init(dimension: dimension, domainValidation: nil, range: -5.0 ... 5.0)
     }
     
-    public override func evaluate(individual: EADoubleIndividual) -> Double {
+    public override func evaluate(individual: IndividualType) -> Double {
         let d = Double(individual.data.count)
         let reverseD = 1 / d
 

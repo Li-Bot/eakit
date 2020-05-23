@@ -12,7 +12,7 @@ import EAKit
 
 func hillClimbing() {
     let fitnessFunction = EAEasomFunction()
-    var delegate = EAAlgorithmDelegate<EAHillClimbing<EAEasomFunction>>()
+    var delegate = EAAlgorithmDelegate<EAHillClimbing<EAEasomFunction>, EAPopulation<EADoubleIndividual>>()
     delegate.didFinishGeneration = { algorithm, iterationIndex, population in
         print(population.bestIndividual?.fitness)
     }
@@ -65,15 +65,15 @@ func geneticAlgorithm2() {
         EATSPCity("T", [160.0, 20.0])
     ]
     
-    let fitnessFunction = EATSPFunction(cities: cities)
+    let fitnessFunction = EATSPFunction(cities: cities, domainValidation: nil)
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
             generationsCount: 2000,
             fitnessFunction: fitnessFunction,
             isElitism: true,
-            selection: EAGARandomSelection(isElitism: true),
+            selection: EARandomSelection(isElitism: true),
             crossover: EAGATSPTwoPointCrossover(threshold: 1.0),
-            mutation: EAGASwapMutation(threshold: 0.9, count: 1),
+            mutation: EASwapMutation(threshold: 0.9, count: 1),
             delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
@@ -96,15 +96,15 @@ func geneticAlgorithm2() {
 
 
 func geneticAlgorithm3() {
-    let fitnessFunction = EATextFunction(text: /*"Dubai, United Arab Emirates."*/ "SKOUMAL Studio s.r.o. by Libor Polehna")
+    let fitnessFunction = EATextFunction(domainValidation: nil, text: /*"Dubai, United Arab Emirates."*/ "SKOUMAL Studio s.r.o. by Libor Polehna")
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
             generationsCount: 2000,
             fitnessFunction: fitnessFunction,
             isElitism: true,
-            selection: EAGATournamentSelection(isElitism: true, tournamentSize: 6),
+            selection: EARouletteSelection(isElitism: true),
             crossover: EAGAKPointCrossover(threshold: 1.0, k: 2),
-            mutation: EAGAReplacementMutation(threshold: 1.0, count: 1, set: fitnessFunction.characters),
+            mutation: EAReplacementMutation(threshold: 1.0, count: 1, set: fitnessFunction.characters),
             delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
@@ -122,6 +122,62 @@ func geneticAlgorithm3() {
 }
 
 
+func evolutionaryAlgorithm() {
+    let fitnessFunction = EARastriginFunction()
+    let configuration = try! EAEvolutionaryStrategyConfiguration(µ: 20, ρ: 1, selectionStrategy: .plus, λ: 20)
+    let parameters = try! EAEvolutionaryStrategyParameters(
+        generationsCount: 2000,
+        configuration: configuration,
+        fitnessFunction: fitnessFunction,
+        selection: EARandomSelection(),
+        recombination: EAESIntermadiateRecombination(),
+        mutation: EAESNormalMutation(threshold: 1.0, σ: 0.5),
+        output: .defaultOutput,
+        delegate: EAAlgorithmDelegate()
+    )
+    
+    parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
+        print(population.bestIndividual?.fitness)
+    }
+    
+    let evolutionaryStrategy = EAEvolutionaryStrategy(parameters: parameters)
+    let result = evolutionaryStrategy.run()
+    print(result.bestPopulation.bestIndividual?.fitness)
+    print(result.bestPopulation.bestIndividual?.data)
+}
+
+
+func particleSwarm() {
+    let parameters = try! EAParticleSwarmParameters(
+        particlesCount: 10,
+        iterationsCount: 50,
+        velocity: EAParticleSwarmVelocity(maximum: EARastriginFunction().distance / 20.0),
+        learning: EAParticleSwarmLearning.defaultLearning,
+        inertiaWeight: EAParticleSwarmInertiaWeight.defaultInertiaWeight,
+        fitnessFunction: EARastriginFunction(),
+        output: EAAlgorithmParametersOutput(saveProgress: true),
+        delegate: EAAlgorithmDelegate()
+    )
+    
+    parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
+        print(population.bestIndividual?.fitness)
+    }
+    
+    let particleSwarm = EAParticleSwarm(parameters: parameters)
+    let result = particleSwarm.run()
+    print(result.bestPopulation.bestIndividual?.fitness)
+    print(result.bestPopulation.bestIndividual?.data)
+    
+    let pythonResult = EAPythonResult(result: result, name: "EARastriginFunction")
+    do {
+        try pythonResult.save()
+    } catch {
+        debugPrint(error)
+    }
+}
+
 //hillClimbing()
 //geneticAlgorithm2()
-geneticAlgorithm3()
+//geneticAlgorithm3()
+//evolutionaryAlgorithm()
+particleSwarm()

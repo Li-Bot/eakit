@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class EAAlgorithmParameters<AlgorithmType: EAAlgorithmProtocol>: EAAlgorithmParametersProtocol {
+public class EAAlgorithmParameters<AlgorithmType: EAAlgorithmProtocol, PopulationType: EAPopulationProtocol>: EAAlgorithmParametersProtocol where AlgorithmType.PopulationType == PopulationType {
     
     public let populationCount: UInt
     public let generationsCount: UInt
@@ -17,9 +17,9 @@ public class EAAlgorithmParameters<AlgorithmType: EAAlgorithmProtocol>: EAAlgori
     
     public let output: EAAlgorithmParametersOutput
     
-    public var delegate: EAAlgorithmDelegate<AlgorithmType>?
+    public var delegate: EAAlgorithmDelegate<AlgorithmType, PopulationType>?
 
-    public init(populationCount: UInt, generationsCount: UInt, fitnessFunction: AlgorithmType.FitnessFunctionType, output: EAAlgorithmParametersOutput = .defaultOutput, delegate: EAAlgorithmDelegate<AlgorithmType>? = nil) throws {
+    public init(populationCount: UInt, generationsCount: UInt, fitnessFunction: AlgorithmType.FitnessFunctionType, output: EAAlgorithmParametersOutput = .defaultOutput, delegate: EAAlgorithmDelegate<AlgorithmType, PopulationType>? = nil) throws {
         if populationCount == 0 {
             throw EAAlgorithmParametersError.populationIsZero
         }

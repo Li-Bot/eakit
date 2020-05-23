@@ -12,7 +12,8 @@ import Foundation
 public protocol EAAlgorithmDelegateProtocol {
     
     associatedtype AlgorithmType: EAAlgorithmProtocol
+    associatedtype PopulationType: EAPopulationProtocol
     
-    func eaAlgorithm(_ algorithm: AlgorithmType, didFinishGeneration generation: UInt, population:  AlgorithmType.FitnessFunctionType.PopulationType)
+    func eaAlgorithm(_ algorithm: AlgorithmType, didFinishGeneration generation: UInt, population:  PopulationType)
     
 }

@@ -9,15 +9,15 @@
 import Foundation
 
 
-public struct EAAlgorithmDelegate<AlgorithmType: EAAlgorithmProtocol>: EAAlgorithmDelegateProtocol {
+public struct EAAlgorithmDelegate<AlgorithmType: EAAlgorithmProtocol, PopulationType: EAPopulationProtocol>: EAAlgorithmDelegateProtocol where AlgorithmType.PopulationType == PopulationType, AlgorithmType.PopulationType.IndividualType == PopulationType.IndividualType {
     
-    public var didFinishGeneration: ((AlgorithmType, UInt, AlgorithmType.FitnessFunctionType.PopulationType) -> Void)?
+    public var didFinishGeneration: ((AlgorithmType, UInt, PopulationType) -> Void)?
     
     public init() {
         
     }
     
-    public func eaAlgorithm(_ algorithm: AlgorithmType, didFinishGeneration generation: UInt, population: AlgorithmType.FitnessFunctionType.PopulationType) {
+    public func eaAlgorithm(_ algorithm: AlgorithmType, didFinishGeneration generation: UInt, population: PopulationType) {
         didFinishGeneration?(algorithm, generation, population)
     }
     

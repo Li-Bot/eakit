@@ -11,7 +11,14 @@ import Foundation
 
 public struct EARouletteSelection<PopulationType: EAPopulationProtocol>: EASelectionProtocol {
     
+    private typealias FitnessTuple = (total: Double, worst: Double)
+    
     public let isElitism: Bool
+    
+    private let unifiedUniformDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
+    
+    private var fitnessTuple: FitnessTuple = (0.0, 0.0)
+    private var fitnessProbabilities: [Double] = []
     
     public init(isElitism: Bool = false) {
         self.isElitism = isElitism
@@ -24,27 +31,29 @@ public struct EARouletteSelection<PopulationType: EAPopulationProtocol>: EASelec
         return nil
     }
     
-    public func selectParents(population: PopulationType, count: Int) -> [PopulationType.IndividualType] {
+    public mutating func prepare(population: PopulationType, context: EAContextProtocol?) {
         if population.bestIndividual == nil {
             fatalError("Population is empty")
         }
         
-        var parents = [PopulationType.IndividualType]()
-        let unifiedUniformDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
-        let (totalFitness, worstFitness) = sumFitness(of: population)
-        let randomNumbers = unifiedUniformDistribution.random(count: UInt(count)).sorted()
-        var fitnessProbabilities = [Double]()
+        fitnessTuple = sumFitness(of: population)
+        fitnessProbabilities = [Double]()
         var probabilitiesSum = 0.0
         for individual in population.individuals {
-            let probability = totalFitness == 0.0 ? 0.0 : ((worstFitness - individual.fitness) + population.bestIndividual!.fitness) / totalFitness
+            let probability = fitnessTuple.total == 0.0 ? 0.0 : ((fitnessTuple.worst - individual.fitness) + population.bestIndividual!.fitness) / fitnessTuple.total
             probabilitiesSum += probability
             fitnessProbabilities.append(probabilitiesSum)
         }
+    }
+    
+    public func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType] {
         
-        if totalFitness == worstFitness {
+        let randomNumbers = unifiedUniformDistribution.random(count: UInt(count)).sorted()
+        if fitnessTuple.total == fitnessTuple.worst {
             return (0 ... count).map({ _ in population.individuals.randomElement()! })
         }
         
+        var parents = [PopulationType.IndividualType]()
         var fitnessProbabilityIndex = 0
         for randomValue in randomNumbers {
             for probabilityIndex in fitnessProbabilityIndex ..< fitnessProbabilities.count {
@@ -63,7 +72,7 @@ public struct EARouletteSelection<PopulationType: EAPopulationProtocol>: EASelec
     }
     
     @inline(__always)
-    private func sumFitness(of population: PopulationType) -> (Double, Double) {
+    private func sumFitness(of population: PopulationType) -> FitnessTuple {
         var sum = 0.0
         var worstFitness = population.bestIndividual!.fitness
         for individual in population.individuals {
