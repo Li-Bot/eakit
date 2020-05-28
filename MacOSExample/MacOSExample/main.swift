@@ -65,7 +65,7 @@ func geneticAlgorithm2() {
         EATSPCity("T", [160.0, 20.0])
     ]
     
-    let fitnessFunction = EATSPFunction(cities: cities, domainValidation: nil)
+    let fitnessFunction = EATSPFunction(cities: cities)
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
             generationsCount: 2000,
@@ -96,14 +96,14 @@ func geneticAlgorithm2() {
 
 
 func geneticAlgorithm3() {
-    let fitnessFunction = EATextFunction(domainValidation: nil, text: /*"Dubai, United Arab Emirates."*/ "SKOUMAL Studio s.r.o. by Libor Polehna")
+    let fitnessFunction = EATextFunction(text: /*"Dubai, United Arab Emirates."*/ "SKOUMAL Studio s.r.o. by Libor Polehna")
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
             generationsCount: 2000,
             fitnessFunction: fitnessFunction,
             isElitism: true,
             selection: EARouletteSelection(isElitism: true),
-            crossover: EAGAKPointCrossover(threshold: 1.0, k: 2),
+            crossover: EAKPointCrossover(threshold: 1.0, k: 2),
             mutation: EAReplacementMutation(threshold: 1.0, count: 1, set: fitnessFunction.characters),
             delegate: EAAlgorithmDelegate()
     )
@@ -176,8 +176,39 @@ func particleSwarm() {
     }
 }
 
+
+func differentialEvolution() {
+    let parameters = try! EADifferentialEvolutionParameters(
+        populationCount: 10,
+        generationsCount: 20,
+        selection: EARandomSelection(),
+        mutationStrategy: EADERand1BinMutationStrategy(f: 0.5, λ: 0.5),
+        crossover: EADifferentialEvolutionCrossover(cr: 0.9),
+        fitnessFunction: EARastriginFunction(),
+        output: EAAlgorithmParametersOutput(saveProgress: true),
+        delegate: EAAlgorithmDelegate()
+    )
+    
+    parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
+        print(population.bestIndividual?.fitness)
+    }
+    
+    let differentialEvolution = EADifferentialEvolution(parameters: parameters)
+    let result = differentialEvolution.run()
+    print(result.bestPopulation.bestIndividual?.fitness)
+    print(result.bestPopulation.bestIndividual?.data)
+    
+    let pythonResult = EAPythonResult(result: result, name: "EARastriginFunction")
+    do {
+        try pythonResult.save()
+    } catch {
+        debugPrint(error)
+    }
+}
+
 //hillClimbing()
 //geneticAlgorithm2()
 //geneticAlgorithm3()
 //evolutionaryAlgorithm()
-particleSwarm()
+//particleSwarm()
+differentialEvolution()

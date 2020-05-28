@@ -43,6 +43,7 @@ public final class EAGeneticAlgorithm<FitnessFunctionType: EAFitnessFunctionProt
                     if uniformUnifiedDistribution.random() <= parameters.mutation.threshold {
                         offsprings[index] = parameters.mutation.mutate(individual: offsprings[index], context: nil)
                     }
+                    offsprings[index] = parameters.fitnessFunction.validateDomains(individual: offsprings[index])
                     offsprings[index].fitness = parameters.fitnessFunction.evaluate(individual: offsprings[index])
                     
                     if parameters.isElitism && parents[index].fitness < offsprings[index].fitness {

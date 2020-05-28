@@ -12,15 +12,13 @@ import Foundation
 public class EATSPFunction: EAFitnessFunctionProtocol {
 
     public let dimension: Int
-    public let domainValidation: EAFitnessFunctionDomainValidationProtocol?
     public let cities: [EATSPCity]
     public let range: ClosedRange<Int>
     
     private var distances: [String : Double]
     
-    public init(cities: [EATSPCity], domainValidation: EAFitnessFunctionDomainValidationProtocol?) {
+    public init(cities: [EATSPCity]) {
         self.dimension = cities.count
-        self.domainValidation = domainValidation
         self.cities = cities
         self.range = 0 ... cities.count
         distances = [:]
@@ -48,7 +46,7 @@ public class EATSPFunction: EAFitnessFunctionProtocol {
     }
     
     public func validateDomains(individual: EAIndividual<EATSPCity>) -> EAIndividual<EATSPCity> {
-        return domainValidation?.validate(individual: individual, fitnessFunction: self) ?? individual
+        return individual
     }
     
     private func generateDistancesMatrix() {

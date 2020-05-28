@@ -12,7 +12,6 @@ import Foundation
 public class EATextFunction: EAFitnessFunctionProtocol {
 
     public let dimension: Int
-    public var domainValidation: EAFitnessFunctionDomainValidationProtocol?
     public let text: String
     public let charactersSet: CharacterSet
     
@@ -20,8 +19,7 @@ public class EATextFunction: EAFitnessFunctionProtocol {
         return getCharacters()
     }()
     
-    public init(domainValidation: EAFitnessFunctionDomainValidationProtocol?, text: String, charactersSet: CharacterSet? = nil) {
-        self.domainValidation = domainValidation
+    public init(text: String, charactersSet: CharacterSet? = nil) {
         dimension = text.count
         self.text = text
         if let charsSet = charactersSet {
@@ -55,7 +53,7 @@ public class EATextFunction: EAFitnessFunctionProtocol {
     }
     
     public func validateDomains(individual: EAIndividual<Character>) -> EAIndividual<Character> {
-        return domainValidation?.validate(individual: individual, fitnessFunction: self) ?? individual
+        return individual
     }
     
     private func getCharacters() -> [Character] {

@@ -12,17 +12,18 @@ import Foundation
 public class EAArtificialLandscapeFunction<IndividualType: EADoubleIndividual>: EAFitnessFunctionProtocol {
     
     public let dimension: Int
-    public let domainValidation: EAFitnessFunctionDomainValidationProtocol?
     public let range: ClosedRange<Double>
+    
+    private let domainValidation: EASingleRangeDomainValidation<IndividualType>
     
     public var distance: Double {
         range.upperBound - range.lowerBound
     }
     
-    public init(dimension: Int, domainValidation: EAFitnessFunctionDomainValidationProtocol?, range: ClosedRange<Double>) {
+    public init(dimension: Int, range: ClosedRange<Double>) {
         self.dimension = dimension
-        self.domainValidation = domainValidation
         self.range = range
+        domainValidation = EASingleRangeDomainValidation(domain: EARangeDomain(range: range))
     }
     
     public func evaluate(individual: IndividualType) -> Double {
@@ -30,7 +31,7 @@ public class EAArtificialLandscapeFunction<IndividualType: EADoubleIndividual>: 
     }
     
     public func getRandomIndividual(type: EADistributionType<IndividualType.DataType>) -> IndividualType {
-        let individual = IndividualType()
+        var individual = IndividualType()
         
         var distribution: EAUniformDistribution<Double>!
         for dimension in 0 ..< dimension {
@@ -45,13 +46,14 @@ public class EAArtificialLandscapeFunction<IndividualType: EADoubleIndividual>: 
 
             individual.data.append(randomValue)
         }
+        individual = validateDomains(individual: individual)
         individual.fitness = evaluate(individual: individual)
         
         return individual
     }
     
     public func validateDomains(individual: IndividualType) -> IndividualType {
-        return domainValidation?.validate(individual: individual, fitnessFunction: self) ?? individual
+        return domainValidation.validate(individual: individual, fitnessFunction: self) ?? individual
     }
     
 }

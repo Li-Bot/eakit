@@ -24,16 +24,16 @@ public final class EAParticleSwarm<FitnessFunctionType: EAFitnessFunctionProtoco
         var currentPopulation = PopulationType.getRandomPopulation(type: .uniform, fitnessFunction: parameters.fitnessFunction, size: parameters.populationCount, context: context)
         let result = EAAlgorithmResult(population: currentPopulation)
         
-        
         for generationIndex in 0 ..< parameters.generationsCount - 1 {
             let population = PopulationType(individuals: [])
             for individual in currentPopulation.individuals {
                 let velocity = computeVelocity(individual: individual, bestIndividual: result.bestPopulation.bestIndividual!, generationIndex: generationIndex)
                 let newPosition = computePosition(velocity: velocity, position: individual.position)
                 
-                let newIndividual = individual.copy()
+                var newIndividual = individual.copy()
                 newIndividual.position = newPosition
                 //newIndividual.velocity = velocity
+                newIndividual = parameters.fitnessFunction.validateDomains(individual: newIndividual)
                 newIndividual.fitness = parameters.fitnessFunction.evaluate(individual: newIndividual)
                 
                 population.append(individual: newIndividual)
@@ -41,6 +41,7 @@ public final class EAParticleSwarm<FitnessFunctionType: EAFitnessFunctionProtoco
             
             currentPopulation = population
             result.append(population: population, keepBestOnly: !parameters.output.saveProgress)
+            parameters.delegate?.didFinishGeneration?(self, generationIndex, currentPopulation)
         }
         
         return result

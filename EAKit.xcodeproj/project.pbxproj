@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18087169247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18087168247ED91900C3743E /* EASingleRangeDomainValidation.swift */; };
+		1808716A247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18087168247ED91900C3743E /* EASingleRangeDomainValidation.swift */; };
+		1808716B247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18087168247ED91900C3743E /* EASingleRangeDomainValidation.swift */; };
+		1808716C247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18087168247ED91900C3743E /* EASingleRangeDomainValidation.swift */; };
+		1808716F247ED96C00C3743E /* EARangeDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808716E247ED96C00C3743E /* EARangeDomain.swift */; };
+		18087170247ED96C00C3743E /* EARangeDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808716E247ED96C00C3743E /* EARangeDomain.swift */; };
+		18087171247ED96C00C3743E /* EARangeDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808716E247ED96C00C3743E /* EARangeDomain.swift */; };
+		18087172247ED96C00C3743E /* EARangeDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808716E247ED96C00C3743E /* EARangeDomain.swift */; };
 		181980EE243E507000150AE6 /* EAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181980E5243E507000150AE6 /* EAKit.framework */; };
 		181980F3243E507000150AE6 /* EAKit_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181980F2243E507000150AE6 /* EAKit_macOSTests.swift */; };
 		181980F5243E507000150AE6 /* EAKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 181980E7243E507000150AE6 /* EAKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -109,30 +117,26 @@
 		187A2F5A2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */; };
 		187A2F5B2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */; };
 		187A2F5C2472DD2A00AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */; };
-		187A2F5F2472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
-		187A2F602472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
-		187A2F612472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
-		187A2F622472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */; };
 		187A58DC244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
 		187A58DD244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
 		187A58DE244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
 		187A58DF244A2DFD0034258D /* EARandomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58DB244A2DFD0034258D /* EARandomProtocol.swift */; };
-		187A58E1244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
-		187A58E2244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
-		187A58E3244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
-		187A58E4244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */; };
-		187A58E6244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
-		187A58E7244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
-		187A58E8244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
-		187A58E9244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */; };
-		187A58EB244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
-		187A58EC244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
-		187A58ED244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
-		187A58EE244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */; };
-		187A58F0244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
-		187A58F1244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
-		187A58F2244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
-		187A58F3244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */; };
+		187A58E1244C6FB00034258D /* EASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EASinglePointCrossover.swift */; };
+		187A58E2244C6FB00034258D /* EASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EASinglePointCrossover.swift */; };
+		187A58E3244C6FB00034258D /* EASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EASinglePointCrossover.swift */; };
+		187A58E4244C6FB00034258D /* EASinglePointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E0244C6FB00034258D /* EASinglePointCrossover.swift */; };
+		187A58E6244C72FE0034258D /* EAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAKPointCrossover.swift */; };
+		187A58E7244C72FE0034258D /* EAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAKPointCrossover.swift */; };
+		187A58E8244C72FE0034258D /* EAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAKPointCrossover.swift */; };
+		187A58E9244C72FE0034258D /* EAKPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58E5244C72FE0034258D /* EAKPointCrossover.swift */; };
+		187A58EB244CAA760034258D /* EATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EATwoPointCrossover.swift */; };
+		187A58EC244CAA760034258D /* EATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EATwoPointCrossover.swift */; };
+		187A58ED244CAA760034258D /* EATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EATwoPointCrossover.swift */; };
+		187A58EE244CAA760034258D /* EATwoPointCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EA244CAA760034258D /* EATwoPointCrossover.swift */; };
+		187A58F0244CAAEA0034258D /* EAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAUniformCrossover.swift */; };
+		187A58F1244CAAEA0034258D /* EAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAUniformCrossover.swift */; };
+		187A58F2244CAAEA0034258D /* EAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAUniformCrossover.swift */; };
+		187A58F3244CAAEA0034258D /* EAUniformCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58EF244CAAEA0034258D /* EAUniformCrossover.swift */; };
 		187A58FA244CB2490034258D /* EASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EASwapMutation.swift */; };
 		187A58FB244CB2490034258D /* EASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EASwapMutation.swift */; };
 		187A58FC244CB2490034258D /* EASwapMutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A58F9244CB2490034258D /* EASwapMutation.swift */; };
@@ -181,6 +185,14 @@
 		18A4577B2478424B00EB666E /* EAPythonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A457792478424B00EB666E /* EAPythonResult.swift */; };
 		18A4577C2478424B00EB666E /* EAPythonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A457792478424B00EB666E /* EAPythonResult.swift */; };
 		18A4577D2478424B00EB666E /* EAPythonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A457792478424B00EB666E /* EAPythonResult.swift */; };
+		18A45780247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4577F247A5BA300EB666E /* EADifferentialEvolution.swift */; };
+		18A45781247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4577F247A5BA300EB666E /* EADifferentialEvolution.swift */; };
+		18A45782247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4577F247A5BA300EB666E /* EADifferentialEvolution.swift */; };
+		18A45783247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4577F247A5BA300EB666E /* EADifferentialEvolution.swift */; };
+		18A45785247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A45784247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift */; };
+		18A45786247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A45784247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift */; };
+		18A45787247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A45784247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift */; };
+		18A45788247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A45784247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift */; };
 		18B1449024477B09007CE7E6 /* EAGeneticAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */; };
 		18B144922447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
 		18B14493244787A3007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */; };
@@ -201,6 +213,26 @@
 		18B144A52447888F007CE7E6 /* EAMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */; };
 		18B144A62447888F007CE7E6 /* EAMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */; };
 		18B144A72447888F007CE7E6 /* EAMutationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */; };
+		18C77DB0247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DAF247A602900F3A339 /* EADifferentialEvolutionContext.swift */; };
+		18C77DB1247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DAF247A602900F3A339 /* EADifferentialEvolutionContext.swift */; };
+		18C77DB2247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DAF247A602900F3A339 /* EADifferentialEvolutionContext.swift */; };
+		18C77DB3247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DAF247A602900F3A339 /* EADifferentialEvolutionContext.swift */; };
+		18C77DB5247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DB4247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift */; };
+		18C77DB6247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DB4247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift */; };
+		18C77DB7247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DB4247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift */; };
+		18C77DB8247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DB4247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift */; };
+		18C77DBB247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DBA247AD22400F3A339 /* EADERand1BinMutationStrategy.swift */; };
+		18C77DBC247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DBA247AD22400F3A339 /* EADERand1BinMutationStrategy.swift */; };
+		18C77DBD247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DBA247AD22400F3A339 /* EADERand1BinMutationStrategy.swift */; };
+		18C77DBE247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DBA247AD22400F3A339 /* EADERand1BinMutationStrategy.swift */; };
+		18C77DD3247C380400F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DD2247C380400F3A339 /* EADifferentialEvolutionCrossover.swift */; };
+		18C77DD4247C380500F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DD2247C380400F3A339 /* EADifferentialEvolutionCrossover.swift */; };
+		18C77DD5247C380500F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DD2247C380400F3A339 /* EADifferentialEvolutionCrossover.swift */; };
+		18C77DD6247C380500F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DD2247C380400F3A339 /* EADifferentialEvolutionCrossover.swift */; };
+		18C77DE7247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DE6247D9A5900F3A339 /* EAFitnessFunctionDomainProtocol.swift */; };
+		18C77DE8247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DE6247D9A5900F3A339 /* EAFitnessFunctionDomainProtocol.swift */; };
+		18C77DE9247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DE6247D9A5900F3A339 /* EAFitnessFunctionDomainProtocol.swift */; };
+		18C77DEA247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C77DE6247D9A5900F3A339 /* EAFitnessFunctionDomainProtocol.swift */; };
 		18D76829247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */; };
 		18D7682A247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */; };
 		18D7682B247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */; };
@@ -333,6 +365,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18087168247ED91900C3743E /* EASingleRangeDomainValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASingleRangeDomainValidation.swift; sourceTree = "<group>"; };
+		1808716E247ED96C00C3743E /* EARangeDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARangeDomain.swift; sourceTree = "<group>"; };
 		181980E5243E507000150AE6 /* EAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		181980E7243E507000150AE6 /* EAKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAKit_macOS.h; sourceTree = "<group>"; };
 		181980E8243E507000150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -369,12 +403,11 @@
 		1876F3FE24719031003A7B41 /* EAParticleSwarmVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmVelocity.swift; sourceTree = "<group>"; };
 		1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmPopulation.swift; sourceTree = "<group>"; };
 		187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFitnessFunctionDomainValidationProtocol.swift; sourceTree = "<group>"; };
-		187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEmptyDomainValidation.swift; sourceTree = "<group>"; };
 		187A58DB244A2DFD0034258D /* EARandomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EARandomProtocol.swift; sourceTree = "<group>"; };
-		187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGASinglePointCrossover.swift; sourceTree = "<group>"; };
-		187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAKPointCrossover.swift; sourceTree = "<group>"; };
-		187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGATwoPointCrossover.swift; sourceTree = "<group>"; };
-		187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGAUniformCrossover.swift; sourceTree = "<group>"; };
+		187A58E0244C6FB00034258D /* EASinglePointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASinglePointCrossover.swift; sourceTree = "<group>"; };
+		187A58E5244C72FE0034258D /* EAKPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAKPointCrossover.swift; sourceTree = "<group>"; };
+		187A58EA244CAA760034258D /* EATwoPointCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATwoPointCrossover.swift; sourceTree = "<group>"; };
+		187A58EF244CAAEA0034258D /* EAUniformCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAUniformCrossover.swift; sourceTree = "<group>"; };
 		187A58F9244CB2490034258D /* EASwapMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASwapMutation.swift; sourceTree = "<group>"; };
 		187A58FE244CB97A0034258D /* EAFloatingNumericMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFloatingNumericMutation.swift; sourceTree = "<group>"; };
 		1887B7BD246089F200AAC050 /* EAReplacementMutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAReplacementMutation.swift; sourceTree = "<group>"; };
@@ -387,11 +420,18 @@
 		18A1B8CA2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategyConfiguration.swift; sourceTree = "<group>"; };
 		18A1B8CF2469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAEvolutionaryStrategySelectionStrategyType.swift; sourceTree = "<group>"; };
 		18A457792478424B00EB666E /* EAPythonResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAPythonResult.swift; sourceTree = "<group>"; };
+		18A4577F247A5BA300EB666E /* EADifferentialEvolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADifferentialEvolution.swift; sourceTree = "<group>"; };
+		18A45784247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADifferentialEvolutionParameters.swift; sourceTree = "<group>"; };
 		18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithm.swift; sourceTree = "<group>"; };
 		18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmParameters.swift; sourceTree = "<group>"; };
 		18B14499244787FB007CE7E6 /* EASelectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASelectionProtocol.swift; sourceTree = "<group>"; };
 		18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAGeneticAlgorithmCrossoverProtocol.swift; sourceTree = "<group>"; };
 		18B144A32447888F007CE7E6 /* EAMutationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAMutationProtocol.swift; sourceTree = "<group>"; };
+		18C77DAF247A602900F3A339 /* EADifferentialEvolutionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADifferentialEvolutionContext.swift; sourceTree = "<group>"; };
+		18C77DB4247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADifferentialEvolutionMutationStrategyProtocol.swift; sourceTree = "<group>"; };
+		18C77DBA247AD22400F3A339 /* EADERand1BinMutationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADERand1BinMutationStrategy.swift; sourceTree = "<group>"; };
+		18C77DD2247C380400F3A339 /* EADifferentialEvolutionCrossover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EADifferentialEvolutionCrossover.swift; sourceTree = "<group>"; };
+		18C77DE6247D9A5900F3A339 /* EAFitnessFunctionDomainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAFitnessFunctionDomainProtocol.swift; sourceTree = "<group>"; };
 		18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarm.swift; sourceTree = "<group>"; };
 		18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAParticleSwarmParameters.swift; sourceTree = "<group>"; };
 		18DBD6D3244E094E00488C14 /* EATSPFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EATSPFunction.swift; sourceTree = "<group>"; };
@@ -456,6 +496,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1808716D247ED95900C3743E /* Fitness Function Domains */ = {
+			isa = PBXGroup;
+			children = (
+				1808716E247ED96C00C3743E /* EARangeDomain.swift */,
+			);
+			path = "Fitness Function Domains";
+			sourceTree = "<group>";
+		};
 		181980B9243CF5FF00150AE6 = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +580,7 @@
 				18B1448E24477AF1007CE7E6 /* Genetic Algorithm */,
 				1887B7D42464787000AAC050 /* Evolutionary Strategy */,
 				18D768272471579000A9CBBF /* Particle Swarn */,
+				18A4577E247A5AE100EB666E /* Differential Evolution */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -553,6 +602,7 @@
 				1832D6AB243F78F400FE1B26 /* EAIndividualProtocol.swift */,
 				1832D6AD243F796C00FE1B26 /* EAPopulationProtocol.swift */,
 				1832D6AF243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift */,
+				18C77DE6247D9A5900F3A339 /* EAFitnessFunctionDomainProtocol.swift */,
 				187A2F532472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift */,
 				18EFBD1124419BDF00C5BD5F /* EAAlgorithmProtocol.swift */,
 				18EFBD302441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift */,
@@ -580,8 +630,10 @@
 				18EFBD252441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift */,
 				18DE235A245A00A800C5A927 /* EAParentsGroup.swift */,
 				18A457792478424B00EB666E /* EAPythonResult.swift */,
+				1808716D247ED95900C3743E /* Fitness Function Domains */,
 				187A2F552472DC2800AD684C /* Fitness Function Domain Validations */,
 				18467868246F005600ADF814 /* Selections */,
+				18C77DD1247C373600F3A339 /* Crossover */,
 				18467869246F006F00ADF814 /* Mutations */,
 				1832D6B9243F806D00FE1B26 /* Test Functions */,
 			);
@@ -650,7 +702,7 @@
 		187A2F552472DC2800AD684C /* Fitness Function Domain Validations */ = {
 			isa = PBXGroup;
 			children = (
-				187A2F5E2472DE6400AD684C /* EAEmptyDomainValidation.swift */,
+				18087168247ED91900C3743E /* EASingleRangeDomainValidation.swift */,
 			);
 			path = "Fitness Function Domain Validations";
 			sourceTree = "<group>";
@@ -678,15 +730,16 @@
 			path = "Evolutionary Strategy";
 			sourceTree = "<group>";
 		};
-		189FF34A244A2302007700D1 /* Crossovers */ = {
+		18A4577E247A5AE100EB666E /* Differential Evolution */ = {
 			isa = PBXGroup;
 			children = (
-				187A58E5244C72FE0034258D /* EAGAKPointCrossover.swift */,
-				187A58E0244C6FB00034258D /* EAGASinglePointCrossover.swift */,
-				187A58EA244CAA760034258D /* EAGATwoPointCrossover.swift */,
-				187A58EF244CAAEA0034258D /* EAGAUniformCrossover.swift */,
+				18C77DB4247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift */,
+				18A45784247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift */,
+				18C77DAF247A602900F3A339 /* EADifferentialEvolutionContext.swift */,
+				18A4577F247A5BA300EB666E /* EADifferentialEvolution.swift */,
+				18C77DB9247ACC3700F3A339 /* Mutation Strategies */,
 			);
-			path = Crossovers;
+			path = "Differential Evolution";
 			sourceTree = "<group>";
 		};
 		18B1448E24477AF1007CE7E6 /* Genetic Algorithm */ = {
@@ -695,9 +748,28 @@
 				18B144912447879E007CE7E6 /* EAGeneticAlgorithmParameters.swift */,
 				18B1449E24478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift */,
 				18B1448F24477B09007CE7E6 /* EAGeneticAlgorithm.swift */,
-				189FF34A244A2302007700D1 /* Crossovers */,
 			);
 			path = "Genetic Algorithm";
+			sourceTree = "<group>";
+		};
+		18C77DB9247ACC3700F3A339 /* Mutation Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				18C77DBA247AD22400F3A339 /* EADERand1BinMutationStrategy.swift */,
+			);
+			path = "Mutation Strategies";
+			sourceTree = "<group>";
+		};
+		18C77DD1247C373600F3A339 /* Crossover */ = {
+			isa = PBXGroup;
+			children = (
+				187A58E5244C72FE0034258D /* EAKPointCrossover.swift */,
+				187A58E0244C6FB00034258D /* EASinglePointCrossover.swift */,
+				187A58EA244CAA760034258D /* EATwoPointCrossover.swift */,
+				187A58EF244CAAEA0034258D /* EAUniformCrossover.swift */,
+				18C77DD2247C380400F3A339 /* EADifferentialEvolutionCrossover.swift */,
+			);
+			path = Crossover;
 			sourceTree = "<group>";
 		};
 		18D768272471579000A9CBBF /* Particle Swarn */ = {
@@ -707,8 +779,8 @@
 				1876F3F424718DD9003A7B41 /* EAParticleSwarmLearning.swift */,
 				1876F3F924718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift */,
 				18D7682D2471584600A9CBBF /* EAParticleSwarmParameters.swift */,
-				1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */,
 				18A06F1C24759C4E00B02AA7 /* EAParticleSwarmContext.swift */,
+				1876F3EF247181D7003A7B41 /* EAParticleSwarmIndividual.swift */,
 				1876F40324719186003A7B41 /* EAParticleSwarmPopulation.swift */,
 				18D76828247157FC00A9CBBF /* EAParticleSwarm.swift */,
 			);
@@ -920,11 +992,12 @@
 			files = (
 				18467826246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */,
 				1846781C246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
+				18C77DB7247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */,
 				1887B7C524608D5F00AAC050 /* EATextFunction.swift in Sources */,
 				18EFBD332441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
 				18EFBD4C2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
 				18A1B8CD2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
-				187A58F2244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				187A58F2244CAAEA0034258D /* EAUniformCrossover.swift in Sources */,
 				187A5901244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
 				1832D6DA243F8EC400FE1B26 /* EASphereFunction.swift in Sources */,
 				18467835246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
@@ -938,6 +1011,7 @@
 				18EFBCEE244102DB00C5BD5F /* EADistributionType.swift in Sources */,
 				1832D6C6243F80BD00FE1B26 /* EAIndividual.swift in Sources */,
 				18EFBD2E2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
+				18A45787247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */,
 				18B1449C244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */,
 				1876F3FC24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */,
 				18EFBD6224424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
@@ -950,35 +1024,41 @@
 				1832D6D5243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
 				18E90BBE246B0312005937A0 /* EAEvolutionaryStrategyParameters.swift in Sources */,
 				18B144A62447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
+				18A45782247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */,
 				187A2F5B2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
 				18D768302471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
 				1832D6EA243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
 				1876F40124719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */,
 				18EFBD512442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				1808716B247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */,
 				18EFBD472442277600C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				18C77DB2247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */,
 				18EFBD1B2441D49600C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
 				18B14494244787A4007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
 				18EFBD1424419CE700C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
 				18EFBD5D244249D200C5BD5F /* EARastriginFunction.swift in Sources */,
 				1832D6C9243F80C000FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
 				18B14497244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
-				187A58E3244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				187A58E3244C6FB00034258D /* EASinglePointCrossover.swift in Sources */,
 				18EFBD67244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
-				187A58E8244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				187A58E8244C72FE0034258D /* EAKPointCrossover.swift in Sources */,
 				18DE23A2245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
 				1887B7C0246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
 				1832D6BD243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
+				18C77DE9247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */,
 				1876F3F2247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */,
-				187A58ED244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				187A58ED244CAA760034258D /* EATwoPointCrossover.swift in Sources */,
 				18EFBD282441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
 				1887B7CA24608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
 				1832D6CF243F80C800FE1B26 /* EAIndividualProtocol.swift in Sources */,
+				18C77DBD247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */,
 				18EFBD3D2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
 				18EFBD232441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
 				18EFBD6C2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
+				18087171247ED96C00C3743E /* EARangeDomain.swift in Sources */,
 				187A58DE244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
-				187A2F612472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
 				1846782B246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
+				18C77DD5247C380500F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */,
 				18DBD6EA244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
 				18DBD6DB244E0DB400488C14 /* EATSPCity.swift in Sources */,
 				1876F3F724718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
@@ -1006,12 +1086,14 @@
 				1832D6CC243F80C500FE1B26 /* EAPopulationProtocol.swift in Sources */,
 				1832D6EB243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
 				18EFBD342441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
+				18C77DB3247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */,
 				18A1B8CE2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
 				18B144A224478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
 				18DE239E245DE24100C5A927 /* EATournamentSelection.swift in Sources */,
 				18EFBD6324424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
 				18A1B8D32469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
 				1846781D246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
+				18A45788247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */,
 				181980F3243E507000150AE6 /* EAKit_macOSTests.swift in Sources */,
 				18EFBD4D2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
 				1832D6C4243F80BA00FE1B26 /* EAPopulation.swift in Sources */,
@@ -1024,6 +1106,7 @@
 				1832D6E6243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
 				1887B7CB24608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
 				18EFBD522442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				1808716C247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */,
 				18D768312471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
 				1887B7D9246478DB00AAC050 /* EAEvolutionaryStrategy.swift in Sources */,
 				18A4577D2478424B00EB666E /* EAPythonResult.swift in Sources */,
@@ -1034,24 +1117,28 @@
 				187A2F5C2472DD2A00AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
 				187A58DF244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
 				1832D6CA243F80C100FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
+				18C77DB8247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */,
 				18EFBD1524419CE800C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
 				18EFBD3E2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
 				1887B7C624608D5F00AAC050 /* EATextFunction.swift in Sources */,
-				187A2F622472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
 				1832D6D1243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */,
 				18B144A72447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
-				187A58E4244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				187A58E4244C6FB00034258D /* EASinglePointCrossover.swift in Sources */,
 				18EFBD59244247C200C5BD5F /* MathGlobal.swift in Sources */,
 				18EFBD6D2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
+				18087172247ED96C00C3743E /* EARangeDomain.swift in Sources */,
+				18C77DBE247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */,
 				1832D6C7243F80BD00FE1B26 /* EAIndividual.swift in Sources */,
 				1876F3F824718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
+				18C77DD6247C380500F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */,
 				1846783B246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */,
 				18EFBD292441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
 				18DBD6EB244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
 				18DBD6D7244E094E00488C14 /* EATSPFunction.swift in Sources */,
-				187A58E9244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				187A58E9244C72FE0034258D /* EAKPointCrossover.swift in Sources */,
 				1832D6BE243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
 				1832D6D6243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
+				18A45783247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */,
 				187A58FD244CB2490034258D /* EASwapMutation.swift in Sources */,
 				18DBD6E1244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
 				187A5902244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
@@ -1061,17 +1148,18 @@
 				18467836246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
 				18D7682C247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */,
 				1876F40724719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */,
-				187A58F3244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				187A58F3244CAAEA0034258D /* EAUniformCrossover.swift in Sources */,
 				18E90BBC246B01A4005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */,
 				18EFBD68244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
 				18EFBD242441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
 				1887B7C1246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
+				18C77DEA247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */,
 				18B14495244787A4007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
 				1846782C246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
 				18DE23A3245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
 				18A06F2024759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */,
 				189FF350244A244D007700D1 /* EARandomSelection.swift in Sources */,
-				187A58EE244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				187A58EE244CAA760034258D /* EATwoPointCrossover.swift in Sources */,
 				18DBD6DC244E0DB400488C14 /* EATSPCity.swift in Sources */,
 				1898175924534BB700803ED5 /* EARouletteSelection.swift in Sources */,
 				18B14498244787A8007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
@@ -1085,11 +1173,12 @@
 			files = (
 				18467824246D91A800ADF814 /* EAEvolutionaryStrategyContext.swift in Sources */,
 				1846781A246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
+				18C77DB5247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */,
 				1887B7C324608D5F00AAC050 /* EATextFunction.swift in Sources */,
 				18EFBD312441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
 				18B1449024477B09007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,
 				18A1B8CB2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
-				187A58F0244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				187A58F0244CAAEA0034258D /* EAUniformCrossover.swift in Sources */,
 				187A58FF244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
 				18EFBD4A2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
 				18467833246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
@@ -1103,6 +1192,7 @@
 				1832D6B0243F79A800FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
 				18EFBCEC244102DB00C5BD5F /* EADistributionType.swift in Sources */,
 				1832D6B4243F7A8D00FE1B26 /* EAFitnessFunction.swift in Sources */,
+				18A45785247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */,
 				18B1449A244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */,
 				1876F3FA24718E14003A7B41 /* EAParticleSwarmInertiaWeight.swift in Sources */,
 				18EFBD2C2441DE3600C5BD5F /* EAHillClimbingParameters.swift in Sources */,
@@ -1115,35 +1205,41 @@
 				189FF34D244A244D007700D1 /* EARandomSelection.swift in Sources */,
 				18EFBD56244247C200C5BD5F /* MathGlobal.swift in Sources */,
 				18B144A42447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
+				18A45780247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */,
 				18D7682E2471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
 				1832D6D3243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
 				1876F3FF24719031003A7B41 /* EAParticleSwarmVelocity.swift in Sources */,
 				1832D6E8243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
 				18EFBD4F2442437100C5BD5F /* EANormalDistribution.swift in Sources */,
+				18087169247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */,
 				18EFBD452442264B00C5BD5F /* EAAlgorithmDelegate.swift in Sources */,
+				18C77DB0247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */,
 				18EFBD172441D2AA00C5BD5F /* EAAlgorithmResultProtocol.swift in Sources */,
 				18EFBD1224419BDF00C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
 				18EFBD5B244249D200C5BD5F /* EARastriginFunction.swift in Sources */,
 				1832D6B6243F7BDA00FE1B26 /* EAIndividual.swift in Sources */,
 				18EFBD65244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
-				187A58E1244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				187A58E1244C6FB00034258D /* EASinglePointCrossover.swift in Sources */,
 				1832D6BB243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
-				187A58E6244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				187A58E6244C72FE0034258D /* EAKPointCrossover.swift in Sources */,
 				18DE23A0245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
 				1887B7BE246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
 				18EFBD262441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
 				187A2F542472DB0100AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
+				18C77DE7247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */,
 				1876F3F0247181D7003A7B41 /* EAParticleSwarmIndividual.swift in Sources */,
-				187A58EB244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				187A58EB244CAA760034258D /* EATwoPointCrossover.swift in Sources */,
 				1819811D243E527300150AE6 /* EAHillClimbing.swift in Sources */,
 				1887B7C824608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
 				18EFBD3B2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
+				18C77DBB247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */,
 				18EFBD212441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
 				18EFBD6A2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
 				1832D6B8243F7C6700FE1B26 /* EAPopulation.swift in Sources */,
+				1808716F247ED96C00C3743E /* EARangeDomain.swift in Sources */,
 				187A58DC244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
-				187A2F5F2472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
 				18467829246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
+				18C77DD3247C380400F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */,
 				18E90BB9246B01A1005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */,
 				18DBD6E8244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
 				1876F3F524718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
@@ -1171,12 +1267,14 @@
 				1832D6CB243F80C400FE1B26 /* EAPopulationProtocol.swift in Sources */,
 				1832D6E9243FA21600FE1B26 /* EAUniformDistribution.swift in Sources */,
 				18EFBD322441F17E00C5BD5F /* EAAlgorithmDelegateProtocol.swift in Sources */,
+				18C77DB1247A602900F3A339 /* EADifferentialEvolutionContext.swift in Sources */,
 				18A1B8CC2469CDAF000C1B97 /* EAEvolutionaryStrategyConfiguration.swift in Sources */,
 				18B144A024478865007CE7E6 /* EAGeneticAlgorithmCrossoverProtocol.swift in Sources */,
 				18DE239C245DE24100C5A927 /* EATournamentSelection.swift in Sources */,
 				18EFBD6124424C1100C5BD5F /* EAAckleyFunction.swift in Sources */,
 				18A1B8D12469CE89000C1B97 /* EAEvolutionaryStrategySelectionStrategyType.swift in Sources */,
 				1846781B246D8BED00ADF814 /* EAContextProtocol.swift in Sources */,
+				18A45786247A5E6D00EB666E /* EADifferentialEvolutionParameters.swift in Sources */,
 				1819810F243E50B400150AE6 /* EAKit_iOSTests.swift in Sources */,
 				18EFBD4B2442433700C5BD5F /* EARosenbrockFunction.swift in Sources */,
 				1832D6C2243F80B900FE1B26 /* EAPopulation.swift in Sources */,
@@ -1189,6 +1287,7 @@
 				1832D6E4243FA0DD00FE1B26 /* EADistributionProtocol.swift in Sources */,
 				1887B7C924608E8700AAC050 /* EACharacterIndividual.swift in Sources */,
 				187A2F5A2472DD2900AD684C /* EAFitnessFunctionDomainValidationProtocol.swift in Sources */,
+				1808716A247ED91900C3743E /* EASingleRangeDomainValidation.swift in Sources */,
 				18EFBD502442437100C5BD5F /* EANormalDistribution.swift in Sources */,
 				18D7682F2471584600A9CBBF /* EAParticleSwarmParameters.swift in Sources */,
 				18A4577B2478424B00EB666E /* EAPythonResult.swift in Sources */,
@@ -1199,24 +1298,28 @@
 				18B1449B244787FB007CE7E6 /* EASelectionProtocol.swift in Sources */,
 				187A58DD244A2DFD0034258D /* EARandomProtocol.swift in Sources */,
 				1832D6C8243F80C000FE1B26 /* EAFitnessFunctionProtocol.swift in Sources */,
+				18C77DB6247A654800F3A339 /* EADifferentialEvolutionMutationStrategyProtocol.swift in Sources */,
 				18EFBD1324419CE700C5BD5F /* EAAlgorithmProtocol.swift in Sources */,
 				18EFBD3C2441F5C700C5BD5F /* EAAlgorithmParameters.swift in Sources */,
 				1887B7C424608D5F00AAC050 /* EATextFunction.swift in Sources */,
-				187A2F602472DE6400AD684C /* EAEmptyDomainValidation.swift in Sources */,
 				1832D6D0243F80C900FE1B26 /* EAIndividualProtocol.swift in Sources */,
 				18B144A52447888F007CE7E6 /* EAMutationProtocol.swift in Sources */,
-				187A58E2244C6FB00034258D /* EAGASinglePointCrossover.swift in Sources */,
+				187A58E2244C6FB00034258D /* EASinglePointCrossover.swift in Sources */,
 				18EFBD57244247C200C5BD5F /* MathGlobal.swift in Sources */,
 				18EFBD6B2442550200C5BD5F /* EAEasomFunction.swift in Sources */,
+				18087170247ED96C00C3743E /* EARangeDomain.swift in Sources */,
+				18C77DBC247AD22400F3A339 /* EADERand1BinMutationStrategy.swift in Sources */,
 				1832D6C5243F80BC00FE1B26 /* EAIndividual.swift in Sources */,
 				1876F3F624718DD9003A7B41 /* EAParticleSwarmLearning.swift in Sources */,
+				18C77DD4247C380500F3A339 /* EADifferentialEvolutionCrossover.swift in Sources */,
 				18467839246DB7B400ADF814 /* EAESNormalMutation.swift in Sources */,
 				18EFBD272441DD8100C5BD5F /* EAAlgorithmParametersOutput.swift in Sources */,
 				18DBD6E9244E291000488C14 /* EAGATSPTwoPointCrossover.swift in Sources */,
 				18DBD6D5244E094E00488C14 /* EATSPFunction.swift in Sources */,
-				187A58E7244C72FE0034258D /* EAGAKPointCrossover.swift in Sources */,
+				187A58E7244C72FE0034258D /* EAKPointCrossover.swift in Sources */,
 				1832D6BC243F80B100FE1B26 /* EAArtificialLandscapeFunction.swift in Sources */,
 				1832D6D4243F8C9400FE1B26 /* EADoubleIndividual.swift in Sources */,
+				18A45781247A5BA300EB666E /* EADifferentialEvolution.swift in Sources */,
 				187A58FB244CB2490034258D /* EASwapMutation.swift in Sources */,
 				18DBD6DF244E0F2B00488C14 /* EAIntegerIndividual.swift in Sources */,
 				187A5900244CB97A0034258D /* EAFloatingNumericMutation.swift in Sources */,
@@ -1226,17 +1329,18 @@
 				18467834246D9EA100ADF814 /* EANormalDistributionMutation.swift in Sources */,
 				18D7682A247157FC00A9CBBF /* EAParticleSwarm.swift in Sources */,
 				1876F40524719186003A7B41 /* EAParticleSwarmPopulation.swift in Sources */,
-				187A58F1244CAAEA0034258D /* EAGAUniformCrossover.swift in Sources */,
+				187A58F1244CAAEA0034258D /* EAUniformCrossover.swift in Sources */,
 				18E90BBA246B01A3005937A0 /* EAEvolutionaryStrategyRecombinationProtocol.swift in Sources */,
 				18EFBD66244250F500C5BD5F /* EASchwefelFunction.swift in Sources */,
 				18EFBD222441D77C00C5BD5F /* EAAlgorithmParametersProtocol.swift in Sources */,
 				1887B7BF246089F200AAC050 /* EAReplacementMutation.swift in Sources */,
+				18C77DE8247D9A5A00F3A339 /* EAFitnessFunctionDomainProtocol.swift in Sources */,
 				18B14493244787A3007CE7E6 /* EAGeneticAlgorithmParameters.swift in Sources */,
 				1846782A246D954D00ADF814 /* EAESIntermadiateRecombination.swift in Sources */,
 				18DE23A1245EE54500C5A927 /* EAGATSPSinglePointCrossover.swift in Sources */,
 				18A06F1E24759C4F00B02AA7 /* EAParticleSwarmContext.swift in Sources */,
 				189FF34E244A244D007700D1 /* EARandomSelection.swift in Sources */,
-				187A58EC244CAA760034258D /* EAGATwoPointCrossover.swift in Sources */,
+				187A58EC244CAA760034258D /* EATwoPointCrossover.swift in Sources */,
 				18DBD6DA244E0DB400488C14 /* EATSPCity.swift in Sources */,
 				1898175724534BB700803ED5 /* EARouletteSelection.swift in Sources */,
 				18B14496244787A7007CE7E6 /* EAGeneticAlgorithm.swift in Sources */,

@@ -15,7 +15,7 @@ public final class EARastriginFunction<IndividualType: EADoubleIndividual>: EAAr
     
     public init(dimension: Int = 2, a: Double = 10.0) {
         self.a = a
-        super.init(dimension: dimension, domainValidation: nil, range: -5.12 ... 5.12)
+        super.init(dimension: dimension, range: -5.12 ... 5.12)
     }
     
     public override func evaluate(individual: IndividualType) -> Double {

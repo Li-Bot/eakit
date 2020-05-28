@@ -12,7 +12,7 @@ import Foundation
 public final class EARosenbrockFunction<IndividualType: EADoubleIndividual>: EAArtificialLandscapeFunction<IndividualType> {
     
     public init(dimension: Int = 2) {
-        super.init(dimension: dimension, domainValidation: nil, range: -5.0 ... 5.0)
+        super.init(dimension: dimension, range: -5.0 ... 5.0)
     }
     
     public override func evaluate(individual: IndividualType) -> Double {

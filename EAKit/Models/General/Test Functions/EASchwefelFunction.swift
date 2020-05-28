@@ -12,7 +12,7 @@ import Foundation
 public final class EASchwefelFunction<IndividualType: EADoubleIndividual>: EAArtificialLandscapeFunction<IndividualType> {
     
     public init(dimension: Int = 2) {
-        super.init(dimension: dimension, domainValidation: nil, range: -500.0 ... 500.0)
+        super.init(dimension: dimension, range: -500.0 ... 500.0)
     }
     
     public override func evaluate(individual: IndividualType) -> Double {

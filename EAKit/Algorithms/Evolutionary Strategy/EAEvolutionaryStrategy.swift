@@ -62,6 +62,7 @@ public final class EAEvolutionaryStrategy<FitnessFunctionType: EAFitnessFunction
             if uniformUnifiedDistribution.random() <= parameters.mutation.threshold {
                 offspring = parameters.mutation.mutate(individual: offspring, context: context)
             }
+            offspring = parameters.fitnessFunction.validateDomains(individual: offspring)
             offspring.fitness = parameters.fitnessFunction.evaluate(individual: offspring)
             
             offsprings.append(offspring)

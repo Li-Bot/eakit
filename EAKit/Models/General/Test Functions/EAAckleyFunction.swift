@@ -19,7 +19,7 @@ public final class EAAckleyFunction<IndividualType: EADoubleIndividual>: EAArtif
         self.a = a
         self.b = b
         self.c = c
-        super.init(dimension: dimension, domainValidation: nil, range: -5.0 ... 5.0)
+        super.init(dimension: dimension, range: -5.0 ... 5.0)
     }
     
     public override func evaluate(individual: IndividualType) -> Double {

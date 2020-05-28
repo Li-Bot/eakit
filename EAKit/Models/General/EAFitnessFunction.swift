@@ -9,12 +9,12 @@
 import Foundation
 
 
-public class EAFitnessFunction<IndividualType: EAIndividualProtocol>: EAFitnessFunctionProtocol {
+public class EAFitnessFunction<IndividualType: EAIndividualProtocol, DomainValidationType: EAFitnessFunctionDomainValidationProtocol>: EAFitnessFunctionProtocol where DomainValidationType.IndividualType == IndividualType {
     
     public let dimension: Int
-    public var domainValidation: EAFitnessFunctionDomainValidationProtocol?
+    private let domainValidation: DomainValidationType?
     
-    public init(dimension: Int, domainValidation: EAFitnessFunctionDomainValidationProtocol?) {
+    public init(dimension: Int, domainValidation: DomainValidationType?) {
         self.dimension = dimension
         self.domainValidation = domainValidation
     }
@@ -28,7 +28,7 @@ public class EAFitnessFunction<IndividualType: EAIndividualProtocol>: EAFitnessF
     }
     
     public func validateDomains(individual: IndividualType) -> IndividualType {
-        fatalError("validateDomains has not been implemented yet")
+        domainValidation?.validate(individual: individual, fitnessFunction: self) ?? individual
     }
     
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 
-public final class EAGATwoPointCrossover<IndividualType: EAIndividualProtocol>: EAGAKPointCrossover<IndividualType> {
+public final class EATwoPointCrossover<IndividualType: EAIndividualProtocol>: EAKPointCrossover<IndividualType> {
     
     public init(threshold: Double) {
         super.init(threshold: threshold, k: 2)

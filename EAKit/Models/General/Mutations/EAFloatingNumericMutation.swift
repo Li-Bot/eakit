@@ -9,6 +9,22 @@
 import Foundation
 
 
+/*public protocol EAFloatingNumericMutationProtocol: EAMutationProtocol {
+    
+    func mutate<IndividualType: EAIndividualProtocol>(individual: IndividualType, context: EAContextProtocol?) -> IndividualType where IndividualType.DataType == Double
+    
+}
+
+
+public extension EAFloatingNumericMutationProtocol {
+    
+    func mutate<IndividualType>(individual: IndividualType, context: EAContextProtocol?) -> IndividualType where IndividualType : EAIndividualProtocol {
+        fatalError("method is not supported")
+    }
+    
+}*/
+
+
 public struct EAFloatingNumericMutation<IndividualType: EAIndividualProtocol>: EAMutationProtocol where IndividualType.DataType == Double {
     
     public let threshold: Double

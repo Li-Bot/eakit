@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class EAGAKPointCrossover<IndividualType: EAIndividualProtocol>: EAGeneticAlgorithmCrossoverProtocol {
+public class EAKPointCrossover<IndividualType: EAIndividualProtocol>: EAGeneticAlgorithmCrossoverProtocol {
     
     public let threshold: Double
     public final let k: UInt

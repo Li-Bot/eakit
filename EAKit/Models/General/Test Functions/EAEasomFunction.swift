@@ -12,7 +12,7 @@ import Foundation
 public final class EAEasomFunction<IndividualType: EADoubleIndividual>: EAArtificialLandscapeFunction<IndividualType> {
     
     public init() {
-        super.init(dimension: 2, domainValidation: nil, range: -100.0 ... 100.0)
+        super.init(dimension: 2, range: -100.0 ... 100.0)
     }
     
     public override func evaluate(individual: IndividualType) -> Double {

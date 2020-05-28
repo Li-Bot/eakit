@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct EAGAUniformCrossover<IndividualType: EAIndividualProtocol>: EAGeneticAlgorithmCrossoverProtocol {
+public struct EAUniformCrossover<IndividualType: EAIndividualProtocol>: EAGeneticAlgorithmCrossoverProtocol {
     
     public let threshold: Double
     
