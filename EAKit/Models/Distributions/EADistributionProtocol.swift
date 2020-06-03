@@ -9,10 +9,19 @@
 import Foundation
 
 
+/**
+ Distribution protocol for specific distribution such as: normal and uniform.
+ */
 public protocol EADistributionProtocol {
     
+    /// Generic Data type of distribution.
     associatedtype DataType
     
+    /**
+     Generate random number.
+     
+     - Returns: Random number of `DataType`.
+     */
     func random() -> DataType
     
 }

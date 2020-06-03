@@ -9,8 +9,9 @@
 import Foundation
 
 
+/**
+ Abstract context protocol for additional metadata required by components of any evolutionary algorithm.
+ */
 public protocol EAContextProtocol {
-    
-    
     
 }

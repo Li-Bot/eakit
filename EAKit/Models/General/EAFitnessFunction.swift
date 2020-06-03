@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class EAFitnessFunction<IndividualType: EAIndividualProtocol, DomainValidationType: EAFitnessFunctionDomainValidationProtocol>: EAFitnessFunctionProtocol where DomainValidationType.IndividualType == IndividualType {
+public class EAFitnessFunction<IndividualType, DomainValidationType: EAFitnessFunctionDomainValidationProtocol>: EAFitnessFunctionProtocol where DomainValidationType.IndividualType == IndividualType {
     
     public let dimension: Int
     private let domainValidation: DomainValidationType?

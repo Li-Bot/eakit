@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class EAAlgorithmParameters<AlgorithmType: EAAlgorithmProtocol, PopulationType: EAPopulationProtocol>: EAAlgorithmParametersProtocol where AlgorithmType.PopulationType == PopulationType {
+public class EAAlgorithmParameters<AlgorithmType: EAAlgorithmProtocol, PopulationType>: EAAlgorithmParametersProtocol where AlgorithmType.PopulationType == PopulationType {
     
     public let populationCount: UInt
     public let generationsCount: UInt

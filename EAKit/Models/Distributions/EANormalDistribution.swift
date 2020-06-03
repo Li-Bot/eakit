@@ -9,11 +9,22 @@
 import Foundation
 
 
+/**
+ Normal distribution defined by `μ` and `σ`.
+*/
 public struct EANormalDistribution<DataType>: EADistributionProtocol {
     
+    /// Mean of distribution.
     public let μ: DataType
+    /// Variance of distribution.
     public let σ: DataType
     
+    /**
+     Normal distribution defined by `μ` and `σ`.
+    
+     - Parameter μ: Input mean of distribution.
+     - Parameter σ: Input variance of distribution.
+    */
     public init(μ: DataType, σ: DataType) {
         self.μ = μ
         self.σ = σ
@@ -26,8 +37,16 @@ public struct EANormalDistribution<DataType>: EADistributionProtocol {
 }
 
 
+/**
+ Normal distribution extension when `DataType` equal to `Double`.
+*/
 extension EANormalDistribution where DataType == Double {
     
+    /**
+     Generate random number.
+    
+     - Returns: Random number of `DataType`
+    */
     public func random() -> DataType {
         let x1 = DataType.random(in: 0.0 ... 1.0)
         let x2 = DataType.random(in: 0.0 ... 1.0)

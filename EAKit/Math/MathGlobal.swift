@@ -9,6 +9,13 @@
 import Foundation
 
 
+/**
+ Square root of `value`. In other words second power of input `value`.
+ 
+ - Parameter value: The input number.
+ - Returns: Square root of `value`.
+ */
+@inline(__always)
 internal func pow2<T: Numeric>(_ value: T) -> T {
     return value * value
 }

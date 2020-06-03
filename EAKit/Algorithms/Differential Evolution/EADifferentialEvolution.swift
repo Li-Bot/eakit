@@ -9,7 +9,7 @@
 import Foundation
 
 
-public final class EADifferentialEvolution<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, MutationStrategyType: EADifferentialEvolutionMutationStrategyProtocol, CrossoverType: EAGeneticAlgorithmCrossoverProtocol>: EAAlgorithmProtocol where FitnessFunctionType.IndividualType.DataType: Numeric, FitnessFunctionType.IndividualType == CrossoverType.IndividualType, EAPopulation<FitnessFunctionType.IndividualType> == SelectionType.PopulationType, FitnessFunctionType.IndividualType == MutationStrategyType.IndividualType, FitnessFunctionType.IndividualType == CrossoverType.IndividualType {
+public final class EADifferentialEvolution<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, MutationStrategyType: EADifferentialEvolutionMutationStrategyProtocol, CrossoverType: EAGeneticAlgorithmCrossoverProtocol>: EAAlgorithmProtocol where EAPopulation<FitnessFunctionType.IndividualType> == SelectionType.PopulationType, FitnessFunctionType.IndividualType == MutationStrategyType.IndividualType, FitnessFunctionType.IndividualType == CrossoverType.IndividualType {
     
     public let parameters: EADifferentialEvolutionParameters<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>
     

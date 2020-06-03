@@ -9,7 +9,7 @@
 import Foundation
 
 
-public final class EADifferentialEvolutionParameters<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, MutationStrategyType: EADifferentialEvolutionMutationStrategyProtocol, CrossoverType: EAGeneticAlgorithmCrossoverProtocol>: EAAlgorithmParameters<EADifferentialEvolution<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>, EAPopulation<FitnessFunctionType.IndividualType>> where FitnessFunctionType.IndividualType.DataType: Numeric, FitnessFunctionType.IndividualType == SelectionType.PopulationType.IndividualType, FitnessFunctionType.IndividualType == CrossoverType.IndividualType, EAPopulation<FitnessFunctionType.IndividualType> == SelectionType.PopulationType, FitnessFunctionType.IndividualType == MutationStrategyType.IndividualType {
+public final class EADifferentialEvolutionParameters<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, MutationStrategyType: EADifferentialEvolutionMutationStrategyProtocol, CrossoverType: EAGeneticAlgorithmCrossoverProtocol>: EAAlgorithmParameters<EADifferentialEvolution<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>, EAPopulation<FitnessFunctionType.IndividualType>> where FitnessFunctionType.IndividualType == CrossoverType.IndividualType, EAPopulation<FitnessFunctionType.IndividualType> == SelectionType.PopulationType, FitnessFunctionType.IndividualType == MutationStrategyType.IndividualType {
     
     public var np: UInt {
         populationCount

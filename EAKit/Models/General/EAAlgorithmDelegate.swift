@@ -9,7 +9,7 @@
 import Foundation
 
 
-public struct EAAlgorithmDelegate<AlgorithmType: EAAlgorithmProtocol, PopulationType: EAPopulationProtocol>: EAAlgorithmDelegateProtocol where AlgorithmType.PopulationType == PopulationType, AlgorithmType.PopulationType.IndividualType == PopulationType.IndividualType {
+public struct EAAlgorithmDelegate<AlgorithmType: EAAlgorithmProtocol, PopulationType>: EAAlgorithmDelegateProtocol where AlgorithmType.PopulationType == PopulationType, AlgorithmType.PopulationType.IndividualType == PopulationType.IndividualType {
     
     public var didFinishGeneration: ((AlgorithmType, UInt, PopulationType) -> Void)?
     
