@@ -9,10 +9,18 @@
 import Foundation
 
 
-public struct EAUniformCrossover<IndividualType: EAIndividualProtocol>: EAGeneticAlgorithmCrossoverProtocol {
+/**
+ Uniform crossover.
+*/
+public struct EAUniformCrossover<IndividualType: EAIndividualProtocol>: EACrossoverProtocol {
     
     public let threshold: Double
     
+    /**
+     Create a new uniform crossover.
+     
+     - Parameter threshold: Treshold which defines if crossover will be performed or not. This parameter has to be in <0.0;1.0>.
+     */
     public init(threshold: Double) {
         self.threshold = threshold
     }

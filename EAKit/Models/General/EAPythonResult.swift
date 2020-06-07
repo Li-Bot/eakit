@@ -9,16 +9,32 @@
 import Foundation
 
 
+/**
+ Save result of an algorithm as a file and read it in the python.
+ */
 public final class EAPythonResult<Result: EAAlgorithmResult<PopulationType>, PopulationType: EAPopulationProtocol> where PopulationType.IndividualType.DataType: CustomStringConvertible {
     
+    /// Result of an algorithm.
     public let result: EAAlgorithmResult<PopulationType>
+    /// Name of the file.
     public let name: String
     
+    /**
+     Create a new python result.
+     
+     - Parameter result: Result of an algorithm.
+     - Parameter name: Name of the file.
+     */
     public init(result: EAAlgorithmResult<PopulationType>, name: String) {
         self.result = result
         self.name = name
     }
     
+    /**
+     Save data to disk.
+     
+     - Throws: If saving failed the method throws an error.
+     */
     public func save() throws {
         let fileName = "\(name).txt"
         let fileUrl = URL(fileURLWithPath: fileName)

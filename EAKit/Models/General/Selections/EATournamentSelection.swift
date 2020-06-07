@@ -9,11 +9,22 @@
 import Foundation
 
 
+/**
+Tournament selection.
+*/
 public struct EATournamentSelection<PopulationType: EAPopulationProtocol>: EASelectionProtocol {
     
+    /// If true, the best individual will be automatically added to the new population.
     public let isElitism: Bool
+    /// Size of the tournament.
     public let size: UInt
     
+    /**
+     Create a new tournament selection.
+     
+     - Parameter isElitism: If true, the best individual will be automatically added to the new population.
+     - Parameter tournamentSize: Size of the tournament.
+     */
     public init(isElitism: Bool = false, tournamentSize: UInt) {
         self.isElitism = isElitism
         self.size = tournamentSize

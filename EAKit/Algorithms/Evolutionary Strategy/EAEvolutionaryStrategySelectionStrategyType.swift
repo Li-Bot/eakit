@@ -9,9 +9,14 @@
 import Foundation
 
 
+/**
+ Individual Selection Strategy of Evolutionary Strategy algorithm.
+ */
 public enum EAEvolutionaryStrategySelectionStrategyType {
     
+    /// Individuals will be selected to the next population from offsprings + parents.
     case plus
+    /// Individuals will be selected to the next population from offsprings only.
     case comma
     
 }

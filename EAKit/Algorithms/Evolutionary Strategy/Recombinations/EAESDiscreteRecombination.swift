@@ -9,8 +9,14 @@
 import Foundation
 
 
+/**
+ Discrete Recombination.
+ */
 public struct EAESDiscreteRecombination<IndividualType: EAIndividualProtocol>: EAEvolutionaryStrategyRecombinationProtocol {
     
+    /**
+     Create a new discrete recombination.
+     */
     public init() {
         
     }

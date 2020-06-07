@@ -9,14 +9,25 @@
 import Foundation
 
 
+/**
+ General Fitness Fuction for Travelling Salesman Problem.
+ */
 public class EATSPFunction: EAFitnessFunctionProtocol {
 
     public let dimension: Int
+    /// Cities
     public let cities: [EATSPCity]
+    /// Dimension of the problem, which equals to number of cities.
     public let range: ClosedRange<Int>
     
+    /// Distances between each other.
     private var distances: [String : Double]
     
+    /**
+     Create a new tsp fitness function.
+     
+     - Parameter cities: Cities where you want to find the shortest path.
+     */
     public init(cities: [EATSPCity]) {
         self.dimension = cities.count
         self.cities = cities
@@ -49,6 +60,9 @@ public class EATSPFunction: EAFitnessFunctionProtocol {
         return individual
     }
     
+    /**
+     Calculate all distances between all cities.
+     */
     private func generateDistancesMatrix() {
         for firstIndex in 0 ..< dimension {
             for secondIndex in firstIndex ..< dimension {
@@ -70,6 +84,14 @@ public class EATSPFunction: EAFitnessFunctionProtocol {
         }
     }
     
+    /**
+     Get unified key of two cities.
+     
+     - Parameter firstCity: First city.
+     - Parameter secondCity: Second city.
+     
+     - Returns: The key of two cities.
+     */
     private func getKey(of firstCity: EATSPCity, _ secondCity: EATSPCity) -> String {
         return "\(firstCity.id)\(secondCity.id)"
     }

@@ -9,6 +9,9 @@
 import Foundation
 
 
+/**
+ General algorithm parameters with generic algorithm type and population type.
+ */
 public class EAAlgorithmParameters<AlgorithmType: EAAlgorithmProtocol, PopulationType>: EAAlgorithmParametersProtocol where AlgorithmType.PopulationType == PopulationType {
     
     public let populationCount: UInt
@@ -17,8 +20,18 @@ public class EAAlgorithmParameters<AlgorithmType: EAAlgorithmProtocol, Populatio
     
     public let output: EAAlgorithmParametersOutput
     
+    /// Algorithm delegate.
     public var delegate: EAAlgorithmDelegate<AlgorithmType, PopulationType>?
 
+    /**
+     Create a new algorithm parameters.
+     
+     - Parameter populationCount: Size of the population.
+     - Parameter generationsCount: Number of generations.
+     - Parameter fitnessFunction: Problem to be solved defined by fitness function.
+     - Parameter output: Desired output data of an algorithm.
+     - Parameter delegate: Delegate of an algorithm.
+     */
     public init(populationCount: UInt, generationsCount: UInt, fitnessFunction: AlgorithmType.FitnessFunctionType, output: EAAlgorithmParametersOutput = .defaultOutput, delegate: EAAlgorithmDelegate<AlgorithmType, PopulationType>? = nil) throws {
         if populationCount == 0 {
             throw EAAlgorithmParametersError.populationIsZero

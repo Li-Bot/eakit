@@ -9,6 +9,9 @@
 import Foundation
 
 
+/**
+ General individual with generic data type.
+ */
 public class EAIndividual<DataType>: EAIndividualProtocol {
     
     public var fitness: Double

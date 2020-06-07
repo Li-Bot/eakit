@@ -17,11 +17,14 @@ public protocol EAIndividualProtocol {
     /// Generic Data type.
     associatedtype DataType
     
-    init()
-    
     /// Fitness value of individual.
     var fitness: Double { get set }
     /// Data which represents the individual.
     var data: [DataType] { get set }
+    
+    /**
+     Create a new empty individual.
+     */
+    init()
     
 }

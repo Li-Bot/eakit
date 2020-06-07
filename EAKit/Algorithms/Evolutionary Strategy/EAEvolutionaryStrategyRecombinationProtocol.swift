@@ -9,10 +9,21 @@
 import Foundation
 
 
+/**
+ Abstract recombination protocol.
+ */
 public protocol EAEvolutionaryStrategyRecombinationProtocol {
     
+    /// Generic Individual type.
     associatedtype IndividualType: EAIndividualProtocol
     
+    /**
+     Recombine the individuals.
+     
+     - Parameter individuals: Individuals to be recombined.
+     
+     - Returns: Recombined individual.
+     */
     func recombine(individuals: [IndividualType]) -> IndividualType
     
 }

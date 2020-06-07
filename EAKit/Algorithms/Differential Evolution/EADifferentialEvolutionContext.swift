@@ -9,8 +9,9 @@
 import Foundation
 
 
+/**
+Context of additional metadata for Differential Evolution algorithm.
+*/
 public struct EADifferentialEvolutionContext: EAContextProtocol {
-    
-    
     
 }

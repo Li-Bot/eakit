@@ -9,21 +9,5 @@
 import Foundation
 
 
+/// Individual of Double data type.
 public typealias EADoubleIndividual = EAIndividual<Double>
-
-
-/*extension EADoubleIndividual: CustomStringConvertible {
-    
-    public var description: String {
-        let delimiter = ";"
-        var result = ""
-        for value in data {
-            result += "\(value)\(delimiter)"
-        }
-        if result.hasSuffix(delimiter) {
-            _ = result.removeLast()
-        }
-        return result
-    }
-    
-}*/

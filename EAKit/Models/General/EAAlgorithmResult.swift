@@ -9,6 +9,9 @@
 import Foundation
 
 
+/**
+ General algorithm result with generic population type.
+ */
 public final class EAAlgorithmResult<PopulationType: EAPopulationProtocol>: EAAlgorithmResultProtocol {
     
     public var bestPopulation: PopulationType {
@@ -17,6 +20,7 @@ public final class EAAlgorithmResult<PopulationType: EAPopulationProtocol>: EAAl
     
     public private(set) var populations: [PopulationType]
     
+    /// Index of the best population in the result.
     private var bestPopulationIndex: Int
     
     required public init(population: PopulationType) {

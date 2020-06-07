@@ -72,7 +72,7 @@ func geneticAlgorithm2() {
             fitnessFunction: fitnessFunction,
             isElitism: true,
             selection: EARandomSelection(isElitism: true),
-            crossover: EAGATSPTwoPointCrossover(threshold: 1.0),
+            crossover: EATSPTwoPointCrossover(threshold: 1.0),
             mutation: EASwapMutation(threshold: 0.9, count: 1),
             delegate: EAAlgorithmDelegate()
     )

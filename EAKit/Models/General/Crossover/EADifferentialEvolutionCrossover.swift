@@ -9,10 +9,18 @@
 import Foundation
 
 
-public class EADifferentialEvolutionCrossover<IndividualType: EAIndividualProtocol>: EAGeneticAlgorithmCrossoverProtocol {
+/**
+ Differential evolution crossover used in the differential evolution algorithm.
+ */
+public class EADifferentialEvolutionCrossover<IndividualType: EAIndividualProtocol>: EACrossoverProtocol {
     
     public let threshold: Double
     
+    /**
+     Create a new differential evolution crossover.
+    
+     - Parameter cr: Treshold which defines if crossover will be performed or not. This parameter has to be in <0.0;1.0>.
+    */
     public init(cr: Double) {
         threshold = cr
     }

@@ -9,8 +9,20 @@
 import Foundation
 
 
+/**
+ Particle Swarm Population.
+ */
 public final class EAParticleSwarmPopulation: EAPopulation<EAParticleSwarmIndividual> {
     
+    /**
+     Create new random particle/individual defined by `fitnessFunction` and velocity.
+    
+     - Parameter type: Distribution type of new individual/particle.
+     - Parameter fitnessFunction: Fitness Function which is responsible for valid data of individual.
+     - Parameter context: Additional metadata of Particle Swarm algorithm.
+    
+     - Returns: New Particle/Individual.
+    */
     public override class func getRandomIndividual<FitnessFunction>(type: EADistributionType<Double>, fitnessFunction: FitnessFunction, context: EAContextProtocol?) -> EAParticleSwarmIndividual where IndividualType == FitnessFunction.IndividualType, FitnessFunction : EAFitnessFunctionProtocol {
         let individual = super.getRandomIndividual(type: type, fitnessFunction: fitnessFunction, context: context)
         guard let ctx = context as? EAParticleSwarmContext else {

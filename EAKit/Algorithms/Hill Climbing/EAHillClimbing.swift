@@ -9,10 +9,19 @@
 import Foundation
 
 
+/**
+ Hill Climbing Algorithm.
+ */
 public final class EAHillClimbing<FitnessFunctionType: EAFitnessFunctionProtocol>: EAAlgorithmProtocol {
     
+    /// Parameters of the algorithm.
     public let parameters: EAHillClimbingParameters<FitnessFunctionType>
     
+    /**
+     Create a new Hill Climbing algorithm.
+     
+     - Parameter parameters: Parameters of the algorithm.
+     */
     public init(parameters: EAHillClimbingParameters<FitnessFunctionType>) {
         self.parameters = parameters
     }
@@ -22,6 +31,7 @@ public final class EAHillClimbing<FitnessFunctionType: EAFitnessFunctionProtocol
         let result = EAAlgorithmResult(population: PopulationType(individuals: [currentIndividual]))
         
         for iterationIndex in 0 ..< parameters.generationsCount - 1 {
+            // Generate neighbours around current individual.
             let population = PopulationType.getRandomPopulation(type: .normal(μ: currentIndividual.data, σ: parameters.deviation), fitnessFunction: parameters.fitnessFunction, size: parameters.populationCount, context: nil)
             
             result.append(population: population, keepBestOnly: !parameters.output.saveProgress)

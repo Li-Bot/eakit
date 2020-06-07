@@ -9,28 +9,24 @@
 import Foundation
 
 
-/*public protocol EAFloatingNumericMutationProtocol: EAMutationProtocol {
-    
-    func mutate<IndividualType: EAIndividualProtocol>(individual: IndividualType, context: EAContextProtocol?) -> IndividualType where IndividualType.DataType == Double
-    
-}
-
-
-public extension EAFloatingNumericMutationProtocol {
-    
-    func mutate<IndividualType>(individual: IndividualType, context: EAContextProtocol?) -> IndividualType where IndividualType : EAIndividualProtocol {
-        fatalError("method is not supported")
-    }
-    
-}*/
-
-
+/**
+ Numeric mutation.
+ */
 public struct EAFloatingNumericMutation<IndividualType: EAIndividualProtocol>: EAMutationProtocol where IndividualType.DataType == Double {
     
     public let threshold: Double
+    /// Number of mutations.
     public let count: UInt
+    /// Mutation value.
     public let increment: Double
     
+    /**
+     Create a new numeric mutation.
+     
+     - Parameter threshold: Treshold which defines if mutation will be performed or not. This parameter has to be in <0.0;1.0>.
+     - Parameter count: Number of mutations.
+     - Parameter increment: Mutation value.
+     */
     public init(threshold: Double, count: UInt, increment: Double) {
         self.threshold = threshold
         self.count = count

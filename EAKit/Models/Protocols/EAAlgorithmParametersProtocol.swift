@@ -34,10 +34,10 @@ public protocol EAAlgorithmParametersProtocol {
     var populationCount: UInt { get }
     /// Number of generations.
     var generationsCount: UInt { get }
-    /// Problem to solve defined by Fitness Function.
+    /// Problem to be solved defined by Fitness Function.
     var fitnessFunction: FitnessFunctionType { get }
     
-    /// Defined desired output data of an algorithm.
+    /// Desired output data of an algorithm.
     var output: EAAlgorithmParametersOutput { get }
     
 }

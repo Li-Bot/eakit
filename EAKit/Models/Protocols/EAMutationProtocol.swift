@@ -17,7 +17,7 @@ public protocol EAMutationProtocol {
     /// Generic Individual type.
     associatedtype IndividualType: EAIndividualProtocol
     
-    /// Treshold which define if mutation will be performed or not. This parameter has to be in <0.0;1.0>.
+    /// Treshold which defines if mutation will be performed or not. This parameter has to be in <0.0;1.0>.
     var threshold: Double { get }
     
     /**

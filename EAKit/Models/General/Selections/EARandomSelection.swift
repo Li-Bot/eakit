@@ -9,10 +9,19 @@
 import Foundation
 
 
+/**
+ Random selection.
+ */
 public struct EARandomSelection<PopulationType: EAPopulationProtocol>: EASelectionProtocol {
     
+    /// If true, the best individual will be automatically added to the new population.
     public let isElitism: Bool
     
+    /**
+     Create a new random selection.
+     
+     - Parameter isElitism: If true, the best individual will be automatically added to the new population.
+     */
     public init(isElitism: Bool = false) {
         self.isElitism = isElitism
     }

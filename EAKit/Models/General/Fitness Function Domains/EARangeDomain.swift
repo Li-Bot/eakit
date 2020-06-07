@@ -9,10 +9,19 @@
 import Foundation
 
 
+/**
+ General fitness function domain defined by range.
+ */
 public struct EARangeDomain<DataType: Comparable>: EAFitnessFunctionDomainProtocol {
     
+    /// Closed range of the domain.
     private let range: ClosedRange<DataType>
     
+    /**
+     Create a new range domain.
+     
+     - Parameter range: Closed range of the domain.
+     */
     public init(range: ClosedRange<DataType>) {
         self.range = range
     }

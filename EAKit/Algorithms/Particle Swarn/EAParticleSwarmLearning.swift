@@ -9,11 +9,17 @@
 import Foundation
 
 
+/**
+ Learning constants of Particle Swarm.
+ */
 public struct EAParticleSwarmLearning {
     
+    /// Default learning control parameters.
     public static let defaultLearning = EAParticleSwarmLearning(cP: 0.2, cG: 0.2)
     
+    /// Learning constant of individual's best position.
     public let cP: Double
+    /// Learning constant of the best individual's best position.
     public let cG: Double
     
 }

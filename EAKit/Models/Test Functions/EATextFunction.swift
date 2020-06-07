@@ -9,16 +9,28 @@
 import Foundation
 
 
+/**
+ General Fitness Function for Text.
+ */
 public class EATextFunction: EAFitnessFunctionProtocol {
 
     public let dimension: Int
+    /// Desired Text.
     public let text: String
+    /// Allowed characters.
     public let charactersSet: CharacterSet
     
+    /// Array of Character from CharacterSet.
     public lazy var characters: [Character] = {
         return getCharacters()
     }()
     
+    /**
+     Create a new text fitness function.
+     
+     - Parameter text: Desired text.
+     - Parameter charactersSet: Allowed characters.
+     */
     public init(text: String, charactersSet: CharacterSet? = nil) {
         dimension = text.count
         self.text = text
@@ -56,6 +68,11 @@ public class EATextFunction: EAFitnessFunctionProtocol {
         return individual
     }
     
+    /**
+     Convert CharacterSet to Array of Character.
+     
+     - Returns: Array of Character.
+     */
     private func getCharacters() -> [Character] {
         var chars: [Character] = []
         for plane in Unicode.UTF8.CodeUnit.min ... 16 where charactersSet.hasMember(inPlane: plane) {

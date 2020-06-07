@@ -9,10 +9,19 @@
 import Foundation
 
 
+/**
+ General algorithm delegate with generic algorithm type and population type.
+ */
 public struct EAAlgorithmDelegate<AlgorithmType: EAAlgorithmProtocol, PopulationType>: EAAlgorithmDelegateProtocol where AlgorithmType.PopulationType == PopulationType, AlgorithmType.PopulationType.IndividualType == PopulationType.IndividualType {
     
+    /**
+     Callback of the delegate.
+     */
     public var didFinishGeneration: ((AlgorithmType, UInt, PopulationType) -> Void)?
     
+    /**
+     Create a new algorithm delegate.
+     */
     public init() {
         
     }

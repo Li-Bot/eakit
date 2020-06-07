@@ -9,11 +9,22 @@
 import Foundation
 
 
+/**
+ Information about a city.
+ */
 public struct EATSPCity {
     
+    /// Id of a city.
     let id: String
+    /// Coordinates of a city.
     let coordinates: [Double]
     
+    /**
+     Create a new city.
+     
+     - Parameter id: Id of the city.
+     - Parameter coordinates: Coordinates of the city.
+     */
     public init(_ id: String, _ coordinates: [Double]) {
         self.id = id
         self.coordinates = coordinates

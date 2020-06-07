@@ -6,4 +6,6 @@
 //  Copyright © 2020 Libor Polehna. All rights reserved.
 //
 
+
+/// Individual of Int data type.
 public typealias EAIntegerIndividual = EAIndividual<Int>

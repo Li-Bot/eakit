@@ -9,11 +9,21 @@
 import Foundation
 
 
+/**
+ Normal distribution mutation.
+ */
 public struct EANormalDistributionMutation<IndividualType: EAIndividualProtocol>: EAMutationProtocol where IndividualType.DataType == Double {
     
     public let threshold: Double
+    /// Variance of distribution.
     public let σ: Double
     
+    /**
+     Create a new normal distribution mutation.
+     
+     - Parameter threshold: Treshold which defines if mutation will be performed or not. This parameter has to be in <0.0;1.0>.
+     - Parameter σ: Variance of distribution.
+     */
     public init(threshold: Double, σ: Double) {
         self.threshold = threshold
         self.σ = σ

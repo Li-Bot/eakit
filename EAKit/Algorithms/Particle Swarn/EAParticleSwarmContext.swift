@@ -9,8 +9,12 @@
 import Foundation
 
 
+/**
+ Context of additional metadata for Particle Swarm algorithm.
+ */
 public struct EAParticleSwarmContext: EAContextProtocol {
     
+    /// Velocity limits.
     public let velocity: EAParticleSwarmVelocity
     
 }

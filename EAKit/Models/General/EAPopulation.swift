@@ -9,6 +9,9 @@
 import Foundation
 
 
+/**
+ General population with generic individual type.
+ */
 public class EAPopulation<IndividualType: EAIndividualProtocol>: EAPopulationProtocol {
     
     public class func getRandomIndividual<FitnessFunction>(type: EADistributionType<IndividualType.DataType>, fitnessFunction: FitnessFunction, context: EAContextProtocol?) -> IndividualType where FitnessFunction : EAFitnessFunctionProtocol, IndividualType == FitnessFunction.IndividualType {
@@ -35,6 +38,7 @@ public class EAPopulation<IndividualType: EAIndividualProtocol>: EAPopulationPro
     
     public private(set) var individuals: [IndividualType]
     
+    /// Index of the best individual in the population.
     private var bestIndividualIndex: Int?
     
     public required init(individuals: [IndividualType]) {

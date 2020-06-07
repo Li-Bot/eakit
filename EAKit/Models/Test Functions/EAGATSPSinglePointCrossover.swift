@@ -9,10 +9,18 @@
 import Foundation
 
 
-public class EAGATSPSinglePointCrossover: EAGeneticAlgorithmCrossoverProtocol {
+/**
+ Single point crossover for TSP Problem.
+ */
+public class EATSPSinglePointCrossover: EACrossoverProtocol {
     
     public let threshold: Double
     
+    /**
+     Create a new TSP single point crossover.
+    
+     - Parameter threshold: Treshold which defines if crossover will be performed or not. This parameter has to be in <0.0;1.0>.
+    */
     public init(threshold: Double) {
         self.threshold = threshold
     }
@@ -43,36 +51,19 @@ public class EAGATSPSinglePointCrossover: EAGeneticAlgorithmCrossoverProtocol {
         }
         
         fill(individual: firstIndividual, from: second, existingCities: firstExistingCities, size: size)
-        /*var firstDelta = size - firstIndividual.data.count
-        for city in second.data {
-            if firstDelta == 0 {
-                break
-            }
-            if firstExistingCities.contains(city.id) {
-                continue
-            }
-            firstIndividual.data.append(city)
-            firstExistingCities.insert(city.id)
-            firstDelta -= 1
-        }*/
-        
         fill(individual: secondIndividual, from: first, existingCities: secondExistingCities, size: size)
-        /*var secondDelta = size - secondIndividual.data.count
-        for city in first.data {
-            if secondDelta == 0 {
-                break
-            }
-            if secondExistingCities.contains(city.id) {
-                continue
-            }
-            secondIndividual.data.append(city)
-            secondExistingCities.insert(city.id)
-            secondDelta -= 1
-        }*/
         
         return [firstIndividual, secondIndividual]
     }
     
+    /**
+     Fill the remaining cities of an individual.
+     
+     - Parameter individual: Individual to be filled.
+     - Parameter from: Individual where the remaining cities come from.
+     - Parameter existingCities: Already existing cities in the `individual`.
+     - Parameter size: Number of cities.
+     */
     private func fill(individual: IndividualType, from: IndividualType, existingCities: Set<String>, size: Int) {
         var existingCities = existingCities
         var delta = size - individual.data.count

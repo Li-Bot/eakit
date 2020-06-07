@@ -9,9 +9,14 @@
 import Foundation
 
 
+/**
+ General fitness fuction with generic individual type and domain validation type.
+ You have to inherit from this class if you want to initialize it.
+ */
 public class EAFitnessFunction<IndividualType, DomainValidationType: EAFitnessFunctionDomainValidationProtocol>: EAFitnessFunctionProtocol where DomainValidationType.IndividualType == IndividualType {
     
     public let dimension: Int
+    /// Selected domain validation.
     private let domainValidation: DomainValidationType?
     
     public init(dimension: Int, domainValidation: DomainValidationType?) {

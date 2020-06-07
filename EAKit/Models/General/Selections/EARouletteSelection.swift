@@ -9,17 +9,30 @@
 import Foundation
 
 
+/**
+ Roulette selection.
+ */
 public struct EARouletteSelection<PopulationType: EAPopulationProtocol>: EASelectionProtocol {
     
+    /// Tuple which consists of total and worst fitness value.
     private typealias FitnessTuple = (total: Double, worst: Double)
     
+    /// If true, the best individual will be automatically added to the new population.
     public let isElitism: Bool
     
+    /// Unified uniform distribution.
     private let unifiedUniformDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
     
+    /// Tuple which consists of total and worst fitness value.
     private var fitnessTuple: FitnessTuple = (0.0, 0.0)
+    /// Probablities of individuals
     private var fitnessProbabilities: [Double] = []
     
+    /**
+    Create a new roulette selection.
+    
+    - Parameter isElitism: If true, the best individual will be automatically added to the new population.
+    */
     public init(isElitism: Bool = false) {
         self.isElitism = isElitism
     }
@@ -71,6 +84,13 @@ public struct EARouletteSelection<PopulationType: EAPopulationProtocol>: EASelec
         return parents
     }
     
+    /**
+     Sum total fitness value of the `population` and find the worst fitness value in the `population`.
+     
+     - Parameter population: Population.
+     
+     - Returns: Total sum of fitness values and the worst fitness value.
+     */
     @inline(__always)
     private func sumFitness(of population: PopulationType) -> FitnessTuple {
         var sum = 0.0

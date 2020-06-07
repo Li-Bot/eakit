@@ -9,23 +9,42 @@
 import Foundation
 
 
+/**
+ Abstract class for Artificial Landscape Test Fitness Functions.
+ */
 public class EAArtificialLandscapeFunction<IndividualType: EADoubleIndividual>: EAFitnessFunctionProtocol {
     
     public let dimension: Int
+    /// Range for all dimensions.
     public let range: ClosedRange<Double>
     
+    /// Domain Validation.
     private let domainValidation: EASingleRangeDomainValidation<IndividualType>
     
+    /// Difference between upper bound of the range and lower bound of the range.
     public var distance: Double {
         range.upperBound - range.lowerBound
     }
     
+    /**
+     Create a new artificial landscape fitness function.
+     
+     - Parameter dimension: Dimension of n-dimensional landscape.
+     - Parameter range: Range for all dimensions.
+     */
     public init(dimension: Int, range: ClosedRange<Double>) {
         self.dimension = dimension
         self.range = range
         domainValidation = EASingleRangeDomainValidation(domain: EARangeDomain(range: range))
     }
     
+    /**
+     Evaluate fitness value of `individual`.
+    
+     - Parameter individual: Individual to be evaluated.
+    
+     - Returns: Fitness value of `individual`.
+    */
     public func evaluate(individual: IndividualType) -> Double {
         fatalError("evaluation has not been implemented yet")
     }

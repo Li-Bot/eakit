@@ -9,8 +9,17 @@
 import Foundation
 
 
+/**
+ Easom Test Fitness Function.
+ Specific artificial landscape test fitness function.
+*/
 public final class EAEasomFunction<IndividualType: EADoubleIndividual>: EAArtificialLandscapeFunction<IndividualType> {
     
+    /**
+     Create a new Easom fitness function.
+    
+     - Parameter dimension: Dimension of landscape.
+    */
     public init() {
         super.init(dimension: 2, range: -100.0 ... 100.0)
     }

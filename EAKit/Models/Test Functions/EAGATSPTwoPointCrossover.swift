@@ -9,21 +9,27 @@
 import Foundation
 
 
-public class EAGATSPTwoPointCrossover: EAGeneticAlgorithmCrossoverProtocol {
+/**
+ Two point crossover for TSP Problem.
+*/
+public class EATSPTwoPointCrossover: EACrossoverProtocol {
     
     public let threshold: Double
-    public let k: UInt
     
-    public init(threshold: Double, k: UInt = 2) {
+    /**
+     Create a new TSP two point crossover.
+    
+     - Parameter threshold: Treshold which defines if crossover will be performed or not. This parameter has to be in <0.0;1.0>.
+    */
+    public init(threshold: Double) {
         self.threshold = threshold
-        self.k = k
     }
     
     public final func cross(first: EAIndividual<EATSPCity>, second: EAIndividual<EATSPCity>) -> [EAIndividual<EATSPCity>] {
         let size = first.data.count
         let range = size > 2 ? 1 ... (size - 3) : 1 ... 1
         let uniformDistribution = EAUniformDistribution(range: range)
-        let indexes = uniformDistribution.random(count: k, minimumDifference: nil).sorted()
+        let indexes = uniformDistribution.random(count: 2, minimumDifference: nil).sorted()
         let firstIndividual = IndividualType()
         let secondIndividual = IndividualType()
         
@@ -51,42 +57,26 @@ public class EAGATSPTwoPointCrossover: EAGeneticAlgorithmCrossoverProtocol {
              size: size,
              crossIndex: indexes[1]
         )
-        /*for city in second.data {
-            if firstDelta == 0 {
-                break
-            }
-            if firstExistingCities.contains(city.id) {
-                continue
-            }
-            firstIndividual.data.append(city)
-            firstExistingCities.insert(city.id)
-            firstDelta -= 1
-        }*/
-        
         fill(individual: secondIndividual,
              from: first,
              existingCities: secondExistingCities,
              size: size,
              crossIndex: indexes[1]
         )
-        /*var secondDelta = size - secondIndividual.data.count - (size - indexes[1] - 1)
-        for city in first.data {
-            if secondDelta == 0 {
-                break
-            }
-            if secondExistingCities.contains(city.id) {
-                continue
-            }
-            secondIndividual.data.append(city)
-            secondExistingCities.insert(city.id)
-            secondDelta -= 1
-        }*/
         
         firstIndividual.data.append(contentsOf: first.data.suffix(from: indexes[1] + 1))
         secondIndividual.data.append(contentsOf: second.data.suffix(from: indexes[1] + 1))
         return [firstIndividual, secondIndividual]
     }
     
+    /**
+     Fill the remaining cities of an individual.
+    
+     - Parameter individual: Individual to be filled.
+     - Parameter from: Individual where the remaining cities come from.
+     - Parameter existingCities: Already existing cities in the `individual`.
+     - Parameter size: Number of cities.
+    */
     private func fill(individual: IndividualType, from: IndividualType, existingCities: Set<String>, size: Int, crossIndex: Int) {
         var existingCities = existingCities
         var delta = size - individual.data.count - (size - crossIndex - 1)

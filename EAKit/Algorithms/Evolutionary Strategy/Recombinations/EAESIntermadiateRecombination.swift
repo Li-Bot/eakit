@@ -8,9 +8,14 @@
 
 import Foundation
 
-
+/**
+ Intermadiate Recombination.
+ */
 public struct EAESIntermadiateRecombination<IndividualType: EADoubleIndividual>: EAEvolutionaryStrategyRecombinationProtocol {
     
+    /**
+     Create a new intermadiate recombination.
+     */
     public init() {
         
     }

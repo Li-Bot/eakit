@@ -9,10 +9,21 @@
 import Foundation
 
 
+/**
+ Rastrigin Test Fitness Function.
+ Specific artificial landscape test fitness function.
+*/
 public final class EARastriginFunction<IndividualType: EADoubleIndividual>: EAArtificialLandscapeFunction<IndividualType> {
     
+    /// Control parameter.
     public let a: Double
     
+    /**
+     Create a new Rastrigin fitness function.
+    
+     - Parameter dimension: Dimension of landscape.
+     - Parameter a: Control parameter.
+    */
     public init(dimension: Int = 2, a: Double = 10.0) {
         self.a = a
         super.init(dimension: dimension, range: -5.12 ... 5.12)

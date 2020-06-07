@@ -9,11 +9,21 @@
 import Foundation
 
 
+/**
+ Swap mutation.
+ */
 public struct EASwapMutation<IndividualType: EAIndividualProtocol>: EAMutationProtocol {
     
     public let threshold: Double
+    /// Number of swappings.
     public let count: UInt
     
+    /**
+     Create a new swap mutation.
+     
+     - Parameter threshold: Treshold which defines if mutation will be performed or not. This parameter has to be in <0.0;1.0>.
+     - Parameter count: Number of swappings.
+     */
     public init(threshold: Double, count: UInt) {
         self.threshold = threshold
         self.count = count
