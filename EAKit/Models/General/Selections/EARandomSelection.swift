@@ -33,7 +33,7 @@ public struct EARandomSelection<PopulationType: EAPopulationProtocol>: EASelecti
         return nil
     }
     
-    public mutating func prepare(population: PopulationType, context: EAContextProtocol?) {
+    public func prepare(population: PopulationType, context: EAContextProtocol?) {
         
     }
     

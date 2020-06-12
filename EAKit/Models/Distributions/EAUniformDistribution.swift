@@ -27,7 +27,7 @@ public struct EAUniformDistribution<DataType: EARandomProtocol>: EADistributionP
     }
     
     public func random() -> DataType {
-        return DataType.random(in: range)
+        return DataType.random(in: range, using: &EAKit.randomNumberGenerator)
     }
     
 }

@@ -59,7 +59,7 @@ public class EATextFunction: EAFitnessFunctionProtocol {
     
     public func getRandomIndividual(type: EADistributionType<EACharacterIndividual.DataType>) -> EACharacterIndividual {
         let individual = EACharacterIndividual()
-        individual.data = Array(characters.shuffled().prefix(upTo: dimension))
+        individual.data = Array(characters.shuffled(using: &EAKit.randomNumberGenerator).prefix(upTo: dimension))
         individual.fitness = evaluate(individual: individual)
         return individual
     }

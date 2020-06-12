@@ -38,13 +38,15 @@ public class EAKPointCrossover<IndividualType: EAIndividualProtocol>: EACrossove
         var secondIndividual = IndividualType()
         
         var crossoverIndex = 0
+        var isFirst = true
         for dataIndex in 0 ..< size {
             if dataIndex == indexes[crossoverIndex] {
                 if crossoverIndex != indexes.count - 1 {
                     crossoverIndex += 1
                 }
+                isFirst.toggle()
             }
-            if dataIndex < indexes[crossoverIndex] {
+            if isFirst /*dataIndex < indexes[crossoverIndex]*/ {
                 firstIndividual.data.append(first.data[dataIndex])
                 secondIndividual.data.append(second.data[dataIndex])
             } else {

@@ -14,9 +14,7 @@ public struct EADERand1BinMutationStrategy<IndividualType: EAIndividualProtocol>
     public var f: IndividualType.DataType
     public var λ: IndividualType.DataType
     
-    public var parentsCount: Int {
-        3
-    }
+    public let parentsCount: Int = 3
     
     public init(f: IndividualType.DataType, λ: IndividualType.DataType) {
         self.f = f

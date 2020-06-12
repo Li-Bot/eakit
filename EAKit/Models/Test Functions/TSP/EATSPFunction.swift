@@ -51,7 +51,7 @@ public class EATSPFunction: EAFitnessFunctionProtocol {
     
     public func getRandomIndividual(type: EADistributionType<EATSPCity>) -> EAIndividual<EATSPCity> {
         let individual = EAIndividual<EATSPCity>()
-        individual.data = cities.shuffled()
+        individual.data = cities.shuffled(using: &EAKit.randomNumberGenerator)
         individual.fitness = evaluate(individual: individual)
         return individual
     }

@@ -48,8 +48,8 @@ extension EANormalDistribution where DataType == Double {
      - Returns: Random number of `DataType`
     */
     public func random() -> DataType {
-        let x1 = DataType.random(in: 0.0 ... 1.0)
-        let x2 = DataType.random(in: 0.0 ... 1.0)
+        let x1 = DataType.random(in: 0.0 ... 1.0, using: &EAKit.randomNumberGenerator)
+        let x2 = DataType.random(in: 0.0 ... 1.0, using: &EAKit.randomNumberGenerator)
         let z1 = sqrt(-2.0 * log(x1)) * cos(2.0 * Double.pi * x2)
         return z1 * σ + μ
     }

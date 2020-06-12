@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import EAKit_macOS
+@testable import EAKit
 
 class EAKit_macOSTests: XCTestCase {
 
@@ -31,11 +31,11 @@ class EAKit_macOSTests: XCTestCase {
         }
     }
     
-    func testHillClimbing() {
+    /*func testHillClimbing() {
         let hillClimbing: EAHillClimbing<EASphereFunction, EAPopulation> = EAHillClimbing(populationCount: 10, fitnessFunction: EASphereFunction(), iterationsCount: 5, deviation: 0.3)
         let result = hillClimbing.run()
         print(result.bestIndividual.fitness)
         print(result.bestIndividual.data)
-    }
+    }*/
 
 }
