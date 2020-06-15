@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Docs/Images/eakit_log.gif">
+</p>
+
 # EAKit
 EAKit is a Framework of Evolutionary Algorithms written in Swift.
 
