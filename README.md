@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Docs/Images/eakit_log.gif">
+  <img src="Docs/Images/eakit_logo.gif">
 </p>
 
 # EAKit
