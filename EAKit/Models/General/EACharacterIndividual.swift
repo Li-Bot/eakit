@@ -6,6 +6,8 @@
 //  Copyright © 2020 Libor Polehna. All rights reserved.
 //
 
+import Foundation
+
 
 /// Individual of Character data type.
 public typealias EACharacterIndividual = EAIndividual<Character>

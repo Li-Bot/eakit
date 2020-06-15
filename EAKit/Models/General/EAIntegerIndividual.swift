@@ -6,6 +6,8 @@
 //  Copyright © 2020 Libor Polehna. All rights reserved.
 //
 
+import Foundation
+
 
 /// Individual of Int data type.
 public typealias EAIntegerIndividual = EAIndividual<Int>

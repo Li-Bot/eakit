@@ -96,7 +96,7 @@ func geneticAlgorithm2() {
 
 
 func geneticAlgorithm3() {
-    let fitnessFunction = EATextFunction(text: /*"Dubai, United Arab Emirates."*/ "SKOUMAL Studio s.r.o. by Libor Polehna")
+    let fitnessFunction = EATextFunction(text: /*"Dubai, United Arab Emirates." "SKOUMAL Studio s.r.o. by Libor Polehna"*/ "Evolutionary Algorithms written in Swift")
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
             generationsCount: 2000,
@@ -105,6 +105,7 @@ func geneticAlgorithm3() {
             selection: EARouletteSelection(isElitism: true),
             crossover: EAKPointCrossover(threshold: 1.0, k: 2),
             mutation: EAReplacementMutation(threshold: 1.0, count: 1, set: fitnessFunction.characters),
+            output: EAAlgorithmParametersOutput(saveProgress: true),
             delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
@@ -119,6 +120,13 @@ func geneticAlgorithm3() {
     let result = genericAlgorithm.run()
     print(result.bestPopulation.bestIndividual?.fitness)
     print(result.bestPopulation.bestIndividual?.text)
+    
+    let pythonResult = EAPythonResult(result: result, name: "GeneticAlgorithmLogo")
+    do {
+        try pythonResult.save(useGlobalBest: false)
+    } catch {
+        debugPrint(error)
+    }
 }
 
 
@@ -208,7 +216,7 @@ func differentialEvolution() {
 
 //hillClimbing()
 //geneticAlgorithm2()
-//geneticAlgorithm3()
+geneticAlgorithm3()
 //evolutionaryAlgorithm()
 //particleSwarm()
-differentialEvolution()
+//differentialEvolution()

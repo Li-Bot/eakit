@@ -39,7 +39,7 @@ public class EATextFunction: EAFitnessFunctionProtocol {
         } else {
             var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYUZ"
             alphabet += alphabet.lowercased()
-            alphabet += "&,-/ '$%^*()@#!\"[]{}_?:|<>~+=."
+            alphabet += "&,-/ '$%^*()@!\"[]{}_?:|<>~+=."
             self.charactersSet = charactersSet ?? CharacterSet(charactersIn: alphabet)
         }
     }

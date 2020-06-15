@@ -35,14 +35,15 @@ public final class EAPythonResult<Result: EAAlgorithmResult<PopulationType>, Pop
      
      - Throws: If saving failed the method throws an error.
      */
-    public func save() throws {
+    public func save(useGlobalBest: Bool = true) throws {
         let fileName = "\(name).txt"
         let fileUrl = URL(fileURLWithPath: fileName)
         FileManager.default.createFile(atPath: fileUrl.relativePath, contents: Data(), attributes: nil)
         let fileWriter = try FileHandle(forWritingTo: fileUrl)
         
         for (pIndex, population) in result.populations.enumerated() {
-            let individuals = [result.bestPopulation.bestIndividual!] + population.individuals
+            fileWriter.write("\(population.bestIndividual!.fitness)#".data(using: .utf8)!)
+            let individuals = [useGlobalBest ? result.bestPopulation.bestIndividual! : population.bestIndividual!] + population.individuals
             for (iIndex, individual) in individuals.enumerated() {
                 for (dIndex, data) in individual.data.enumerated() {
                     guard let stringData = "\(data)".data(using: .utf8) else {
@@ -62,7 +63,11 @@ public final class EAPythonResult<Result: EAAlgorithmResult<PopulationType>, Pop
             }
         }
         
-        try fileWriter.close()
+        if #available(OSX 10.15, iOS 13, *) {
+            try fileWriter.close()
+        } else {
+            fileWriter.closeFile()
+        }
     }
     
 }
