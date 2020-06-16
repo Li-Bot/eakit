@@ -3,7 +3,8 @@
 </p>
 
 # EAKit
-EAKit is a Framework of Evolutionary Algorithms written in Swift.
+EAKit is a Framework of Evolutionary Algorithms written in Swift. 
+It is fully generic, simple to use and you can build your own evolutionary algorithm by using existing components. 
 
 ## Features
 - [x] Genetic Algorithm
@@ -152,12 +153,59 @@ print(result.bestPopulation.bestIndividual?.fitness)
 print(result.bestPopulation.bestIndividual?.data)
 ```
 
-### Fitness Function
+## Components
+Each evolutionary algorithm is decomposed to components. The components are interchangeable between algorithms. Each component is defined by protocol.
 
-```swift
-let test = ""
-```
+### EAFitnessFunctionProtocol
+Fitness Function protocol is the most important component. It defines a description of your problem. 
 
-#### Predefined Functions
+There are already built-in some fitness functions:
+- Artificial Landscapes
+  - EASphereFunction
+  - EARosenbrockFunction
+  - EARastriginFunction
+  - EAAckleyFunction
+  - EASchwefelFunction
+  - EAEasomFunction
+- TSP
+  - EATSPFunction
+- Others
+  - EATextFunction
+
+### EASelectionProtocol
+Selection component is used for selecting parents.
+
+There are already built-in some selections:
+- General
+  - EARandomSelection
+  - EARouletteSelection
+  - EATournamentSelection
+
+### EACrossoverProtocol
+Crossover component is used for crossing individuals, e.g. two parents selected from a selection component to create offsprings. 
+
+There are already built-in some crossovers:
+- General
+  - EASinglePointCrossover
+  - EATwoPointCrossover
+  - EAKPointCrossover
+  - EAUniformCrossover
+- TSP (Special crossovers for TSP)
+  - EATSPSinglePointCrossover
+  - EATSPTwoPointCrossover
+- Differential Evolution (Special crossovers for DE)
+  - EADifferentialEvolutionCrossover
+  
+### EAMutationProtocol
+Mutation component is used for mutating individuals, e.g. mutate offsprings from a crossover component. 
+
+There are already built-in some mutations:
+- General
+  - EASwapMutation
+  - EAFloatingNumericMutation
+  - EAReplacementMutation
+  - EANormalDistributionMutation
+- Evolutionary Strategy (Special mutations for ES)
+  - EAESNormalMutation
 
 ## Custom Implementation
