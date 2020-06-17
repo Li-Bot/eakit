@@ -47,6 +47,10 @@ print(result.bestPopulation.bestIndividual?.fitness)
 print(result.bestPopulation.bestIndividual?.data)
 ```
 
+<p align="center">
+  <img src="Docs/Images/hill_climbing.gif">
+</p>
+
 ### Genetic Algorithm
 
 ```swift
