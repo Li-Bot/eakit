@@ -46,6 +46,7 @@ class ParticleSwarmTests: XCTestCase {
 
     func testParticleSwarm() {
         EAKit.randomNumberGenerator = EARandomNumberGeneratorWrapper(generator: FakeRandomNumberGenerator(seed: 42))
+        
         let parameters = try! EAParticleSwarmParameters(
             particlesCount: 30,
             iterationsCount: 1000,

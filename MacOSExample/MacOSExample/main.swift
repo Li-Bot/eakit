@@ -11,16 +11,28 @@ import EAKit
 
 
 func hillClimbing() {
-    let fitnessFunction = EAEasomFunction()
-    var delegate = EAAlgorithmDelegate<EAHillClimbing<EAEasomFunction>, EAPopulation<EADoubleIndividual>>()
-    delegate.didFinishGeneration = { algorithm, iterationIndex, population in
+    let parameters = try! EAHillClimbingParameters(
+        populationCount: 20,
+        generationsCount: 100,
+        fitnessFunction: EAAckleyFunction(),
+        deviation: 0.7,
+        output: EAAlgorithmParametersOutput(saveProgress: true),
+        delegate: EAAlgorithmDelegate()
+    )
+    parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
         print(population.bestIndividual?.fitness)
     }
-    let parameters = try! EAHillClimbingParameters(populationCount: 200, generationsCount: 1000, fitnessFunction: fitnessFunction, deviation: 10.0, delegate: delegate)
     let hillClimbing = EAHillClimbing(parameters: parameters)
     let result = hillClimbing.run()
     print(result.bestPopulation.bestIndividual?.fitness)
     print(result.bestPopulation.bestIndividual?.data)
+    
+    let pythonResult = EAPythonResult(result: result, name: "HillClimbing")
+    do {
+        try pythonResult.save(useGlobalBest: false)
+    } catch {
+        debugPrint(error)
+    }
 }
 
 
@@ -64,7 +76,6 @@ func geneticAlgorithm2() {
         EATSPCity("S", [60.0, 20.0]),
         EATSPCity("T", [160.0, 20.0])
     ]
-    
     let fitnessFunction = EATSPFunction(cities: cities)
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
@@ -79,8 +90,12 @@ func geneticAlgorithm2() {
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
         print(population.bestIndividual?.fitness)
     }
+    let algorithm = EAGeneticAlgorithm(parameters: parameters)
+    let result = algorithm.run()
+    print(result.bestPopulation.bestIndividual?.fitness)
+    print(result.bestPopulation.bestIndividual?.data)
     
-    var success = 0
+    /*var success = 0
     let count = 1
     for _ in 0 ..< count {
         let genericAlgorithm = EAGeneticAlgorithm(parameters: parameters)
@@ -91,7 +106,7 @@ func geneticAlgorithm2() {
         print(result.bestPopulation.bestIndividual?.fitness)
         print(result.bestPopulation.bestIndividual?.data)
     }
-    print(Double(success) / Double(count))
+    print(Double(success) / Double(count))*/
 }
 
 
@@ -214,9 +229,9 @@ func differentialEvolution() {
     }
 }
 
-//hillClimbing()
+hillClimbing()
 //geneticAlgorithm2()
-geneticAlgorithm3()
+//geneticAlgorithm3()
 //evolutionaryAlgorithm()
 //particleSwarm()
 //differentialEvolution()
