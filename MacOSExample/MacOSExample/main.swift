@@ -13,9 +13,9 @@ import EAKit
 func hillClimbing() {
     let parameters = try! EAHillClimbingParameters(
         populationCount: 20,
-        generationsCount: 100,
+        generationsCount: 101,
         fitnessFunction: EAAckleyFunction(),
-        deviation: 0.7,
+        deviation: 0.5,
         output: EAAlgorithmParametersOutput(saveProgress: true),
         delegate: EAAlgorithmDelegate()
     )
@@ -147,44 +147,57 @@ func geneticAlgorithm3() {
 
 
 func evolutionaryAlgorithm() {
-    let fitnessFunction = EARastriginFunction()
-    let configuration = try! EAEvolutionaryStrategyConfiguration(µ: 20, ρ: 1, selectionStrategy: .plus, λ: 20)
+    let fitnessFunction = EAAckleyFunction()
+    let configuration = try! EAEvolutionaryStrategyConfiguration(µ: 20, ρ: 3, selectionStrategy: .plus, λ: 20)
     let parameters = try! EAEvolutionaryStrategyParameters(
         generationsCount: 2000,
         configuration: configuration,
         fitnessFunction: fitnessFunction,
         selection: EARandomSelection(),
         recombination: EAESIntermadiateRecombination(),
-        mutation: EAESNormalMutation(threshold: 1.0, σ: 0.5),
+        mutation: EAESNormalMutation(threshold: 1.0, σ: 0.1),
         output: .defaultOutput,
         delegate: EAAlgorithmDelegate()
     )
     
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
         print(population.bestIndividual?.fitness)
+        if population.bestIndividual!.fitness < 0.01 {
+            print(iterationIndex)
+        }
     }
     
     let evolutionaryStrategy = EAEvolutionaryStrategy(parameters: parameters)
     let result = evolutionaryStrategy.run()
     print(result.bestPopulation.bestIndividual?.fitness)
     print(result.bestPopulation.bestIndividual?.data)
+    
+    let pythonResult = EAPythonResult(result: result, name: "EvolutionaryAlgorithm")
+    do {
+        try pythonResult.save(useGlobalBest: false)
+    } catch {
+        debugPrint(error)
+    }
 }
 
 
 func particleSwarm() {
     let parameters = try! EAParticleSwarmParameters(
         particlesCount: 10,
-        iterationsCount: 50,
-        velocity: EAParticleSwarmVelocity(maximum: EARastriginFunction().distance / 20.0),
+        iterationsCount: 101,
+        velocity: EAParticleSwarmVelocity(maximum: EAAckleyFunction().distance / 30.0),
         learning: EAParticleSwarmLearning.defaultLearning,
         inertiaWeight: EAParticleSwarmInertiaWeight.defaultInertiaWeight,
-        fitnessFunction: EARastriginFunction(),
+        fitnessFunction: EAAckleyFunction(),
         output: EAAlgorithmParametersOutput(saveProgress: true),
         delegate: EAAlgorithmDelegate()
     )
     
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
         print(population.bestIndividual?.fitness)
+        if population.bestIndividual!.fitness < 0.01 {
+            print(iterationIndex)
+        }
     }
     
     let particleSwarm = EAParticleSwarm(parameters: parameters)
@@ -192,9 +205,9 @@ func particleSwarm() {
     print(result.bestPopulation.bestIndividual?.fitness)
     print(result.bestPopulation.bestIndividual?.data)
     
-    let pythonResult = EAPythonResult(result: result, name: "EARastriginFunction")
+    let pythonResult = EAPythonResult(result: result, name: "ParticleSwarm")
     do {
-        try pythonResult.save()
+        try pythonResult.save(useGlobalBest: false)
     } catch {
         debugPrint(error)
     }
@@ -204,17 +217,20 @@ func particleSwarm() {
 func differentialEvolution() {
     let parameters = try! EADifferentialEvolutionParameters(
         populationCount: 10,
-        generationsCount: 20,
+        generationsCount: 101,
         selection: EARandomSelection(),
         mutationStrategy: EADERand1BinMutationStrategy(f: 0.5, λ: 0.5),
         crossover: EADifferentialEvolutionCrossover(cr: 0.9),
-        fitnessFunction: EARastriginFunction(),
+        fitnessFunction: EAAckleyFunction(),
         output: EAAlgorithmParametersOutput(saveProgress: true),
         delegate: EAAlgorithmDelegate()
     )
     
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
         print(population.bestIndividual?.fitness)
+        if population.bestIndividual!.fitness < 0.01 {
+            print(iterationIndex)
+        }
     }
     
     let differentialEvolution = EADifferentialEvolution(parameters: parameters)
@@ -222,17 +238,17 @@ func differentialEvolution() {
     print(result.bestPopulation.bestIndividual?.fitness)
     print(result.bestPopulation.bestIndividual?.data)
     
-    let pythonResult = EAPythonResult(result: result, name: "EARastriginFunction")
+    let pythonResult = EAPythonResult(result: result, name: "DifferentialEvolution")
     do {
-        try pythonResult.save()
+        try pythonResult.save(useGlobalBest: false)
     } catch {
         debugPrint(error)
     }
 }
 
-hillClimbing()
+//hillClimbing()
 //geneticAlgorithm2()
 //geneticAlgorithm3()
 //evolutionaryAlgorithm()
 //particleSwarm()
-//differentialEvolution()
+differentialEvolution()
