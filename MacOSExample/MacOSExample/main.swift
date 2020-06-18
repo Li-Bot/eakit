@@ -111,7 +111,8 @@ func geneticAlgorithm2() {
 
 
 func geneticAlgorithm3() {
-    let fitnessFunction = EATextFunction(text: /*"Dubai, United Arab Emirates." "SKOUMAL Studio s.r.o. by Libor Polehna"*/ "Evolutionary Algorithms written in Swift")
+    let text = "Evolutionary Algorithms written in Swift"
+    let fitnessFunction = EATextFunction(text: /*"Dubai, United Arab Emirates." "SKOUMAL Studio s.r.o. by Libor Polehna"*/ text, charactersSet: CharacterSet(charactersIn: text))
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
             generationsCount: 2000,
