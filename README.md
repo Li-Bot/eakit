@@ -117,6 +117,10 @@ print(result.bestPopulation.bestIndividual?.fitness)
 print(result.bestPopulation.bestIndividual?.data)
 ```
 
+<p align="center">
+  <img src="Docs/Images/evolutionary_algorithm.gif">
+</p>
+
 ### Particle Swarm
 
 ```swift
@@ -137,6 +141,10 @@ print(result.bestPopulation.bestIndividual?.fitness)
 print(result.bestPopulation.bestIndividual?.data)
 ```
 
+<p align="center">
+  <img src="Docs/Images/particle_swarm.gif">
+</p>
+
 ### Differential Evolution
 
 ```swift
@@ -156,6 +164,10 @@ let result = algorithm.run()
 print(result.bestPopulation.bestIndividual?.fitness)
 print(result.bestPopulation.bestIndividual?.data)
 ```
+
+<p align="center">
+  <img src="Docs/Images/differential_evolution.gif">
+</p>
 
 ## Components
 Each evolutionary algorithm is decomposed to components. The components are interchangeable between algorithms. Each component is defined by protocol.
