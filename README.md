@@ -34,9 +34,9 @@ Let's look at how simple it is!
 ```swift
 // Parameters of Hill Climbing
 let parameters = try! EAHillClimbingParameters(
-    populationCount: 10,
-    generationsCount: 300,
-    fitnessFunction: EASphereFunction(),
+    populationCount: 20,
+    generationsCount: 101,
+    fitnessFunction: EAAckleyFunction(),
     deviation: 0.5
 )
 // Run the algorithm
@@ -56,26 +56,13 @@ print(result.bestPopulation.bestIndividual?.data)
 ```swift
 // Data of TSP Fitness Function
 let cities = [
-    EATSPCity("A", [60.0, 200.0]),
-    EATSPCity("B", [80.0, 200.0]),
-    EATSPCity("C", [80.0, 180.0]),
-    EATSPCity("D", [140.0, 180.0]),
-    EATSPCity("E", [20.0, 160.0]),
-    EATSPCity("F", [100.0, 160.0]),
-    EATSPCity("G", [200.0, 160.0]),
-    EATSPCity("H", [140.0, 140.0]),
-    EATSPCity("I", [40.0, 120.0]),
-    EATSPCity("J", [100.0, 120.0]),
-    EATSPCity("K", [180.0, 100.0]),
-    EATSPCity("L", [60.0, 80.0]),
-    EATSPCity("M", [120.0, 80.0]),
-    EATSPCity("N", [180.0, 60.0]),
-    EATSPCity("O", [20.0, 40.0]),
-    EATSPCity("P", [100.0, 40.0]),
-    EATSPCity("Q", [200.0, 40.0]),
-    EATSPCity("R", [20.0, 20.0]),
-    EATSPCity("S", [60.0, 20.0]),
-    EATSPCity("T", [160.0, 20.0])
+    EATSPCity("A", [60.0, 200.0]), EATSPCity("B", [80.0, 200.0]), EATSPCity("C", [80.0, 180.0]),
+    EATSPCity("D", [140.0, 180.0]), EATSPCity("E", [20.0, 160.0]), EATSPCity("F", [100.0, 160.0]),
+    EATSPCity("G", [200.0, 160.0]), EATSPCity("H", [140.0, 140.0]), EATSPCity("I", [40.0, 120.0]),
+    EATSPCity("J", [100.0, 120.0]), EATSPCity("K", [180.0, 100.0]), EATSPCity("L", [60.0, 80.0]),
+    EATSPCity("M", [120.0, 80.0]), EATSPCity("N", [180.0, 60.0]), EATSPCity("O", [20.0, 40.0]),
+    EATSPCity("P", [100.0, 40.0]), EATSPCity("Q", [200.0, 40.0]), EATSPCity("R", [20.0, 20.0]),
+    EATSPCity("S", [60.0, 20.0]), EATSPCity("T", [160.0, 20.0])
 ]
 let fitnessFunction = EATSPFunction(cities: cities)
 // Parameters of Genetic Algorithm
@@ -99,12 +86,12 @@ print(result.bestPopulation.bestIndividual?.data)
 ### Evolutionary Strategy
 ```swift
 // Configuration of Evolutionary Strategy 
-let configuration = try! EAEvolutionaryStrategyConfiguration(µ: 20, ρ: 2, selectionStrategy: .plus, λ: 20)
+let configuration = try! EAEvolutionaryStrategyConfiguration(µ: 20, ρ: 3, selectionStrategy: .plus, λ: 20)
 // Parameters of Evolutionary Strategy
 let parameters = try! EAEvolutionaryStrategyParameters(
-    generationsCount: 2000,
+    generationsCount: 101,
     configuration: configuration,
-    fitnessFunction: EASphereFunction(),
+    fitnessFunction: EAAckleyFunction(),
     selection: EARandomSelection(),
     recombination: EAESIntermadiateRecombination(),
     mutation: EAESNormalMutation(threshold: 1.0, σ: 0.5)
@@ -126,12 +113,12 @@ print(result.bestPopulation.bestIndividual?.data)
 ```swift
 // Parameters of Particle Swarm
 let parameters = try! EAParticleSwarmParameters(
-    particlesCount: 30,
-    iterationsCount: 1000,
+    particlesCount: 10,
+    iterationsCount: 101,
     velocity: EAParticleSwarmVelocity(maximum: EASphereFunction().distance / 30.0),
     learning: .defaultLearning,
     inertiaWeight: .defaultInertiaWeight,
-    fitnessFunction: EASphereFunction()
+    fitnessFunction: EAAckleyFunction()
 )
 // Run the algorithm
 let algorithm = EAParticleSwarm(parameters: parameters)
@@ -151,11 +138,11 @@ print(result.bestPopulation.bestIndividual?.data)
 // Parameters of Differential Evolution
 let parameters = try! EADifferentialEvolutionParameters(
     populationCount: 10,
-    generationsCount: 20,
+    generationsCount: 101,
     selection: EARandomSelection(),
     mutationStrategy: EADERand1BinMutationStrategy(f: 0.5, λ: 0.5),
     crossover: EADifferentialEvolutionCrossover(cr: 0.9),
-    fitnessFunction: EASphereFunction()
+    fitnessFunction: EAAckleyFunction()
 )
 // Run the algorithm
 let algorithm = EADifferentialEvolution(parameters: parameters)
