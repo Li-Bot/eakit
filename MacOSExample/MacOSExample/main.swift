@@ -85,6 +85,7 @@ func geneticAlgorithm2() {
             selection: EARandomSelection(isElitism: true),
             crossover: EATSPTwoPointCrossover(threshold: 1.0),
             mutation: EASwapMutation(threshold: 0.9, count: 1),
+            output: EAAlgorithmParametersOutput(saveProgress: true),
             delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
@@ -107,6 +108,13 @@ func geneticAlgorithm2() {
         print(result.bestPopulation.bestIndividual?.data)
     }
     print(Double(success) / Double(count))*/
+    
+    let pythonResult = EAPythonResult(result: result, name: "GeneticAlgorithm")
+    do {
+        try pythonResult.save(useGlobalBest: false)
+    } catch {
+        debugPrint(error)
+    }
 }
 
 
@@ -247,8 +255,8 @@ func differentialEvolution() {
 }
 
 //hillClimbing()
-//geneticAlgorithm2()
+geneticAlgorithm2()
 //geneticAlgorithm3()
 //evolutionaryAlgorithm()
 //particleSwarm()
-differentialEvolution()
+//differentialEvolution()

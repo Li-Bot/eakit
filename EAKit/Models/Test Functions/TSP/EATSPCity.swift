@@ -31,3 +31,17 @@ public struct EATSPCity {
     }
     
 }
+
+
+extension EATSPCity: CustomStringConvertible {
+    
+    public var description: String {
+        var data = ""
+        for coordinate in coordinates {
+            data += "\(coordinate),"
+        }
+        data.removeLast()
+        return data
+    }
+    
+}
