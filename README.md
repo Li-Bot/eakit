@@ -68,7 +68,7 @@ let fitnessFunction = EATSPFunction(cities: cities)
 // Parameters of Genetic Algorithm
 let parameters = try! EAGeneticAlgorithmParameters(
     populationCount: 20,
-    generationsCount: 2000,
+    generationsCount: 301,
     fitnessFunction: fitnessFunction,
     isElitism: true,
     selection: EARandomSelection(isElitism: true),
