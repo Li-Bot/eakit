@@ -83,6 +83,10 @@ print(result.bestPopulation.bestIndividual?.fitness)
 print(result.bestPopulation.bestIndividual?.data)
 ```
 
+<p align="center">
+  <img src="Docs/Images/genetic_algorithm.gif">
+</p>
+
 ### Evolutionary Strategy
 ```swift
 // Configuration of Evolutionary Strategy 
@@ -105,7 +109,7 @@ print(result.bestPopulation.bestIndividual?.data)
 ```
 
 <p align="center">
-  <img src="Docs/Images/evolutionary_algorithm.gif">
+  <img src="Docs/Images/evolutionary_strategy.gif">
 </p>
 
 ### Particle Swarm
