@@ -230,5 +230,124 @@ Mutation Strategy component is used for mutating individuals based on active ind
 There are already built-in some mutation strategies:
 - EADERand1BinMutationStrategy
 
+### EAIndividualProtocol
+One of the core components. Individual represents a solution of your problem. It is almost used throughout the all components. 
+
+There are already built-in some individuals:
+- General
+  - EAIndividual<DataType>, which is generic and you can define data type of your individual
+  - EADoubleIndividual, data type is Double
+  - EAIntegerIndividual, data type is Int
+  - EACharacterIndividual, data type is Character
+- Particle Swarm (Special individuals for PS)
+  - EAParticleSwarmIndividual
+
+### EAPopulationProtocol
+One of the core components. Population consists of array of individuals. It is almost used throughout the all components. 
+
+There are already built-in some populations:
+- General
+  - EAPopulation<IndividualType: EAIndividualProtocol>, which is generic and you can define individual type of your population
+- Particle Swarm (Special individuals for PS)
+  - EAParticleSwarmPopulation
 
 ## Custom Implementation
+Let's look at how simple it is to implement your own components & evolutionary algorithms. 
+
+### Fitness Function
+If you want to have your problem solved by some of already implemented algorithms described above, you have to implement your own fitness function. Do not worry, it is a piece of cake!
+
+```swift
+struct MySphereFunction: EAFitnessFunctionProtocol {
+    
+    let dimension: Int
+    let range: ClosedRange<Double>
+    
+    private let domainValidation: EASingleRangeDomainValidation<EADoubleIndividual>
+    
+    init() {
+        self.dimension = 2
+        self.range = -5.0 ... 5.0
+        domainValidation = EASingleRangeDomainValidation(domain: EARangeDomain(range: range))
+    }
+    
+    func evaluate(individual: EADoubleIndividual) -> Double {
+        var fitness: Double = 0.0
+        for x in individual.data {
+            fitness += x * x
+        }
+        return fitness
+    }
+    
+    func getRandomIndividual(type: EADistributionType<EADoubleIndividual.DataType>) -> EADoubleIndividual {
+        var individual = IndividualType()
+        
+        let distribution = EAUniformDistribution(range: range)
+        for _ in 0 ..< dimension {
+            let randomValue = distribution.random()
+            individual.data.append(randomValue)
+        }
+        individual = validateDomains(individual: individual)
+        individual.fitness = evaluate(individual: individual)
+        
+        return individual
+    }
+    
+    func validateDomains(individual: EADoubleIndividual) -> EADoubleIndividual {
+        return domainValidation.validate(individual: individual, fitnessFunction: self) ?? individual
+    }
+    
+}
+```
+
+1. ```EAFitnessFunctionProtocol``` has IndividualType (which conforms to ```EAIndividualProtocol```) as a associated type (a generic parameter of protocol). If you define the type of IndividualType in signatures of methods, such as: evaluate and validateDomains, compiler automatically resolve the type of generic parameter (IndividualType).
+2. ```func evaluate(individual: EADoubleIndividual) -> Double```
+  - You should implement your problem in this method to calculate a fitness value of given individual.
+3. ```func getRandomIndividual(type: EADistributionType<EADoubleIndividual.DataType>) -> EADoubleIndividual```
+  - Generate a random individual in your search space (problem space).
+4. ```func validateDomains(individual: EADoubleIndividual) -> EADoubleIndividual```
+  - Use this method to validate domains of given individual, e.g. when your search space is limited or is discrete, you have to define boundaries of search space to prevent individuals from being in forbidden areas.
+5. That's it! You can use some of algorithms described above to have your problem solved.
+
+### Individual 
+As you can see, we used ```EADoubleIndividual``` in our custom implementation of fitness function ```MySphereFunction``` above. However, you can define your own individual to meet your expectations.
+
+1. If you only need different type of individual, you can use generic ```EAIndividual<DataType>``` class:
+```swift
+typealias MyIndividual = EAIndividual<String>
+```
+
+2. If you need more sophisticated individual, you have to implement custom class/struct:
+```swift
+class MyIndividual: EAIndividualProtocol {
+    
+    var position: [Float] {
+        set { data = newValue }
+        get { return data }
+    }
+    
+    var fitness: Double {
+           didSet {
+               if fitness < oldValue {
+                   bestPosition = position
+               }
+           }
+       }
+    
+    var data: [Float]
+    var velocity: [Float]
+    private(set) var bestPosition: [Float]
+    
+    public required init() {
+        bestPosition = []
+        velocity = []
+        data = []
+        fitness = Double.greatestFiniteMagnitude
+    }
+    
+}
+```
+
+1. ```EAIndividualProtocol``` has DataType as a associated type (a generic parameter of protocol). If you define the type of data property, compiler automatically resolve the type of generic parameter (DataType). 
+2. You have to implement ```fitness: Double``` a ```data: [DataType]``` properties as required by protocol.
+3. That's it! You can use your own individual in your fitness function or in other components.
