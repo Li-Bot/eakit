@@ -250,6 +250,13 @@ There are already built-in some populations:
   - EAPopulation<IndividualType: EAIndividualProtocol>, which is generic and you can define individual type of your population
 - Particle Swarm (Special individuals for PS)
   - EAParticleSwarmPopulation
+  
+### EADistributionProtocol
+Distribution component is used for generating random numbers.
+
+There are already built-in some distributions:
+- EAUniformDistribution
+- EANormalDistribution
 
 ## Custom Implementation
 Let's look at how simple it is to implement your own components & evolutionary algorithms. 
