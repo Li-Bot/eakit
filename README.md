@@ -180,7 +180,7 @@ There are already built-in some fitness functions:
   - EATextFunction
 
 ### EASelectionProtocol
-Selection component is used for selecting parents.
+Selection component is used for selecting parents from a pupulation.
 
 There are already built-in some selections:
 - General
@@ -214,5 +214,21 @@ There are already built-in some mutations:
   - EANormalDistributionMutation
 - Evolutionary Strategy (Special mutations for ES)
   - EAESNormalMutation
+
+### EAEvolutionaryStrategyRecombinationProtocol
+This component is made specially for Evolutionary Strategy algorithm. However, you can use it in your custom algorithm if necessary.
+Recombination component is used for combination multiple individuals to generate one offspring, e.g. recombine parents selected from a selection component to create one recombinant (offspring).
+
+There are already built-in some recombinations:
+- EAESIntermadiateRecombination
+- EAESDiscreteRecombination
+
+### EADifferentialEvolutionMutationStrategyProtocol
+This component is made specially for Differential Evolution algorithm. However, you can use it in your custom algorithm if necessary.
+Mutation Strategy component is used for mutating individuals based on active individual, global best individual and others random selected individuals.
+
+There are already built-in some mutation strategies:
+- EADERand1BinMutationStrategy
+
 
 ## Custom Implementation
