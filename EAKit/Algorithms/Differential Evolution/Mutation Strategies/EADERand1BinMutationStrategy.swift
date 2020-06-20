@@ -9,6 +9,9 @@
 import Foundation
 
 
+/**
+ DERand1Bin Mutation Strategy
+ */
 public struct EADERand1BinMutationStrategy<IndividualType: EAIndividualProtocol> : EADifferentialEvolutionMutationStrategyProtocol where IndividualType.DataType: Numeric {
     
     public var f: IndividualType.DataType
@@ -16,6 +19,12 @@ public struct EADERand1BinMutationStrategy<IndividualType: EAIndividualProtocol>
     
     public let parentsCount: Int = 3
     
+    /**
+     Create a new DERand1Bin mutation strategy.
+     
+     - Parameter f: Mutation constant F.
+     - Parameter λ: Mutation constant λ.
+     */
     public init(f: IndividualType.DataType, λ: IndividualType.DataType) {
         self.f = f
         self.λ = λ

@@ -34,10 +34,10 @@ public final class EADifferentialEvolution<FitnessFunctionType: EAFitnessFunctio
         var currentPopulation = PopulationType.getRandomPopulation(type: .uniform, fitnessFunction: parameters.fitnessFunction, size: parameters.populationCount, context: context)
         let result = EAAlgorithmResult(population: currentPopulation)
         
-        
         for generationIndex in 0 ..< parameters.generationsCount - 1 {
             let population = PopulationType(individuals: [])
             
+            parameters.selection.prepare(population: currentPopulation, context: context)
             for individual in currentPopulation.individuals {
                 // Select parents.
                 let parents = parameters.selection.selectParents(population: currentPopulation, count: parameters.mutationStrategy.parentsCount, context: context)

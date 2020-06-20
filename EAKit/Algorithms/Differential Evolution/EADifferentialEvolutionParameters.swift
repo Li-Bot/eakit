@@ -20,11 +20,11 @@ public final class EADifferentialEvolutionParameters<FitnessFunctionType: EAFitn
     }
     
     /// Parents selection strategy.
-    let selection: SelectionType
+    public var selection: SelectionType
     /// Individuals mutation strategy.
-    let mutationStrategy: MutationStrategyType
+    public let mutationStrategy: MutationStrategyType
     /// Parents crossover strategy.
-    let crossover: CrossoverType
+    public let crossover: CrossoverType
     
     /**
      Create a new Differential Evolution parameters.

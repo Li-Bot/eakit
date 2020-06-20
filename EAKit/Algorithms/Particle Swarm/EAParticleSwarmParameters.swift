@@ -15,11 +15,11 @@ import Foundation
 public final class EAParticleSwarmParameters<FitnessFunctionType: EAFitnessFunctionProtocol>: EAAlgorithmParameters<EAParticleSwarm<FitnessFunctionType>, EAParticleSwarmPopulation> where FitnessFunctionType.IndividualType == EAParticleSwarmPopulation.IndividualType {
     
     /// Velocity limits.
-    let velocity: EAParticleSwarmVelocity
+    public let velocity: EAParticleSwarmVelocity
     /// Learning constants.
-    let learning: EAParticleSwarmLearning
+    public let learning: EAParticleSwarmLearning
     /// Inertia Weight.
-    let inertiaWeight: EAParticleSwarmInertiaWeight
+    public let inertiaWeight: EAParticleSwarmInertiaWeight
 
     /**
      Create a new Particle Swarm parameters.
