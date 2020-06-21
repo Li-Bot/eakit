@@ -163,100 +163,112 @@ print(result.bestPopulation.bestIndividual?.data)
 ## Components
 Each evolutionary algorithm is decomposed to components. The components are interchangeable between algorithms. Each component is defined by protocol.
 
-### EAFitnessFunctionProtocol
+### ```EAFitnessFunctionProtocol```
 Fitness Function protocol is the most important component. It defines a description of your problem. 
 
 There are already built-in some fitness functions:
 - Artificial Landscapes
-  - EASphereFunction
-  - EARosenbrockFunction
-  - EARastriginFunction
-  - EAAckleyFunction
-  - EASchwefelFunction
-  - EAEasomFunction
+  - ```EASphereFunction```
+  - ```EARosenbrockFunction```
+  - ```EARastriginFunction```
+  - ```EAAckleyFunction```
+  - ```EASchwefelFunction```
+  - ```EAEasomFunction```
 - TSP
-  - EATSPFunction
+  - ```EATSPFunction```
 - Others
-  - EATextFunction
+  - ```EATextFunction```
 
-### EASelectionProtocol
+### ```EASelectionProtocol```
 Selection component is used for selecting parents from a pupulation.
 
 There are already built-in some selections:
 - General
-  - EARandomSelection
-  - EARouletteSelection
-  - EATournamentSelection
+  - ```EARandomSelection```
+  - ```EARouletteSelection```
+  - ```EATournamentSelection```
 
-### EACrossoverProtocol
+### ```EACrossoverProtocol```
 Crossover component is used for crossing individuals, e.g. two parents selected from a selection component to create offsprings. 
 
 There are already built-in some crossovers:
 - General
-  - EASinglePointCrossover
-  - EATwoPointCrossover
-  - EAKPointCrossover
-  - EAUniformCrossover
+  - ```EASinglePointCrossover```
+  - ```EATwoPointCrossover```
+  - ```EAKPointCrossover```
+  - ```EAUniformCrossover```
 - TSP (Special crossovers for TSP)
-  - EATSPSinglePointCrossover
-  - EATSPTwoPointCrossover
+  - ```EATSPSinglePointCrossover```
+  - ```EATSPTwoPointCrossover```
 - Differential Evolution (Special crossovers for DE)
-  - EADifferentialEvolutionCrossover
+  - ```EADifferentialEvolutionCrossover```
   
-### EAMutationProtocol
+### ```EAMutationProtocol```
 Mutation component is used for mutating individuals, e.g. mutate offsprings from a crossover component. 
 
 There are already built-in some mutations:
 - General
-  - EASwapMutation
-  - EAFloatingNumericMutation
-  - EAReplacementMutation
-  - EANormalDistributionMutation
+  - ```EASwapMutation```
+  - ```EAFloatingNumericMutation```
+  - ```EAReplacementMutation```
+  - ```EANormalDistributionMutation```
 - Evolutionary Strategy (Special mutations for ES)
-  - EAESNormalMutation
+  - ```EAESNormalMutation```
 
-### EAEvolutionaryStrategyRecombinationProtocol
+### ```EAEvolutionaryStrategyRecombinationProtocol```
 This component is made specially for Evolutionary Strategy algorithm. However, you can use it in your custom algorithm if necessary.
 Recombination component is used for combination multiple individuals to generate one offspring, e.g. recombine parents selected from a selection component to create one recombinant (offspring).
 
 There are already built-in some recombinations:
-- EAESIntermadiateRecombination
-- EAESDiscreteRecombination
+- ```EAESIntermadiateRecombination```
+- ```EAESDiscreteRecombination```
 
-### EADifferentialEvolutionMutationStrategyProtocol
+### ```EADifferentialEvolutionMutationStrategyProtocol```
 This component is made specially for Differential Evolution algorithm. However, you can use it in your custom algorithm if necessary.
 Mutation Strategy component is used for mutating individuals based on active individual, global best individual and others random selected individuals.
 
 There are already built-in some mutation strategies:
-- EADERand1BinMutationStrategy
+- ```EADERand1BinMutationStrategy```
 
-### EAIndividualProtocol
+### ```EAIndividualProtocol```
 One of the core components. Individual represents a solution of your problem. It is almost used throughout the all components. 
 
 There are already built-in some individuals:
 - General
-  - EAIndividual<DataType>, which is generic and you can define data type of your individual
-  - EADoubleIndividual, data type is Double
-  - EAIntegerIndividual, data type is Int
-  - EACharacterIndividual, data type is Character
+  - ```EAIndividual<DataType>```, which is generic and you can define data type of your individual
+  - ```EADoubleIndividual```, data type is Double
+  - ```EAIntegerIndividual```, data type is Int
+  - ```EACharacterIndividual```, data type is Character
 - Particle Swarm (Special individuals for PS)
-  - EAParticleSwarmIndividual
+  - ```EAParticleSwarmIndividual```
 
-### EAPopulationProtocol
+### ```EAPopulationProtocol```
 One of the core components. Population consists of array of individuals. It is almost used throughout the all components. 
 
 There are already built-in some populations:
 - General
-  - EAPopulation<IndividualType: EAIndividualProtocol>, which is generic and you can define individual type of your population
+  - ```EAPopulation<IndividualType: EAIndividualProtocol>```, which is generic and you can define individual type of your population
 - Particle Swarm (Special individuals for PS)
-  - EAParticleSwarmPopulation
+  - ```EAParticleSwarmPopulation```
   
-### EADistributionProtocol
+### ```EADistributionProtocol```
 Distribution component is used for generating random numbers.
 
 There are already built-in some distributions:
-- EAUniformDistribution
-- EANormalDistribution
+- ```EAUniformDistribution```
+- ```EANormalDistribution```
+
+### ```EAAlgorithmProtocol```
+Algorithm component is used for implementing your own evolutionary algorithm. It also includes three others components: ```EAAlgorithmDelegateProtocol```, ```EAAlgorithmParametersProtocol``` and ```EAAlgorithmResultProtocol```.
+
+- ```EAAlgorithmDelegateProtocol``` is used for tracking progress while a algorithm is running (you can use it for updating UI)
+  - ```EAAlgorithmDelegate``` - basic built-in implementation ready to use. There is no need to implement it by yourself.
+- ```EAAlgorithmParametersProtocol``` is used for defining parameters of an evolutionary algorithm. Just to keep parameters and logic of an algorithm apart.
+  - ```EAAlgorithmParameters``` - basic built-in implementation ready to use. There is no need to implement it by yourself.
+- ```EAAlgorithmResultProtocol``` is used for getting result of an algorithm. 
+  - ```EAAlgorithmParametersOutput``` - basic built-in implementation ready to use. There is no need to implement it by yourself.
+
+I recommend you to use all those components mentioned above when you want to create your own evolutionary algorithm. It will be easier and consistent.
 
 ## Custom Implementation
 Let's look at how simple it is to implement your own components & evolutionary algorithms. 
@@ -265,12 +277,14 @@ Let's look at how simple it is to implement your own components & evolutionary a
 If you want to have your problem solved by some of already implemented algorithms described above, you have to implement your own fitness function. Do not worry, it is a piece of cake!
 
 ```swift
-struct MySphereFunction: EAFitnessFunctionProtocol {
+struct MyFunction: EAFitnessFunctionProtocol {
+    
+    typealias IndividualType = EADoubleIndividual
     
     let dimension: Int
     let range: ClosedRange<Double>
     
-    private let domainValidation: EASingleRangeDomainValidation<EADoubleIndividual>
+    private let domainValidation: EASingleRangeDomainValidation<IndividualType>
     
     init() {
         self.dimension = 2
@@ -278,7 +292,7 @@ struct MySphereFunction: EAFitnessFunctionProtocol {
         domainValidation = EASingleRangeDomainValidation(domain: EARangeDomain(range: range))
     }
     
-    func evaluate(individual: EADoubleIndividual) -> Double {
+    func evaluate(individual: IndividualType) -> Double {
         var fitness: Double = 0.0
         for x in individual.data {
             fitness += x * x
@@ -286,7 +300,7 @@ struct MySphereFunction: EAFitnessFunctionProtocol {
         return fitness
     }
     
-    func getRandomIndividual(type: EADistributionType<EADoubleIndividual.DataType>) -> EADoubleIndividual {
+    func getRandomIndividual(type: EADistributionType<IndividualType.DataType>) -> IndividualType {
         var individual = IndividualType()
         
         let distribution = EAUniformDistribution(range: range)
@@ -300,14 +314,14 @@ struct MySphereFunction: EAFitnessFunctionProtocol {
         return individual
     }
     
-    func validateDomains(individual: EADoubleIndividual) -> EADoubleIndividual {
+    func validateDomains(individual: IndividualType) -> IndividualType {
         return domainValidation.validate(individual: individual, fitnessFunction: self) ?? individual
     }
     
 }
 ```
 
-1. ```EAFitnessFunctionProtocol``` has IndividualType (which conforms to ```EAIndividualProtocol```) as a associated type (a generic parameter of protocol). If you define the type of IndividualType in signatures of methods, such as: evaluate and validateDomains, compiler automatically resolve the type of generic parameter (IndividualType).
+1. ```EAFitnessFunctionProtocol``` has ```IndividualType``` (which conforms to ```EAIndividualProtocol```) as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias IndividualType = EADoubleIndividual```.
 2. ```func evaluate(individual: EADoubleIndividual) -> Double```
   - You should implement your problem in this method to calculate a fitness value of given individual.
 3. ```func getRandomIndividual(type: EADistributionType<EADoubleIndividual.DataType>) -> EADoubleIndividual```
@@ -328,7 +342,9 @@ typealias MyIndividual = EAIndividual<String>
 ```swift
 class MyIndividual: EAIndividualProtocol {
     
-    var position: [Float] {
+    typealias DataType = Float
+    
+    var position: [DataType] {
         set { data = newValue }
         get { return data }
     }
@@ -341,9 +357,9 @@ class MyIndividual: EAIndividualProtocol {
            }
        }
     
-    var data: [Float]
-    var velocity: [Float]
-    private(set) var bestPosition: [Float]
+    var data: [DataType]
+    var velocity: [DataType]
+    private(set) var bestPosition: [DataType]
     
     public required init() {
         bestPosition = []
@@ -355,6 +371,62 @@ class MyIndividual: EAIndividualProtocol {
 }
 ```
 
-1. ```EAIndividualProtocol``` has DataType as a associated type (a generic parameter of protocol). If you define the type of data property, compiler automatically resolve the type of generic parameter (DataType). 
+1. ```EAIndividualProtocol``` has ```DataType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias DataType = Float```. 
 2. You have to implement ```fitness: Double``` a ```data: [DataType]``` properties as required by protocol.
 3. That's it! You can use your own individual in your fitness function or in other components.
+
+### Selection
+Selection of individuals (parents) from given population.
+
+```swift
+struct MySelection: EASelectionProtocol {
+    
+    typealias PopulationType = EAPopulation<EADoubleIndividual>
+    
+    let isElitism: Bool
+    
+    init(isElitism: Bool = false) {
+        self.isElitism = isElitism
+    }
+    
+    func createNewPopulation(population: PopulationType) -> PopulationType? {
+        if let individual = population.bestIndividual, isElitism {
+            return PopulationType(individuals: [individual])
+        }
+        return nil
+    }
+    
+    func prepare(population: PopulationType, context: EAContextProtocol?) {
+    }
+    
+    func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType] {
+        let distribution = EAUniformDistribution(range: 0 ... population.individuals.count - 1)
+        let indexes = distribution.random(count: UInt(count))
+        return indexes.map { index -> PopulationType.IndividualType in
+            return population.individuals[index]
+        }
+    }
+    
+}
+```
+
+1. ```EASelectionProtocol``` has ```PopulationType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias PopulationType = EAPopulation<EADoubleIndividual>```. 
+2. ```func createNewPopulation(population: PopulationType) -> PopulationType?```
+  - Create a new population from given population, e.g. appling elitism
+3. ```func prepare(population: PopulationType, context: EAContextProtocol?)```
+  - Use this method for preprocessing current population
+4. ```func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType]```
+  - Selection logic should be implemented here
+5. That's it! You can use your own selection in some of already implemented algorithms.
+
+### Crossover
+
+### Mutation
+
+### Recombination
+
+### Mutation Strategy
+
+### Population
+
+### Algotithm
