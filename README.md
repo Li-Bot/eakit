@@ -332,11 +332,11 @@ struct MyFunction: EAFitnessFunctionProtocol {
 ```
 
 1. ```EAFitnessFunctionProtocol``` has ```IndividualType``` (which conforms to ```EAIndividualProtocol```) as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias IndividualType = EADoubleIndividual```.
-2. ```func evaluate(individual: EADoubleIndividual) -> Double```
+2. ```func evaluate(individual: EADoubleIndividual) -> Double```.
   - You should implement your problem in this method to calculate a fitness value of given individual.
 3. ```func getRandomIndividual(type: EADistributionType<EADoubleIndividual.DataType>) -> EADoubleIndividual```
   - Generate a random individual in your search space (problem space).
-4. ```func validateDomains(individual: EADoubleIndividual) -> EADoubleIndividual```
+4. ```func validateDomains(individual: EADoubleIndividual) -> EADoubleIndividual```.
   - Use this method to validate domains of given individual, e.g. when your search space is limited or is discrete, you have to define boundaries of search space to prevent individuals from being in forbidden areas.
 5. That's it! You can use some of algorithms described above to have your problem solved.
 
@@ -382,7 +382,7 @@ class MyIndividual: EAIndividualProtocol {
 ```
 
 1. ```EAIndividualProtocol``` has ```DataType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias DataType = Float```. 
-2. You have to implement ```fitness: Double``` a ```data: [DataType]``` properties as required by protocol.
+2. You have to implement ```fitness: Double``` and ```data: [DataType]``` properties as required by protocol.
 3. That's it! You can use your own individual in your fitness function or in other components.
 
 ### Selection
@@ -421,21 +421,166 @@ struct MySelection: EASelectionProtocol {
 ```
 
 1. ```EASelectionProtocol``` has ```PopulationType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias PopulationType = EAPopulation<EADoubleIndividual>```. 
-2. ```func createNewPopulation(population: PopulationType) -> PopulationType?```
-  - Create a new population from given population, e.g. appling elitism
-3. ```func prepare(population: PopulationType, context: EAContextProtocol?)```
-  - Use this method for preprocessing current population
-4. ```func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType]```
-  - Selection logic should be implemented here
+2. ```func createNewPopulation(population: PopulationType) -> PopulationType?```.
+  - Create a new population from given population, e.g. appling elitism.
+3. ```func prepare(population: PopulationType, context: EAContextProtocol?)```.
+  - Use this method for preprocessing current population.
+4. ```func selectParents(population: PopulationType, count: Int, context: EAContextProtocol?) -> [PopulationType.IndividualType]```.
+  - Selection logic should be implemented here.
 5. That's it! You can use your own selection in some of already implemented algorithms.
 
 ### Crossover
+Crossover two individuals (parents) to create offsprings.
+
+```swift
+struct MyCrossover: EACrossoverProtocol {
+    
+    typealias IndividualType = EADoubleIndividual
+    
+    let threshold: Double
+    
+    init(threshold: Double) {
+        self.threshold = threshold
+    }
+        
+    func cross(first: IndividualType, second: IndividualType) -> [IndividualType] {
+        let size = first.data.count
+        let uniformDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
+        var firstIndividual = IndividualType()
+        var secondIndividual = IndividualType()
+        
+        for dataIndex in 0 ..< size {
+            if uniformDistribution.random() <= 0.5 {
+                firstIndividual.data.append(first.data[dataIndex])
+                secondIndividual.data.append(second.data[dataIndex])
+            } else {
+                firstIndividual.data.append(second.data[dataIndex])
+                secondIndividual.data.append(first.data[dataIndex])
+            }
+        }
+        
+        return [firstIndividual, secondIndividual]
+    }
+}
+```
+
+1. ```EACrossoverProtocol``` has ```IndividualType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias IndividualType = EADoubleIndividual```.
+2. You have to implement ```threshold: Double``` property as required by protocol.
+3. ```func cross(first: IndividualType, second: IndividualType) -> [IndividualType]```.
+  - Crossover logic should be implemented here.
+4. That's it! You can use your own crossover in some of already implemented algorithms.
 
 ### Mutation
+Mutate given individual.
+
+```swift
+struct MyMutation: EAMutationProtocol {
+    
+    typealias IndividualType = EADoubleIndividual
+    
+    let threshold: Double
+    let count: UInt
+    
+    init(threshold: Double, count: UInt) {
+        self.threshold = threshold
+        self.count = count
+    }
+    
+    mutating func prepare(context: EAContextProtocol?) {
+    }
+    
+    func mutate(individual: IndividualType, context: EAContextProtocol?) -> IndividualType {
+        var individual = individual
+        let distribution = EAUniformDistribution(range: 0 ... individual.data.count - 1)
+        
+        for _ in 0 ..< count {
+            let indexes = distribution.random(count: 2)
+            
+            let temp = individual.data[indexes[0]]
+            individual.data[indexes[0]] = individual.data[indexes[1]]
+            individual.data[indexes[1]] = temp
+        }
+        
+        return individual
+    }
+    
+}
+```
+
+1. ```EAMutationProtocol``` has ```IndividualType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias IndividualType = EADoubleIndividual```.
+2. You have to implement ```threshold: Double``` and ```count: UInt``` properties as required by protocol.
+3. ```func prepare(context: EAContextProtocol?)```.
+  - Use this method for preprocessing data if necessary.
+4. ```func mutate(individual: IndividualType, context: EAContextProtocol?) -> IndividualType```.
+  - Mutation logic should be implemented here.
+5. That's it! You can use your own mutation in some of already implemented algorithms.
 
 ### Recombination
+Create a recombinant from given individuals.
+
+```swift
+struct MyRecombination: EAEvolutionaryStrategyRecombinationProtocol {
+    
+    typealias IndividualType = EADoubleIndividual
+    
+    public init() {
+    }
+    
+    func recombine(individuals: [IndividualType]) -> IndividualType {
+        let uniformDistribution = EAUniformDistribution(range: 0 ... individuals.count - 1)
+        var recombinant = IndividualType()
+        for dataIndex in 0 ..< (individuals.first?.data.count ?? 0) {
+            let randomIndex = uniformDistribution.random()
+            let data = individuals[randomIndex].data[dataIndex]
+            recombinant.data.append(data)
+        }
+        return recombinant
+    }
+    
+}
+```
+
+1. ```EAEvolutionaryStrategyRecombinationProtocol``` has ```IndividualType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias IndividualType = EADoubleIndividual```.
+2. ```func recombine(individuals: [IndividualType]) -> IndividualType```.
+  - Recombination logic should be implemented here.
+4. That's it! You can use your own recombination in some of already implemented algorithms.
 
 ### Mutation Strategy
+Mutate individuals to create a mutated individual from given active individual, global best individual and others individuals.
+
+```swift
+struct MyMutationStrategy: EADifferentialEvolutionMutationStrategyProtocol {
+    
+    typealias IndividualType = EADoubleIndividual
+    
+    let f: IndividualType.DataType
+    let λ: IndividualType.DataType
+    let parentsCount: Int = 3
+    
+    init(f: IndividualType.DataType, λ: IndividualType.DataType) {
+        self.f = f
+        self.λ = λ
+    }
+    
+    func mutate(activeIndividual: IndividualType, bestIndividual: IndividualType, individuals: [IndividualType], context: EADifferentialEvolutionContext) -> IndividualType {
+        var offspring = IndividualType()
+        
+        for index in 0 ..< activeIndividual.data.count {
+            let value = individuals[2].data[index] + f * (individuals[0].data[index] - individuals[1].data[index])
+            offspring.data.append(value)
+        }
+        
+        return offspring
+    }
+    
+}
+```
+
+1. ```EADifferentialEvolutionMutationStrategyProtocol``` has ```IndividualType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias IndividualType = EADoubleIndividual```.
+2. You have to implement ```parentsCount: Int``` property as required by protocol.
+3. ```func mutate(activeIndividual: IndividualType, bestIndividual: IndividualType, individuals: [IndividualType], context: EADifferentialEvolutionContext) -> IndividualType```.
+  - Mutation strategy logic should be implemented here.
+5. That's it! You can use your own mutation strategy in some of already implemented algorithms.
 
 ### Population
 
