@@ -4,7 +4,17 @@
 
 # EAKit
 EAKit is a Framework of Evolutionary Algorithms written in Swift. 
-It is fully generic, simple to use and you can build your own evolutionary algorithm by using existing components. 
+It is fully generic, architecture (algorithms) based on (interchangeable) components, simple to use and you can build your own evolutionary algorithm by using existing components.
+
+## Contents
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+- [Custom Implementation](#custom-implementation)
+- [Future](#future)
+- [License](#license)
 
 ## Features
 - [x] Genetic Algorithm
@@ -430,3 +440,9 @@ struct MySelection: EASelectionProtocol {
 ### Population
 
 ### Algotithm
+
+## Future
+
+## License 
+
+
