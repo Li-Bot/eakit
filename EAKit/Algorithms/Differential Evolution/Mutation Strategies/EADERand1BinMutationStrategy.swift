@@ -12,10 +12,10 @@ import Foundation
 /**
  DERand1Bin Mutation Strategy
  */
-public struct EADERand1BinMutationStrategy<IndividualType: EAIndividualProtocol> : EADifferentialEvolutionMutationStrategyProtocol where IndividualType.DataType: Numeric {
+public struct EADERand1BinMutationStrategy<IndividualType: EAIndividualProtocol>: EADifferentialEvolutionMutationStrategyProtocol where IndividualType.DataType: Numeric {
     
-    public var f: IndividualType.DataType
-    public var λ: IndividualType.DataType
+    public let f: IndividualType.DataType
+    public let λ: IndividualType.DataType
     
     public let parentsCount: Int = 3
     
