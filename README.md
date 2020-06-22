@@ -543,7 +543,7 @@ struct MyRecombination: EAEvolutionaryStrategyRecombinationProtocol {
 1. ```EAEvolutionaryStrategyRecombinationProtocol``` has ```IndividualType``` as a associated type (a generic parameter of protocol). You can define the associated type as ```typealias IndividualType = EADoubleIndividual```.
 2. ```func recombine(individuals: [IndividualType]) -> IndividualType```.
   - Recombination logic should be implemented here.
-4. That's it! You can use your own recombination in some of already implemented algorithms.
+3. That's it! You can use your own recombination in some of already implemented algorithms.
 
 ### Mutation Strategy
 Mutate individuals to create a mutated individual from given active individual, global best individual and others individuals.
@@ -580,13 +580,128 @@ struct MyMutationStrategy: EADifferentialEvolutionMutationStrategyProtocol {
 2. You have to implement ```parentsCount: Int``` property as required by protocol.
 3. ```func mutate(activeIndividual: IndividualType, bestIndividual: IndividualType, individuals: [IndividualType], context: EADifferentialEvolutionContext) -> IndividualType```.
   - Mutation strategy logic should be implemented here.
-5. That's it! You can use your own mutation strategy in some of already implemented algorithms.
+4. That's it! You can use your own mutation strategy in some of already implemented algorithms.
 
 ### Population
+Population consists of array of individuals and keep the best individual in the population. 
 
-### Algotithm
+1. You can implement the ```EAPopulationProtocol``` protocol to create your population.
+
+2. You can create a subclass of ```EAPopulation<IndividualType>``` and override methods or added new ones.
+```swift
+final class MyPopulation: EAPopulation<EAParticleSwarmIndividual> {
+    
+    override class func getRandomIndividual<FitnessFunction>(type: EADistributionType<Double>, fitnessFunction: FitnessFunction, context: EAContextProtocol?) -> EAParticleSwarmIndividual where IndividualType == FitnessFunction.IndividualType, FitnessFunction : EAFitnessFunctionProtocol {
+        let individual = super.getRandomIndividual(type: type, fitnessFunction: fitnessFunction, context: context)
+        guard let ctx = context as? EAParticleSwarmContext else {
+            return individual
+        }
+        
+        let velocityMin = ctx.velocity.maximum * -1.0
+        let velocityMax = ctx.velocity.maximum
+        let uniformDistribution = EAUniformDistribution(range: velocityMin ... velocityMax)
+        
+        for _ in 0 ..< fitnessFunction.dimension {
+            individual.velocity.append(uniformDistribution.random())
+        }
+        
+        return individual
+    }
+    
+}
+```
+
+1. ```EAPopulation``` or ```EAPopulationProtocol``` has ```IndividualType``` as a associated type (a generic parameter of protocol). You can define the associated type as a generic parameter of ```EAPopulation``` or  ```typealias IndividualType = EAParticleSwarmIndividual```.
+2. You have to implement ```bestIndividual: IndividualType?``` and ```individuals: [IndividualType]``` properties as required by protocol.
+3. ```static func getRandomIndividual<FitnessFunction: EAFitnessFunctionProtocol>(type: EADistributionType<IndividualType.DataType>, fitnessFunction: FitnessFunction, context: EAContextProtocol?) -> IndividualType where FitnessFunction.IndividualType == IndividualType```.
+  - Logic of creating random individual should be implemented here.
+4. ```static func getRandomPopulation<FitnessFunction: EAFitnessFunctionProtocol>(type: EADistributionType<IndividualType.DataType>, fitnessFunction: FitnessFunction, size: UInt, context: EAContextProtocol?) -> Self where FitnessFunction.IndividualType == IndividualType```.
+  - Logic of creating random population should be implemented here.
+5. That's it! You can use your own population in your own evolutionary algorithm.
+
+### Algorithm
+This is the component where you will use all components implemented above to create your own evolutionary algorithm.
+
+1. Parameters of an algorithm.
+```swift
+final class MyParameters<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, MutationStrategyType: EADifferentialEvolutionMutationStrategyProtocol, CrossoverType: EACrossoverProtocol>: EAAlgorithmParameters<EADifferentialEvolution<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>, EAPopulation<FitnessFunctionType.IndividualType>> where FitnessFunctionType.IndividualType == CrossoverType.IndividualType, EAPopulation<FitnessFunctionType.IndividualType> == SelectionType.PopulationType, FitnessFunctionType.IndividualType == MutationStrategyType.IndividualType {
+    
+    public var np: UInt {
+        populationCount
+    }
+    var selection: SelectionType
+    let mutationStrategy: MutationStrategyType
+    let crossover: CrossoverType
+    
+    init(populationCount: UInt, generationsCount: UInt, selection: SelectionType, mutationStrategy: MutationStrategyType, crossover: CrossoverType, fitnessFunction: FitnessFunctionType, output: EAAlgorithmParametersOutput = .defaultOutput, delegate: EAAlgorithmDelegate<EADifferentialEvolution<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>, EAPopulation<FitnessFunctionType.IndividualType>>? = nil) throws {
+        self.selection = selection
+        self.mutationStrategy = mutationStrategy
+        self.crossover = crossover
+        try super.init(populationCount: populationCount, generationsCount: generationsCount, fitnessFunction: fitnessFunction, output: output, delegate: delegate)
+    }
+    
+}
+```
+
+1.1 Use ```EAAlgorithmParameters``` to create a subclass and add others parameters.
+1.2 ```EAAlgorithmParameters``` has ```AlgorithmType``` and ```PopulationType``` as a generic parameter. Define these generic parameters in the signature of your subclass, e.g. ```EAAlgorithmParameters<EADifferentialEvolution<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>, EAPopulation<FitnessFunctionType.IndividualType>>```.
+1.3 Define generic constraints to assure that all generic parameters have the same ```PopulationType``` and ```IndividualType```.
+1.4 Create a constructor and call super constuctor.
+
+2. An Algorithm
+```swift
+final class MyAlgorithm<FitnessFunctionType: EAFitnessFunctionProtocol, SelectionType: EASelectionProtocol, MutationStrategyType: EADifferentialEvolutionMutationStrategyProtocol, CrossoverType: EACrossoverProtocol>: EAAlgorithmProtocol where EAPopulation<FitnessFunctionType.IndividualType> == SelectionType.PopulationType, FitnessFunctionType.IndividualType == MutationStrategyType.IndividualType, FitnessFunctionType.IndividualType == CrossoverType.IndividualType {
+    
+    let parameters: EADifferentialEvolutionParameters<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>
+    private let uniformUnifiedDistribution = EAUniformDistribution(range: 0.0 ... 1.0)
+    
+    init(parameters: EADifferentialEvolutionParameters<FitnessFunctionType, SelectionType, MutationStrategyType, CrossoverType>) {
+        self.parameters = parameters
+    }
+    
+    func run() -> EAAlgorithmResult<EAPopulation<FitnessFunctionType.IndividualType>> {
+        let context = EADifferentialEvolutionContext()
+        var currentPopulation = PopulationType.getRandomPopulation(type: .uniform, fitnessFunction: parameters.fitnessFunction, size: parameters.populationCount, context: context)
+        let result = EAAlgorithmResult(population: currentPopulation)
+        
+        for generationIndex in 0 ..< parameters.generationsCount - 1 {
+            let population = PopulationType(individuals: [])
+            
+            parameters.selection.prepare(population: currentPopulation, context: context)
+            for individual in currentPopulation.individuals {
+                let parents = parameters.selection.selectParents(population: currentPopulation, count: parameters.mutationStrategy.parentsCount, context: context)
+                var offspring = parameters.mutationStrategy.mutate(activeIndividual: individual, bestIndividual: currentPopulation.bestIndividual!, individuals: parents, context: context)
+                offspring = parameters.crossover.cross(first: individual, second: offspring).first!
+                offspring = parameters.fitnessFunction.validateDomains(individual: offspring)
+                offspring.fitness = parameters.fitnessFunction.evaluate(individual: offspring)
+                
+                if offspring.fitness < individual.fitness {
+                    population.append(individual: offspring)
+                } else {
+                    population.append(individual: individual)
+                }
+            }
+            
+            currentPopulation = population
+            result.append(population: population, keepBestOnly: !parameters.output.saveProgress)
+            parameters.delegate?.didFinishGeneration?(self, generationIndex, currentPopulation)
+        }
+        
+        return result
+    }
+    
+}
+```
+
+2.1 Define all generic parameters as you did in 1. step (If you want to avoid this, you do not have to separate parameters of algorithm and algorithm itself. I do, because it keeps logic of algorithm clean).
+2.2 ```func run() -> EAAlgorithmResult<EAPopulation<FitnessFunctionType.IndividualType>>``` 
+  - Implementation logic of an algorithm should be implemented here.
+2.3 That's it! You have your own generic evolutionary algorithm and you can use it.
 
 ## Future
+- More evolutionary algorithms
+- More components 
+- More built-in functions
 
 ## License 
 
