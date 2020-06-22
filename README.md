@@ -34,7 +34,8 @@ It is fully generic, architecture (algorithms) based on (interchangeable) compon
 
 ### Swift Package Manager
 
-### Swift Scripting
+### Cocoapods
+
 
 ## Usage
 Let's look at how simple it is!
@@ -703,6 +704,7 @@ final class MyAlgorithm<FitnessFunctionType: EAFitnessFunctionProtocol, Selectio
 - More components 
 - More built-in functions
 
-## License 
+## License
+EAKit is released under the GNU GPLv3 license. See the [LICENSE here](LICENSE.md).
 
 
