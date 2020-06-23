@@ -32,7 +32,7 @@ EAKit is a Framework of Evolutionary Algorithms written in Swift. It is fully ge
   s.osx.deployment_target = '10.9'
   s.swift_versions = '5.0'
 
-  s.source_files = 'Source/**/*.{h,m,swift}'
+  s.source_files = 'Sources/**/*.{h,m,swift}'
   
   # s.resource = '.../**/*.{xib,storyboard}'
 
