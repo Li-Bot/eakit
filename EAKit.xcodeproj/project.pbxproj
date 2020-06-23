@@ -415,13 +415,13 @@
 		181980E5243E507000150AE6 /* EAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		181980E7243E507000150AE6 /* EAKit_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAKit_macOS.h; sourceTree = "<group>"; };
 		181980E8243E507000150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		181980ED243E507000150AE6 /* EAKit-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EAKit-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181980ED243E507000150AE6 /* EAKit macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EAKit macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		181980F2243E507000150AE6 /* EAKit_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAKit_macOSTests.swift; sourceTree = "<group>"; };
 		181980F4243E507000150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18198101243E50B300150AE6 /* EAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18198103243E50B300150AE6 /* EAKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAKit_iOS.h; sourceTree = "<group>"; };
 		18198104243E50B300150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18198109243E50B300150AE6 /* EAKit-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EAKit-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18198109243E50B300150AE6 /* EAKit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EAKit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1819810E243E50B400150AE6 /* EAKit_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAKit_iOSTests.swift; sourceTree = "<group>"; };
 		18198110243E50B400150AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1819811C243E527300150AE6 /* EAHillClimbing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAHillClimbing.swift; sourceTree = "<group>"; };
@@ -567,22 +567,7 @@
 		180D5D4E248D666F001DA0FD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				18E1D72F248FEF85003C1A25 /* FakeRandomNumberGenerator.swift */,
-				180D5D52248E73D6001DA0FD /* MathTests.swift */,
-				180D5D4F248D66D9001DA0FD /* DistributionTests.swift */,
-				180D5D55248E9D33001DA0FD /* PopulationTests.swift */,
-				18C9EEE2248EA463006F4CAE /* ArtificialLandscapeFunctionTests.swift */,
-				18E1D734249014D1003C1A25 /* TSPFunctionTests.swift */,
-				18E1D73724914855003C1A25 /* TextFunctionTests.swift */,
-				18E453812491664000187478 /* DomainTests.swift */,
-				18E4538424929D1D00187478 /* SelectionTests.swift */,
-				18E453872492AD3000187478 /* CrossoverTests.swift */,
-				1849B34C2493BA4E00473419 /* MutationTests.swift */,
-				1849B34F2493F1C000473419 /* HillClimbingTests.swift */,
-				1849B3522493F54D00473419 /* GeneticAlgorithmTests.swift */,
-				1849B3552493FB1800473419 /* EvolutionaryStrategyTests.swift */,
-				1849B3582494002600473419 /* ParticleSwarmTests.swift */,
-				1849B35B2494042900473419 /* DifferentialEvolutionTests.swift */,
+				183AA6F124A1199C00E1CF00 /* EAKitTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -590,12 +575,12 @@
 		181980B9243CF5FF00150AE6 = {
 			isa = PBXGroup;
 			children = (
-				18198118243E50C300150AE6 /* EAKit */,
+				183AA6F824A2428900E1CF00 /* Sources */,
+				180D5D4E248D666F001DA0FD /* Tests */,
 				18198102243E50B300150AE6 /* EAKit-iOS */,
 				1819810D243E50B400150AE6 /* EAKit-iOSTests */,
 				181980E6243E507000150AE6 /* EAKit-macOS */,
 				181980F1243E507000150AE6 /* EAKit-macOSTests */,
-				180D5D4E248D666F001DA0FD /* Tests */,
 				181980C4243CF5FF00150AE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -604,9 +589,9 @@
 			isa = PBXGroup;
 			children = (
 				181980E5243E507000150AE6 /* EAKit.framework */,
-				181980ED243E507000150AE6 /* EAKit-macOSTests.xctest */,
+				181980ED243E507000150AE6 /* EAKit macOSTests.xctest */,
 				18198101243E50B300150AE6 /* EAKit.framework */,
-				18198109243E50B300150AE6 /* EAKit-iOSTests.xctest */,
+				18198109243E50B300150AE6 /* EAKit iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -745,6 +730,37 @@
 				1832D6E7243FA21600FE1B26 /* EAUniformDistribution.swift */,
 			);
 			path = Distributions;
+			sourceTree = "<group>";
+		};
+		183AA6F124A1199C00E1CF00 /* EAKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				18E1D72F248FEF85003C1A25 /* FakeRandomNumberGenerator.swift */,
+				180D5D52248E73D6001DA0FD /* MathTests.swift */,
+				180D5D4F248D66D9001DA0FD /* DistributionTests.swift */,
+				180D5D55248E9D33001DA0FD /* PopulationTests.swift */,
+				18C9EEE2248EA463006F4CAE /* ArtificialLandscapeFunctionTests.swift */,
+				18E1D734249014D1003C1A25 /* TSPFunctionTests.swift */,
+				18E1D73724914855003C1A25 /* TextFunctionTests.swift */,
+				18E453812491664000187478 /* DomainTests.swift */,
+				18E4538424929D1D00187478 /* SelectionTests.swift */,
+				18E453872492AD3000187478 /* CrossoverTests.swift */,
+				1849B34C2493BA4E00473419 /* MutationTests.swift */,
+				1849B34F2493F1C000473419 /* HillClimbingTests.swift */,
+				1849B3522493F54D00473419 /* GeneticAlgorithmTests.swift */,
+				1849B3552493FB1800473419 /* EvolutionaryStrategyTests.swift */,
+				1849B3582494002600473419 /* ParticleSwarmTests.swift */,
+				1849B35B2494042900473419 /* DifferentialEvolutionTests.swift */,
+			);
+			path = EAKitTests;
+			sourceTree = "<group>";
+		};
+		183AA6F824A2428900E1CF00 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				18198118243E50C300150AE6 /* EAKit */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		18467868246F005600ADF814 /* Selections */ = {
@@ -945,9 +961,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		181980E4243E507000150AE6 /* EAKit-macOS */ = {
+		181980E4243E507000150AE6 /* EAKit macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 181980FA243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOS" */;
+			buildConfigurationList = 181980FA243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit macOS" */;
 			buildPhases = (
 				181980E0243E507000150AE6 /* Headers */,
 				181980E1243E507000150AE6 /* Sources */,
@@ -958,14 +974,14 @@
 			);
 			dependencies = (
 			);
-			name = "EAKit-macOS";
+			name = "EAKit macOS";
 			productName = "EAKit-macOS";
 			productReference = 181980E5243E507000150AE6 /* EAKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		181980EC243E507000150AE6 /* EAKit-macOSTests */ = {
+		181980EC243E507000150AE6 /* EAKit macOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 181980FB243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOSTests" */;
+			buildConfigurationList = 181980FB243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit macOSTests" */;
 			buildPhases = (
 				181980E9243E507000150AE6 /* Sources */,
 				181980EA243E507000150AE6 /* Frameworks */,
@@ -976,14 +992,14 @@
 			dependencies = (
 				181980F0243E507000150AE6 /* PBXTargetDependency */,
 			);
-			name = "EAKit-macOSTests";
+			name = "EAKit macOSTests";
 			productName = "EAKit-macOSTests";
-			productReference = 181980ED243E507000150AE6 /* EAKit-macOSTests.xctest */;
+			productReference = 181980ED243E507000150AE6 /* EAKit macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		18198100243E50B300150AE6 /* EAKit-iOS */ = {
+		18198100243E50B300150AE6 /* EAKit iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18198112243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOS" */;
+			buildConfigurationList = 18198112243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit iOS" */;
 			buildPhases = (
 				181980FC243E50B300150AE6 /* Headers */,
 				181980FD243E50B300150AE6 /* Sources */,
@@ -994,14 +1010,14 @@
 			);
 			dependencies = (
 			);
-			name = "EAKit-iOS";
+			name = "EAKit iOS";
 			productName = "EAKit-iOS";
 			productReference = 18198101243E50B300150AE6 /* EAKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		18198108243E50B300150AE6 /* EAKit-iOSTests */ = {
+		18198108243E50B300150AE6 /* EAKit iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18198115243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOSTests" */;
+			buildConfigurationList = 18198115243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit iOSTests" */;
 			buildPhases = (
 				18198105243E50B300150AE6 /* Sources */,
 				18198106243E50B300150AE6 /* Frameworks */,
@@ -1012,9 +1028,9 @@
 			dependencies = (
 				1819810C243E50B300150AE6 /* PBXTargetDependency */,
 			);
-			name = "EAKit-iOSTests";
+			name = "EAKit iOSTests";
 			productName = "EAKit-iOSTests";
-			productReference = 18198109243E50B300150AE6 /* EAKit-iOSTests.xctest */;
+			productReference = 18198109243E50B300150AE6 /* EAKit iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1056,10 +1072,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18198100243E50B300150AE6 /* EAKit-iOS */,
-				18198108243E50B300150AE6 /* EAKit-iOSTests */,
-				181980E4243E507000150AE6 /* EAKit-macOS */,
-				181980EC243E507000150AE6 /* EAKit-macOSTests */,
+				18198100243E50B300150AE6 /* EAKit iOS */,
+				18198108243E50B300150AE6 /* EAKit iOSTests */,
+				181980E4243E507000150AE6 /* EAKit macOS */,
+				181980EC243E507000150AE6 /* EAKit macOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1505,12 +1521,12 @@
 /* Begin PBXTargetDependency section */
 		181980F0243E507000150AE6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 181980E4243E507000150AE6 /* EAKit-macOS */;
+			target = 181980E4243E507000150AE6 /* EAKit macOS */;
 			targetProxy = 181980EF243E507000150AE6 /* PBXContainerItemProxy */;
 		};
 		1819810C243E50B300150AE6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 18198100243E50B300150AE6 /* EAKit-iOS */;
+			target = 18198100243E50B300150AE6 /* EAKit iOS */;
 			targetProxy = 1819810B243E50B300150AE6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1654,7 +1670,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.polehna.EAKit;
 				PRODUCT_NAME = EAKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1681,7 +1697,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.polehna.EAKit;
 				PRODUCT_NAME = EAKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1746,7 +1762,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.polehna.EAKit;
 				PRODUCT_NAME = EAKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1772,7 +1788,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.polehna.EAKit-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.polehna.EAKit;
 				PRODUCT_NAME = EAKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1828,7 +1844,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		181980FA243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOS" */ = {
+		181980FA243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				181980F6243E507000150AE6 /* Debug */,
@@ -1837,7 +1853,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		181980FB243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit-macOSTests" */ = {
+		181980FB243E507000150AE6 /* Build configuration list for PBXNativeTarget "EAKit macOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				181980F8243E507000150AE6 /* Debug */,
@@ -1846,7 +1862,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18198112243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOS" */ = {
+		18198112243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18198113243E50B400150AE6 /* Debug */,
@@ -1855,7 +1871,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18198115243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit-iOSTests" */ = {
+		18198115243E50B400150AE6 /* Build configuration list for PBXNativeTarget "EAKit iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18198116243E50B400150AE6 /* Debug */,

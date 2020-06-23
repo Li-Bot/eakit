@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "181980E4243E507000150AE6"
                BuildableName = "EAKit.framework"
-               BlueprintName = "EAKit-macOS"
+               BlueprintName = "EAKit macOS"
                ReferencedContainer = "container:EAKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "181980EC243E507000150AE6"
-               BuildableName = "EAKit-macOSTests.xctest"
-               BlueprintName = "EAKit-macOSTests"
+               BuildableName = "EAKit macOSTests.xctest"
+               BlueprintName = "EAKit macOSTests"
                ReferencedContainer = "container:EAKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "181980E4243E507000150AE6"
             BuildableName = "EAKit.framework"
-            BlueprintName = "EAKit-macOS"
+            BlueprintName = "EAKit macOS"
             ReferencedContainer = "container:EAKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
