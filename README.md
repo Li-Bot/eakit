@@ -32,7 +32,7 @@ It is fully generic, architecture (algorithms) based on (interchangeable) compon
 
 ### Carthage
 ```ogdl
-github "Li-Bot/eakit.git" ~> 1.0.0
+github "Li-Bot/eakit.git" ~> 0.1.0
 ```
 
 ### Swift Package Manager
@@ -43,7 +43,9 @@ dependencies: [
 ```
 
 ### Cocoapods
-
+```ruby
+pod 'EAKitAI', '~> 0.1.0'
+```
 
 ## Usage
 Let's look at how simple it is!
