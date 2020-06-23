@@ -10,7 +10,7 @@ import Foundation
 import EAKit
 
 
-func hillClimbing() {
+func hillClimbingAL() {
     let parameters = try! EAHillClimbingParameters(
         populationCount: 20,
         generationsCount: 101,
@@ -20,40 +20,15 @@ func hillClimbing() {
         delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
-        print(population.bestIndividual?.fitness)
+        print(population.bestIndividual!.fitness)
     }
     let hillClimbing = EAHillClimbing(parameters: parameters)
     let result = hillClimbing.run()
-    print(result.bestPopulation.bestIndividual?.fitness)
-    print(result.bestPopulation.bestIndividual?.data)
-    
-    let pythonResult = EAPythonResult(result: result, name: "HillClimbing")
-    do {
-        try pythonResult.save(useGlobalBest: false)
-    } catch {
-        debugPrint(error)
-    }
+    print(result.bestPopulation.bestIndividual!.fitness)
+    print(result.bestPopulation.bestIndividual!.data)
 }
 
-
-/*func geneticAlgorithm() {
-    let fitnessFunction = EARosenbrockFunction()
-    let selection = EAGARandomSelection<EARosenbrockFunction.PopulationType>()
-    let crossover = EAGASinglePointCrossover<EARosenbrockFunction.PopulationType.IndividualType>()
-    let mutation = EAGAFloatingNumericMutation<EARosenbrockFunction.PopulationType.IndividualType>(limit: 0.5, increment: (fitnessFunction.range.upperBound - fitnessFunction.range.lowerBound) * 0.001)
-    var delegate = EAAlgorithmDelegate<EAGeneticAlgorithm<EARosenbrockFunction, EAGARandomSelection<EARosenbrockFunction.PopulationType>, EAGASinglePointCrossover<EARosenbrockFunction.PopulationType.IndividualType>, EAGAFloatingNumericMutation<EARosenbrockFunction.PopulationType.IndividualType>>>()
-    delegate.didFinishGeneration = { algorithm, iterationIndex, population in
-        print(population.bestIndividual.fitness)
-    }
-    let parameters = try! EAGeneticAlgorithmParameters(populationCount: 100, generationsCount: 1000, fitnessFunction: fitnessFunction, selection: selection, crossover: crossover, mutation: mutation, delegate: delegate)
-    let genericAlgorithm = EAGeneticAlgorithm(parameters: parameters)
-    let result = genericAlgorithm.run()
-    print(result.bestPopulation.bestIndividual.fitness)
-    print(result.bestPopulation.bestIndividual.data)
-}*/
-
-
-func geneticAlgorithm2() {
+func geneticAlgorithmTSP() {
     let cities = [
         EATSPCity("A", [60.0, 200.0]),
         EATSPCity("B", [80.0, 200.0]),
@@ -89,38 +64,18 @@ func geneticAlgorithm2() {
             delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
-        print(population.bestIndividual?.fitness)
+        print(population.bestIndividual!.fitness)
     }
     let algorithm = EAGeneticAlgorithm(parameters: parameters)
     let result = algorithm.run()
-    print(result.bestPopulation.bestIndividual?.fitness)
-    print(result.bestPopulation.bestIndividual?.data)
-    
-    /*var success = 0
-    let count = 1
-    for _ in 0 ..< count {
-        let genericAlgorithm = EAGeneticAlgorithm(parameters: parameters)
-        let result = genericAlgorithm.run()
-        if result.bestPopulation.bestIndividual!.fitness < 857.0 {
-            success += 1
-        }
-        print(result.bestPopulation.bestIndividual?.fitness)
-        print(result.bestPopulation.bestIndividual?.data)
-    }
-    print(Double(success) / Double(count))*/
-    
-    let pythonResult = EAPythonResult(result: result, name: "GeneticAlgorithm")
-    do {
-        try pythonResult.save(useGlobalBest: false)
-    } catch {
-        debugPrint(error)
-    }
+    print(result.bestPopulation.bestIndividual!.fitness)
+    print(result.bestPopulation.bestIndividual!.data)
 }
 
 
-func geneticAlgorithm3() {
+func geneticAlgorithmText() {
     let text = "Evolutionary Algorithms written in Swift"
-    let fitnessFunction = EATextFunction(text: /*"Dubai, United Arab Emirates." "SKOUMAL Studio s.r.o. by Libor Polehna"*/ text, charactersSet: CharacterSet(charactersIn: text))
+    let fitnessFunction = EATextFunction(text: text)
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
             generationsCount: 2000,
@@ -133,28 +88,16 @@ func geneticAlgorithm3() {
             delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
-        //print(population.bestIndividual?.fitness)
-        if population.bestIndividual!.fitness == 0 {
-            print(iterationIndex)
-        }
-        print(population.bestIndividual?.text)
+        print(population.bestIndividual!.text)
     }
-    
     let genericAlgorithm = EAGeneticAlgorithm(parameters: parameters)
     let result = genericAlgorithm.run()
-    print(result.bestPopulation.bestIndividual?.fitness)
-    print(result.bestPopulation.bestIndividual?.text)
-    
-    let pythonResult = EAPythonResult(result: result, name: "GeneticAlgorithmLogo")
-    do {
-        try pythonResult.save(useGlobalBest: false)
-    } catch {
-        debugPrint(error)
-    }
+    print(result.bestPopulation.bestIndividual!.fitness)
+    print(result.bestPopulation.bestIndividual!.text)
 }
 
 
-func evolutionaryAlgorithm() {
+func evolutionaryAlgorithmAL() {
     let fitnessFunction = EAAckleyFunction()
     let configuration = try! EAEvolutionaryStrategyConfiguration(µ: 20, ρ: 3, selectionStrategy: .plus, λ: 20)
     let parameters = try! EAEvolutionaryStrategyParameters(
@@ -167,29 +110,17 @@ func evolutionaryAlgorithm() {
         output: .defaultOutput,
         delegate: EAAlgorithmDelegate()
     )
-    
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
-        print(population.bestIndividual?.fitness)
-        if population.bestIndividual!.fitness < 0.01 {
-            print(iterationIndex)
-        }
+        print(population.bestIndividual!.fitness)
     }
-    
     let evolutionaryStrategy = EAEvolutionaryStrategy(parameters: parameters)
     let result = evolutionaryStrategy.run()
-    print(result.bestPopulation.bestIndividual?.fitness)
-    print(result.bestPopulation.bestIndividual?.data)
-    
-    let pythonResult = EAPythonResult(result: result, name: "EvolutionaryAlgorithm")
-    do {
-        try pythonResult.save(useGlobalBest: false)
-    } catch {
-        debugPrint(error)
-    }
+    print(result.bestPopulation.bestIndividual!.fitness)
+    print(result.bestPopulation.bestIndividual!.data)
 }
 
 
-func particleSwarm() {
+func particleSwarmAL() {
     let parameters = try! EAParticleSwarmParameters(
         particlesCount: 10,
         iterationsCount: 101,
@@ -200,29 +131,17 @@ func particleSwarm() {
         output: EAAlgorithmParametersOutput(saveProgress: true),
         delegate: EAAlgorithmDelegate()
     )
-    
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
-        print(population.bestIndividual?.fitness)
-        if population.bestIndividual!.fitness < 0.01 {
-            print(iterationIndex)
-        }
+        print(population.bestIndividual!.fitness)
     }
-    
     let particleSwarm = EAParticleSwarm(parameters: parameters)
     let result = particleSwarm.run()
-    print(result.bestPopulation.bestIndividual?.fitness)
-    print(result.bestPopulation.bestIndividual?.data)
-    
-    let pythonResult = EAPythonResult(result: result, name: "ParticleSwarm")
-    do {
-        try pythonResult.save(useGlobalBest: false)
-    } catch {
-        debugPrint(error)
-    }
+    print(result.bestPopulation.bestIndividual!.fitness)
+    print(result.bestPopulation.bestIndividual!.data)
 }
 
 
-func differentialEvolution() {
+func differentialEvolutionAL() {
     let parameters = try! EADifferentialEvolutionParameters(
         populationCount: 10,
         generationsCount: 101,
@@ -235,28 +154,10 @@ func differentialEvolution() {
     )
     
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
-        print(population.bestIndividual?.fitness)
-        if population.bestIndividual!.fitness < 0.01 {
-            print(iterationIndex)
-        }
+        print(population.bestIndividual!.fitness)
     }
-    
     let differentialEvolution = EADifferentialEvolution(parameters: parameters)
     let result = differentialEvolution.run()
-    print(result.bestPopulation.bestIndividual?.fitness)
-    print(result.bestPopulation.bestIndividual?.data)
-    
-    let pythonResult = EAPythonResult(result: result, name: "DifferentialEvolution")
-    do {
-        try pythonResult.save(useGlobalBest: false)
-    } catch {
-        debugPrint(error)
-    }
+    print(result.bestPopulation.bestIndividual!.fitness)
+    print(result.bestPopulation.bestIndividual!.data)
 }
-
-//hillClimbing()
-geneticAlgorithm2()
-//geneticAlgorithm3()
-//evolutionaryAlgorithm()
-//particleSwarm()
-//differentialEvolution()
