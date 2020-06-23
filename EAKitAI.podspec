@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'EAKit'
-  s.version          = '0.1.3'
+  s.name             = 'EAKitAI'
+  s.version          = '0.1.4'
   s.summary          = 'Evolutionary Algorithms written in Swift.'
 
 # This description is used to generate tags and improve search results.
