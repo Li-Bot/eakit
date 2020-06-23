@@ -44,7 +44,7 @@ dependencies: [
 
 ### Cocoapods
 ```ruby
-pod 'EAKit', '~> 0.1.0'
+pod 'EAKitAI', '~> 0.1.0'
 ```
 
 ## Usage
