@@ -2,6 +2,13 @@
   <img src="Docs/Images/eakit_logo.gif">
 </p>
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Pods compatible](https://img.shields.io/cocoapods/v/EAKitAI.svg?style=flat)](https://cocoapods.org/pods/EAKitAI)
+[![SPM compatible](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager)
+[![Swift Version](https://img.shields.io/badge/swift-5.1-orange.svg)](https://swift.org/)
+[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](https://github.com/Li-Bot/eakit)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 # EAKit
 EAKit is a Framework of Evolutionary Algorithms written in Swift. 
 It is fully generic, architecture (algorithms) based on (interchangeable) components, simple to use and you can build your own evolutionary algorithm by using existing components.
