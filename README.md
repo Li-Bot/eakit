@@ -31,8 +31,16 @@ It is fully generic, architecture (algorithms) based on (interchangeable) compon
 ## Installation
 
 ### Carthage
+```ogdl
+github "Li-Bot/eakit.git" ~> 1.0.0
+```
 
 ### Swift Package Manager
+```swift
+dependencies: [
+    .package(url: "https://github.com/Li-Bot/eakit.git", .upToNextMajor(from: "1.0.0"))
+]
+```
 
 ### Cocoapods
 
