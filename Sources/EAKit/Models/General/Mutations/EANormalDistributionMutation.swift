@@ -34,7 +34,7 @@ public struct EANormalDistributionMutation<IndividualType: EAIndividualProtocol>
     }
     
     public func mutate(individual: IndividualType, context: EAContextProtocol?) -> IndividualType {
-        var individual = individual
+        var individual = individual.copy()
         
         for index in 0 ..< individual.data.count {
             let distribution = EANormalDistribution(μ: individual.data[index], σ: σ)

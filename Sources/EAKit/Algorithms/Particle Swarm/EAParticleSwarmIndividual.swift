@@ -52,7 +52,7 @@ public final class EAParticleSwarmIndividual: EADoubleIndividual {
      
      - Returns: Copy of self.
      */
-    public func copy() -> Self {
+    public override func copy() -> Self {
         let copy = Self()
         copy.position = position
         copy.velocity = velocity

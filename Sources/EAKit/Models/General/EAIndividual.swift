@@ -22,4 +22,11 @@ public class EAIndividual<DataType>: EAIndividualProtocol {
         data = []
     }
     
+    public func copy() -> Self {
+        let copyIndividual = Self()
+        copyIndividual.fitness = fitness
+        copyIndividual.data = data
+        return copyIndividual
+    }
+    
 }

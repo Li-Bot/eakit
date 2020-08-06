@@ -27,4 +27,11 @@ public protocol EAIndividualProtocol {
      */
     init()
     
+    /**
+     Create a copy of current instance.
+     
+     - Returns: A copy.
+     */
+    func copy() -> Self
+    
 }

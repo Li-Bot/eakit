@@ -38,7 +38,7 @@ public struct EAReplacementMutation<IndividualType: EAIndividualProtocol>: EAMut
     }
     
     public func mutate(individual: IndividualType, context: EAContextProtocol?) -> IndividualType {
-        var individual = individual
+        var individual = individual.copy()
         let randomPositionIndexes = EAUniformDistribution(range: 0 ... individual.data.count - 1).random(count: count)
         let randomDataIndexes = EAUniformDistribution(range: 0 ... set.count - 1).random(count: count)
         

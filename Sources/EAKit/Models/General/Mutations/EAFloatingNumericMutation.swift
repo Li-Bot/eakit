@@ -38,7 +38,7 @@ public struct EAFloatingNumericMutation<IndividualType: EAIndividualProtocol>: E
     }
     
     public func mutate(individual: IndividualType, context: EAContextProtocol?) -> IndividualType {
-        var individual = individual
+        var individual = individual.copy()
         let distribution = EAUniformDistribution(range: 0 ... individual.data.count - 1)
         let indexes = distribution.random(count: count)
         

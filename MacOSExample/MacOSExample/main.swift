@@ -74,26 +74,37 @@ func geneticAlgorithmTSP() {
 
 
 func geneticAlgorithmText() {
-    let text = "Evolutionary Algorithms written in Swift"
+    let text = "SKOUMAL Studiosophisticated simplicity" //"Evolutionary Algorithms written in Swift"
     let fitnessFunction = EATextFunction(text: text)
+    let ff2 = EATextFunction(text: text, charactersSet: CharacterSet(charactersIn: text))
     let parameters = try! EAGeneticAlgorithmParameters(
             populationCount: 20,
-            generationsCount: 2000,
+            generationsCount: 1000,
             fitnessFunction: fitnessFunction,
             isElitism: true,
             selection: EARouletteSelection(isElitism: true),
-            crossover: EAKPointCrossover(threshold: 1.0, k: 2),
-            mutation: EAReplacementMutation(threshold: 1.0, count: 1, set: fitnessFunction.characters),
+            crossover: EAKPointCrossover(threshold: 1.0, k: 3),
+            mutation: EAReplacementMutation(threshold: 1.0, count: 1, set: ff2.characters),
             output: EAAlgorithmParametersOutput(saveProgress: true),
             delegate: EAAlgorithmDelegate()
     )
     parameters.delegate?.didFinishGeneration = { algorithm, iterationIndex, population in
         print(population.bestIndividual!.text)
+        if population.bestIndividual!.fitness == 0.0 {
+            print(iterationIndex)
+        }
     }
     let genericAlgorithm = EAGeneticAlgorithm(parameters: parameters)
     let result = genericAlgorithm.run()
     print(result.bestPopulation.bestIndividual!.fitness)
     print(result.bestPopulation.bestIndividual!.text)
+    
+    let python = EAPythonResult(result: result, name: "SkoumalLogo")
+    do {
+        try python.save(useGlobalBest: false)
+    } catch {
+        print(error)
+    }
 }
 
 
@@ -161,3 +172,7 @@ func differentialEvolutionAL() {
     print(result.bestPopulation.bestIndividual!.fitness)
     print(result.bestPopulation.bestIndividual!.data)
 }
+
+
+
+geneticAlgorithmText()

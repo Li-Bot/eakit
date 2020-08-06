@@ -34,7 +34,7 @@ public struct EASwapMutation<IndividualType: EAIndividualProtocol>: EAMutationPr
     }
     
     public func mutate(individual: IndividualType, context: EAContextProtocol?) -> IndividualType {
-        var individual = individual
+        var individual = individual.copy()
         let distribution = EAUniformDistribution(range: 0 ... individual.data.count - 1)
         
         for _ in 0 ..< count {
